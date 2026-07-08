@@ -12,6 +12,7 @@ export const ui = {
         'Systems engineer working where systems meet ML. Building things and making them public: live models, writeups, and the notebooks behind them.',
     },
     work: { label: 'work' },
+    education: { label: 'education' },
     entry: {
       wip: 'wip',
       repo: 'repo',
@@ -36,6 +37,7 @@ export const ui = {
         "Sistemlerle ML'in kesiştiği yerde çalışan bir sistem mühendisi. Yaptığı her şey ortada: canlı modeller, yazılar ve arkalarındaki notebook'lar.",
     },
     work: { label: 'deneyim' },
+    education: { label: 'eğitim' },
     entry: {
       wip: 'wip',
       repo: 'repo',

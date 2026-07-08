@@ -1,0 +1,42 @@
+---
+import { education } from '../../config/education';
+import { useTranslations } from '../../i18n/ui';
+import type { Lang } from '../../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section style="margin-top:2.6rem">
+  <span class="eyebrow">{t.education.label}</span>
+  <div class="timeline">
+    {education.map((item) => (
+      <div class="timeline-row">
+        <span class="timeline-logo timeline-logo-empty" aria-hidden="true"></span>
+        <div class="timeline-main">
+          <div class="timeline-years">{item.years}</div>
+          <div class="timeline-desc">
+            {item.url ? (
+              <a href={item.url}><strong>{item.org}</strong></a>
+            ) : (
+              <strong>{item.org}</strong>
+            )}{' '}
+            {item.descPre[lang]}
+            {item.advisor ? <a href={item.advisor.url}>{item.advisor.name}</a> : null}
+            {item.descPost[lang]}
+          </div>
+          {item.publications && item.publications.length ? (
+            <ul class="pub-list">
+              {item.publications.map((p) => (
+                <li><a href={p.url}>{p.title}</a></li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
