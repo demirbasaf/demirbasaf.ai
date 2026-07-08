@@ -13,6 +13,7 @@ export const site = {
   links: {
     github: 'https://github.com/demirbasaf',
     linkedin: 'https://www.linkedin.com/in/demirbasaf/',
+    email: 'me.demirbasaf@gmail.com',
     // You don't have X/Twitter, so it isn't rendered. Set it to switch it on.
     x: '',
   },
