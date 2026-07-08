@@ -86,14 +86,19 @@ hr { border: none; border-top: 1px solid var(--rule); margin: calc(var(--step) *
 
 /* ---- header / footer ---- */
 .site-header { border-bottom: 1px solid var(--rule); }
-.site-header .bar { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-block: 1.1rem 0; }
-.site-bio { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; padding-bottom: 1.1rem; }
-.brand { font-family: var(--font-mono); font-size: 0.95rem; font-weight: 500; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); }
+.site-header .bar { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-block: 1.5rem 0; }
+.brand { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; letter-spacing: -0.015em; text-decoration: none; color: var(--ink); }
 .brand:hover { color: var(--accent); }
-.nav-links { display: flex; gap: 1.1rem; align-items: baseline; font-size: 0.85rem; }
-.nav-links a { color: var(--muted); text-decoration: none; }
-.nav-links a:hover, .nav-links a[aria-current='page'] { color: var(--ink); }
-.nav-links .lang-switch { text-transform: lowercase; }
+.header-controls { display: flex; gap: 0.9rem; align-items: baseline; font-family: var(--font-mono); font-size: 0.82rem; }
+.header-controls a { color: var(--muted); text-decoration: none; text-transform: lowercase; }
+.header-controls a:hover { color: var(--ink); }
+.site-bio { font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; color: var(--muted); margin-top: 0.4rem; }
+
+/* circular social icons (github / linkedin / rss) */
+.icon-links { display: flex; gap: 0.55rem; margin-top: 1rem; padding-bottom: 1.5rem; }
+.icon-links a { width: 2rem; height: 2rem; border-radius: 50%; background: var(--ink); display: inline-flex; align-items: center; justify-content: center; transition: background 0.15s ease; }
+.icon-links a:hover { background: var(--accent); }
+.icon-links svg { width: 0.95rem; height: 0.95rem; fill: var(--paper); display: block; }
 
 .site-footer { border-top: 1px solid var(--rule); margin-top: calc(var(--step) * 3); }
 .site-footer .bar { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; padding-block: 1.4rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }

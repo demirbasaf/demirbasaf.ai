@@ -57,9 +57,6 @@ export async function llmsText(lang: Lang, origin: string): Promise<string> {
         )
       : ['-']),
     '',
-    `## ${c.about}`,
-    `- [${c.about}](${url('/about/')}): ${c.aboutText}`,
-    '',
     `## ${c.topics}`,
     `- ${site.person.knowsAbout.join(', ')}.`,
     '',

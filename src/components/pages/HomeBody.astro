@@ -1,6 +1,7 @@
 ---
 import { publishedEntries, bareSlug } from '../../lib/entries';
 import { useTranslations } from '../../i18n/ui';
+import { site } from '../../config/site';
 import { localizePath, type Lang } from '../../lib/i18n';
 
 interface Props {
@@ -16,7 +17,14 @@ const p = (path: string) => localizePath(lang, path);
   <h1>{t.home.thesis}</h1>
 </section>
 
-<ul class="entry-list" style="margin-top:2.6rem">
+<section class="prose" style="margin-top:2.2rem">
+  <span class="eyebrow">{t.about.label}</span>
+  <p>{t.about.p1a}<a href={site.person.worksFor.url}>MoonPay</a>{t.about.p1b}</p>
+  <p>{t.about.p2}</p>
+  <p class="subtle" style="font-size:0.85rem">{t.about.variants}</p>
+</section>
+
+<ul class="entry-list" style="margin-top:2.8rem">
   {entries.map((e) => (
     <li class="entry">
       <a href={p(`/${bareSlug(e)}/`)}>

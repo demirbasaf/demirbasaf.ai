@@ -24,7 +24,7 @@ export const ui = {
       back: 'home',
     },
     about: {
-      label: 'about',
+      label: 'bio',
       p1a: "I'm a senior software engineer at ",
       p1b: ', based in Lisbon. For six years I have built deterministic systems at scale: payments and high-load distributed backends, where being correct under load is the whole job.',
       p2: 'I am now working at the intersection of systems and ML, the engineering of deployed intelligence: making models reliable, fast, and cheap in production. This site is where I build in public. The models here run live, in your browser, next to the writeups and notebooks that produced them.',

@@ -6,7 +6,7 @@ import { LOCALES, localizePath } from '../lib/i18n';
 
 export async function GET(context: APIContext) {
   const base = (context.site ?? new URL(site.url)).origin;
-  const staticPaths = ['/', '/about/'];
+  const staticPaths = ['/'];
 
   const urls: { loc: string; lastmod?: string }[] = [];
   for (const lang of LOCALES) {
