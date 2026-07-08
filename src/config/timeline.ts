@@ -24,7 +24,7 @@ export const timeline: TimelineItem[] = [
   {
     years: '2022 - 2024',
     org: 'Trendyol',
-    url: 'https://www.trendyol.com/',
+    url: 'https://careers.trendyol.com/trendyol-tech',
     logo: '/logos/trendyol.png',
     desc: {
       en: "Shipping and logistics for one of Turkey's largest e-commerce platforms. Go microservices over gRPC and Kafka, behind 3M+ deliveries a day.",

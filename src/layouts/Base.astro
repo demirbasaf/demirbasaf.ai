@@ -27,5 +27,16 @@ const { title, description, article, lang = getLang(Astro.url.pathname) } = Astr
       </div>
     </main>
     <Footer lang={lang} />
+
+    <!-- Open off-site links in a new tab so the site stays put. Covers links in
+         writeups too, so nothing has to be tagged by hand. -->
+    <script is:inline>
+      for (const a of document.querySelectorAll('a[href^="http"]')) {
+        if (a.host !== location.host) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
+      }
+    </script>
   </body>
 </html>
