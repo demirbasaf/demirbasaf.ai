@@ -23,8 +23,8 @@ export const education: EducationItem[] = [
     url: 'https://www.yasar.edu.tr/',
     logo: '/logos/yasar.png',
     descPre: {
-      en: 'BSc in Electrical Engineering, İzmir. Thesis on network prediction with neural networks, advised by ',
-      tr: 'Elektrik Mühendisliği lisansı, İzmir. Sinir ağlarıyla ağ tahmini üzerine tez; danışman ',
+      en: 'BSc in Electrical Engineering. Thesis on network prediction with neural networks, advised by ',
+      tr: 'Elektrik Mühendisliği lisansı. Sinir ağlarıyla ağ tahmini üzerine tez; danışman ',
     },
     advisor: {
       name: 'Prof. Volkan Rodoplu',
