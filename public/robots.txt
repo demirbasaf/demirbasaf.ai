@@ -1,4 +1,4 @@
-# demirbasaf.ai - open to search engines and AI crawlers alike.
+# demirbasaf.dev - open to search engines and AI crawlers alike.
 # The whole site is static and public; there is nothing to hide from indexers.
 
 User-agent: *
@@ -27,4 +27,4 @@ User-agent: CCBot
 Allow: /
 
 # Structured summaries for language models: /llms.txt (English), /tr/llms.txt (Turkish)
-Sitemap: https://demirbasaf.ai/sitemap.xml
+Sitemap: https://demirbasaf.dev/sitemap.xml

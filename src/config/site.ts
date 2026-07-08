@@ -3,7 +3,7 @@
 export const site = {
   title: 'Ali Furkan Demirbaş',
   handle: 'demirbasaf',
-  url: 'https://demirbasaf.ai',
+  url: 'https://demirbasaf.dev',
   description:
     'Systems engineer working where systems meet ML. Models that run live in your browser, next to the writeups and notebooks behind them.',
   // The hero thesis. No em dashes, per preference.
