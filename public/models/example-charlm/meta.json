@@ -1,7 +1,7 @@
 {
-  "name": "turkish-makemore",
-  "title": "Turkish makemore",
-  "description": "Character-level bigram trained on Turkish names (placeholder artifact).",
+  "name": "example-charlm",
+  "title": "Example demo",
+  "description": "Placeholder character-level model, wired end to end to show live in-browser inference.",
   "backend": "js",
   "arch": "bigram",
   "vocab": [

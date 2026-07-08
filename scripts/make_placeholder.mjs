@@ -1,17 +1,17 @@
 // ---------------------------------------------------------------------------
-// Generates the PLACEHOLDER model artifact so the site has a working, name-ish
-// demo before your real model exists. It trains a character-level *bigram* by
-// counting letter pairs in a small embedded list of Turkish names - no PyTorch,
-// no deps, runs in plain Node:  `npm run placeholder`.
+// Generates the DUMMY example model artifact so the site has a working demo
+// before any real model exists. It trains a character-level *bigram* by counting
+// letter pairs in a small embedded name list, no PyTorch, no deps, runs in plain
+// Node:  `npm run placeholder`.
 //
-// When your real model is ready, run scripts/export_model.py instead and drop
-// its output into public/models/turkish-makemore/ - no code changes needed.
+// This is a throwaway scaffold. Real projects get their own artifact (via
+// scripts/export_model.py) and their own /public/models/<name>/ folder.
 // ---------------------------------------------------------------------------
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'models', 'turkish-makemore');
+const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'models', 'example-charlm');
 
 // A small sample of Turkish first names (lowercased, ASCII-folded for the demo).
 const NAMES = `ali,veli,ayse,fatma,mehmet,mustafa,ahmet,emine,hatice,zeynep,elif,
@@ -55,9 +55,9 @@ for (let i = 0; i < V; i++) {
 }
 
 const meta = {
-  name: 'turkish-makemore',
-  title: 'Turkish makemore',
-  description: 'Character-level bigram trained on Turkish names (placeholder artifact).',
+  name: 'example-charlm',
+  title: 'Example demo',
+  description: 'Placeholder character-level model, wired end to end to show live in-browser inference.',
   backend: 'js',
   arch: 'bigram',
   vocab,

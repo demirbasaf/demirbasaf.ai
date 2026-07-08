@@ -1,21 +1,21 @@
-// A hand-rolled sitemap covering both locales and every strict-paired post.
+// A hand-rolled sitemap covering both locales and every strict-paired entry.
 import type { APIContext } from 'astro';
 import { site } from '../config/site';
-import { publishedPosts, bareSlug } from '../lib/posts';
+import { publishedEntries, bareSlug } from '../lib/entries';
 import { LOCALES, localizePath } from '../lib/i18n';
 
 export async function GET(context: APIContext) {
   const base = (context.site ?? new URL(site.url)).origin;
-  const staticPaths = ['/', '/writing/', '/demos/', '/about/'];
+  const staticPaths = ['/', '/about/'];
 
   const urls: { loc: string; lastmod?: string }[] = [];
   for (const lang of LOCALES) {
     for (const path of staticPaths) urls.push({ loc: localizePath(lang, path) });
-    const posts = await publishedPosts(lang);
-    for (const p of posts) {
+    const entries = await publishedEntries(lang);
+    for (const e of entries) {
       urls.push({
-        loc: localizePath(lang, `/writing/${bareSlug(p)}/`),
-        lastmod: p.data.date.toISOString(),
+        loc: localizePath(lang, `/${bareSlug(e)}/`),
+        lastmod: e.data.date.toISOString(),
       });
     }
   }

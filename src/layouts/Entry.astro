@@ -1,0 +1,41 @@
+---
+import Base from './Base.astro';
+import ModelDemo from '../components/ModelDemo.tsx';
+import { useTranslations } from '../i18n/ui';
+import { localizePath, type Lang } from '../lib/i18n';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'entries'>;
+  lang: Lang;
+}
+const { entry, lang } = Astro.props;
+const t = useTranslations(lang);
+const { title, date, summary, tags, status, repo, demo, notebook } = entry.data;
+const dateStr = date.toISOString().slice(0, 10);
+const p = (x: string) => localizePath(lang, x);
+---
+
+<Base title={title} description={summary} article={{ publishedTime: date, tags }} lang={lang}>
+  <article class="prose">
+    <p class="entry-meta" style="margin-bottom:0.4rem">
+      <a href={p('/')}>← {t.entry.back}</a>
+    </p>
+    <header>
+      <h1>
+        {title}
+        {status === 'wip' ? <span class="badge">{t.entry.wip}</span> : null}
+      </h1>
+      <p class="entry-meta">
+        <time datetime={dateStr}>{dateStr}</time>
+        {tags.length ? <span> · {tags.join(' · ')}</span> : null}
+        {repo ? <span> · <a href={repo}>{t.entry.repo} ↗</a></span> : null}
+        {notebook ? <span> · <a href={notebook}>{t.entry.notebook} ↗</a></span> : null}
+      </p>
+    </header>
+
+    {demo ? <ModelDemo name={demo} client:visible /> : null}
+
+    <slot />
+  </article>
+</Base>

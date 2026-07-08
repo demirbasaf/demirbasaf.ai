@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { JsEngine } from '../src/lib/inference/js-backend';
 import type { ModelMeta, Tensor } from '../src/lib/inference/types';
 
-const dir = 'public/models/turkish-makemore';
+const dir = 'public/models/example-charlm';
 const meta = JSON.parse(readFileSync(`${dir}/meta.json`, 'utf8')) as ModelMeta;
 const weights = JSON.parse(readFileSync(`${dir}/weights.json`, 'utf8')).params as Record<string, Tensor>;
 
