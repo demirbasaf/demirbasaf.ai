@@ -34,14 +34,14 @@ export const ui = {
 
   tr: {
     langName: 'Türkçe',
-    bio: 'Yıllarca makineleri anlaştırdım. Şimdi onları düşündürüyorum.',
+    bio: 'Yıllarca makinelere anlaşmayı öğrettim. Şimdi düşünmeyi.',
     meta: {
       description:
-        "Sistemlerle makine öğreniminin kesiştiği yerde çalışan bir mühendis. Yaptıklarını herkese açıyor: canlı modeller, yazılar ve arkalarındaki notebook'lar.",
+        "Sistemlerle ML'in kesiştiği yerde çalışan bir sistem mühendisi. Yaptığı her şey ortada: canlı modeller, yazılar ve arkalarındaki notebook'lar.",
     },
     home: {
       thesis:
-        'Büyük ölçekte deterministik sistemler kuruyorum. Şimdi de deterministik olmayanları konuşlandırıp dizginleyen sistemleri.',
+        'Büyük ölçekte deterministik sistemler kuruyorum. Şimdi de deterministik olmayanları konuşlandırıp zapt eden sistemleri.',
     },
     work: { label: 'deneyim' },
     entry: {
@@ -55,8 +55,8 @@ export const ui = {
     about: {
       label: 'hakkında',
       p1a: '',
-      p1b: "'de kıdemli yazılım mühendisiyim, Lizbon'da yaşıyorum. Altı yıldır büyük ölçekte deterministik sistemler kuruyorum: ödemeler, yüksek yüklü dağıtık backend'ler. İşin tamamı şu: yük altında da doğru çalışmak.",
-      p2: "Artık sistemlerle makine öğreniminin kesişiminde çalışıyorum: konuşlandırılmış zekânın mühendisliği, yani modelleri üretimde güvenilir, hızlı ve ucuz tutmak. Bu site, işleri gözler önünde yaptığım yer. Buradaki modeller tarayıcınızda canlı çalışıyor, hemen yanlarında da onları üreten yazılar ve notebook'lar.",
+      p1b: "'de kıdemli yazılım mühendisiyim, Lizbon'dayım. Yıllardır büyük ölçekte deterministik sistemler kuruyorum: ödemeler ve yüksek trafikli dağıtık backend'ler. İşin tamamı zaten bu: yük altında doğru kalmak.",
+      p2: "Artık sistemlerle ML'in kesişiminde, konuşlandırılmış zekânın mühendisliğinde çalışıyorum: modelleri üretimde güvenilir, hızlı ve ucuz kılmak. Bu site, işi göz önünde yaptığım yer. Buradaki modeller tarayıcınızda canlı çalışıyor, hemen yanlarında da onları üreten yazılar ve notebook'lar var.",
     },
   },
 } as const;

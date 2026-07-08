@@ -16,7 +16,7 @@ export const timeline: TimelineItem[] = [
     url: 'https://www.moonpay.com/',
     desc: {
       en: 'Payments infrastructure across bank transfers, cards, Apple Pay and more, in Node.js. Systems that process over $1B in transactions a year.',
-      tr: 'Node.js ile ödeme altyapısı: banka havaleleri, kartlar, Apple Pay ve daha fazlası. Yılda 1 milyar doların üzerinde işlem hacmi.',
+      tr: 'Node.js ile ödeme altyapısı: banka havaleleri, kartlar, Apple Pay ve dahası. Yılda $1B üzeri işlem geçen sistemler.',
     },
   },
   {
@@ -25,7 +25,7 @@ export const timeline: TimelineItem[] = [
     url: 'https://www.trendyol.com/',
     desc: {
       en: "Shipping and logistics for one of Turkey's largest e-commerce platforms. Go microservices over gRPC and Kafka, behind 3M+ deliveries a day.",
-      tr: "Türkiye'nin en büyük e-ticaret platformlarından birinde kargo ve lojistik. gRPC ve Kafka üzerinde Go mikroservisleri, günde 3 milyondan fazla teslimatın arkasında.",
+      tr: "Türkiye'nin en büyük e-ticaret platformlarından birinde kargo ve lojistik. Günde 3M+ teslimatı sırtlayan, gRPC ve Kafka üzerinde çalışan Go mikroservisleri.",
     },
   },
   {
@@ -34,7 +34,7 @@ export const timeline: TimelineItem[] = [
     url: 'https://adsby.co/',
     desc: {
       en: 'My first job. A fast-paced startup building a digital-ads hub: generate creatives and publish to channels in one place. Vendor integrations, AWS infra and DevOps, in Node.js, TypeScript and GraphQL.',
-      tr: 'İlk işim. Reklamları tek merkezden üretip kanallara yayınlayan, hızlı tempolu bir dijital reklam girişimi. Node.js, TypeScript ve GraphQL ile sağlayıcı entegrasyonları, AWS altyapısı ve DevOps.',
+      tr: 'İlk işim. Reklam kreatiflerini üretip tek yerden kanallara yayınlayan bir dijital reklam platformu kuran, temposu yüksek bir startup. Node.js, TypeScript ve GraphQL ile sağlayıcı entegrasyonları, AWS altyapısı ve DevOps.',
     },
   },
 ];
