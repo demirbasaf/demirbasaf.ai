@@ -1,0 +1,37 @@
+---
+import ModelDemo from '../ModelDemo.tsx';
+import { demos } from '../../config/models';
+import { useTranslations } from '../../i18n/ui';
+import type { Lang } from '../../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<span class="eyebrow">{t.demos.eyebrow}</span>
+<h1>{t.demos.title}</h1>
+<p class="subtle">{t.demos.intro}</p>
+
+<div style="margin-top:2rem; display:grid; gap:2.2rem;">
+  {demos.map((d) => (
+    <section>
+      <span class="eyebrow" style="margin-bottom:0.3rem">
+        {d.status === 'live' ? t.demos.live : t.demos.soon} · {d.title}
+      </span>
+      <p class="subtle" style="margin-top:0">{d.blurb[lang]}</p>
+      {d.status === 'live' ? (
+        <ModelDemo name={d.name} client:visible />
+      ) : (
+        <div class="console"><div class="console-body subtle mono">{t.demos.comingSoon}</div></div>
+      )}
+      {d.notebook ? (
+        <p class="mono" style="font-size:0.8rem; margin-top:0.5rem;">
+          <a href={d.notebook}>{t.demos.notebook} ↗</a>
+        </p>
+      ) : null}
+    </section>
+  ))}
+</div>

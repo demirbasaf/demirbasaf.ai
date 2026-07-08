@@ -1,60 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
-import ModelDemo from '../components/ModelDemo.tsx';
-import { site } from '../config/site';
-import { featuredDemo } from '../config/models';
-import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('posts', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3);
+import HomeBody from '../components/pages/HomeBody.astro';
 ---
 
-<Base>
-  <!-- Hero: the thesis, then immediate proof, a model running live. -->
-  <section>
-    <span class="eyebrow">engineer of deployed intelligence</span>
-    <h1>{site.thesis}</h1>
-    <p class="lede subtle">
-      Six years of payments and distributed systems, now pointed at the model side,
-      making inference reliable, fast, and cheap where it runs.
-    </p>
-    <p class="mono" style="font-size:0.85rem; margin-top:1.2rem;">
-      <a href={site.links.github}>github</a>
-      {site.links.x ? <> · <a href={site.links.x}>x</a></> : null}
-      · <a href="/writing">writing</a>
-    </p>
-  </section>
-
-  {featuredDemo ? (
-    <section>
-      <span class="eyebrow" style="margin-top:2.6rem">live · {featuredDemo.title}</span>
-      <p class="subtle" style="margin-top:0.2rem">{featuredDemo.blurb}</p>
-      <!-- client:load. The front door itself runs the model, no server. -->
-      <ModelDemo name={featuredDemo.name} client:load />
-      <p class="mono" style="font-size:0.8rem; margin-top:0.6rem;">
-        <a href="/demos">all demos →</a>
-      </p>
-    </section>
-  ) : null}
-
-  {posts.length ? (
-    <section>
-      <span class="eyebrow" style="margin-top:2.6rem">latest writing</span>
-      <ul class="entry-list">
-        {posts.map((p) => (
-          <li class="entry">
-            <a href={`/writing/${p.slug}/`}>
-              <div class="entry-title">{p.data.title}</div>
-              <div class="entry-meta">{p.data.date.toISOString().slice(0, 10)}</div>
-              <div class="entry-summary">{p.data.summary}</div>
-            </a>
-          </li>
-        ))}
-      </ul>
-      <p class="mono" style="font-size:0.8rem; margin-top:0.8rem;">
-        <a href="/writing">all writing →</a>
-      </p>
-    </section>
-  ) : null}
+<Base lang="en">
+  <HomeBody lang="en" />
 </Base>

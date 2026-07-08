@@ -1,0 +1,36 @@
+---
+import { publishedPosts, bareSlug } from '../../lib/posts';
+import { useTranslations } from '../../i18n/ui';
+import { localizePath, type Lang } from '../../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const posts = await publishedPosts(lang);
+const p = (path: string) => localizePath(lang, path);
+---
+
+<span class="eyebrow">{t.writing.eyebrow}</span>
+<h1>{t.writing.title}</h1>
+<p class="subtle">{t.writing.intro}</p>
+
+{posts.length ? (
+  <ul class="entry-list">
+    {posts.map((post) => (
+      <li class="entry">
+        <a href={p(`/writing/${bareSlug(post)}/`)}>
+          <div class="entry-title">{post.data.title}</div>
+          <div class="entry-meta">
+            {post.data.date.toISOString().slice(0, 10)}
+            {post.data.tags.length ? <span> · {post.data.tags.join(' · ')}</span> : null}
+          </div>
+          <div class="entry-summary">{post.data.summary}</div>
+        </a>
+      </li>
+    ))}
+  </ul>
+) : (
+  <p class="subtle mono" style="margin-top:1.5rem">{t.writing.none}</p>
+)}

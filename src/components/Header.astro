@@ -1,21 +1,36 @@
 ---
 import { site } from '../config/site';
+import { ui, useTranslations } from '../i18n/ui';
+import { getLang, localizePath, stripLang, counterpart, OTHER, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang?: Lang;
+}
 const path = Astro.url.pathname;
-const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const { lang = getLang(path) } = Astro.props;
+const t = useTranslations(lang);
+const p = (x: string) => localizePath(lang, x);
+const canonical = stripLang(path);
+
 const nav = [
-  { href: '/writing', label: 'writing' },
-  { href: '/demos', label: 'demos' },
-  { href: '/about', label: 'about' },
+  { href: p('/writing/'), label: t.nav.writing, match: '/writing' },
+  { href: p('/demos/'), label: t.nav.demos, match: '/demos' },
+  { href: p('/about/'), label: t.nav.about, match: '/about' },
 ];
+const isActive = (m: string) => canonical.startsWith(m);
+
+const otherHref = counterpart(lang, path);
+const otherName = ui[OTHER[lang]].langName;
 ---
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="/">{site.handle}</a>
+    <a class="brand" href={p('/')}>{site.handle}</a>
     <nav class="nav-links" aria-label="Primary">
       {nav.map((n) => (
-        <a href={n.href} aria-current={isActive(n.href) ? 'page' : undefined}>{n.label}</a>
+        <a href={n.href} aria-current={isActive(n.match) ? 'page' : undefined}>{n.label}</a>
       ))}
+      <a class="lang-switch" href={otherHref} hreflang={OTHER[lang]}>{otherName}</a>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme">
         ◐
       </button>

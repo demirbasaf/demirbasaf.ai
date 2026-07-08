@@ -2,27 +2,30 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { getLang, type Lang } from '../lib/i18n';
+import { bcp47 } from '../i18n/ui';
 
 interface Props {
   title?: string;
   description?: string;
   article?: { publishedTime: Date; tags?: string[] };
+  lang?: Lang;
 }
-const { title, description, article } = Astro.props;
+const { title, description, article, lang = getLang(Astro.url.pathname) } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={bcp47[lang]}>
   <head>
-    <BaseHead title={title} description={description} article={article} />
+    <BaseHead title={title} description={description} article={article} lang={lang} />
   </head>
   <body>
-    <Header />
+    <Header lang={lang} />
     <main>
       <div class="wrap">
         <slot />
       </div>
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

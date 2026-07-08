@@ -1,19 +1,26 @@
 ---
 import '../styles/global.css';
 import { site } from '../config/site';
+import { ui, bcp47, ogLocale } from '../i18n/ui';
+import { localizePath, stripLang, type Lang } from '../lib/i18n';
 
 interface Props {
   title?: string;
   description?: string;
-  /** Present on blog posts: switches meta to article + adds Article JSON-LD. */
   article?: { publishedTime: Date; tags?: string[] };
+  lang: Lang;
 }
-const { title, description = site.description, article } = Astro.props;
+const { title, article, lang } = Astro.props;
+const description = Astro.props.description ?? ui[lang].meta.description;
 const fullTitle = title ? `${title} · ${site.title}` : site.title;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? site.url).href;
 const ogType = article ? 'article' : 'website';
 
-// Name variants as keywords so every spelling of the name is on the page.
+// hreflang: this same page in each language, plus x-default -> English.
+const canonicalPath = stripLang(Astro.url.pathname);
+const enHref = new URL(localizePath('en', canonicalPath), site.url).href;
+const trHref = new URL(localizePath('tr', canonicalPath), site.url).href;
+
 const keywords = [
   ...site.person.alternateNames,
   'systems engineer',
@@ -22,7 +29,6 @@ const keywords = [
   'Lisbon',
 ].join(', ');
 
-// --- schema.org Person: the entity every name variant resolves to ---
 const personLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -45,7 +51,7 @@ const websiteLd = {
   '@type': 'WebSite',
   name: site.title,
   url: site.url,
-  inLanguage: site.locale,
+  inLanguage: bcp47[lang],
   author: { '@type': 'Person', name: site.title, url: site.url },
 };
 
@@ -56,7 +62,7 @@ const articleLd = article
       headline: title,
       description,
       url: canonical,
-      inLanguage: site.locale,
+      inLanguage: bcp47[lang],
       datePublished: article.publishedTime.toISOString(),
       keywords: (article.tags ?? []).join(', '),
       author: { '@type': 'Person', name: site.title, url: site.url },
@@ -71,7 +77,12 @@ const articleLd = article
 <meta name="generator" content={Astro.generator} />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="canonical" href={canonical} />
-<link rel="alternate" type="application/rss+xml" title={site.title} href="/rss.xml" />
+
+<!-- hreflang alternates for the two locales. -->
+<link rel="alternate" hreflang="en" href={enHref} />
+<link rel="alternate" hreflang="tr" href={trHref} />
+<link rel="alternate" hreflang="x-default" href={enHref} />
+<link rel="alternate" type="application/rss+xml" title={site.title} href={localizePath(lang, '/rss.xml')} />
 
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
@@ -84,9 +95,10 @@ const articleLd = article
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
-<meta property="og:locale" content="en_US" />
+<meta property="og:locale" content={ogLocale[lang]} />
+<meta property="og:locale:alternate" content={lang === 'en' ? ogLocale.tr : ogLocale.en} />
 {article ? <meta property="article:published_time" content={article.publishedTime.toISOString()} /> : null}
-{article?.tags?.map((t) => <meta property="article:tag" content={t} />)}
+{article?.tags?.map((tag) => <meta property="article:tag" content={tag} />)}
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />

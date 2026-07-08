@@ -92,6 +92,7 @@ hr { border: none; border-top: 1px solid var(--rule); margin: calc(var(--step) *
 .nav-links { display: flex; gap: 1.1rem; align-items: baseline; font-size: 0.85rem; }
 .nav-links a { color: var(--muted); text-decoration: none; }
 .nav-links a:hover, .nav-links a[aria-current='page'] { color: var(--ink); }
+.nav-links .lang-switch { padding-left: 1.1rem; border-left: 1px solid var(--rule); }
 
 .site-footer { border-top: 1px solid var(--rule); margin-top: calc(var(--step) * 3); }
 .site-footer .bar { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; padding-block: 1.4rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }

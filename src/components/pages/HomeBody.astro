@@ -1,0 +1,58 @@
+---
+import ModelDemo from '../ModelDemo.tsx';
+import { site } from '../../config/site';
+import { featuredDemo } from '../../config/models';
+import { publishedPosts, bareSlug } from '../../lib/posts';
+import { useTranslations } from '../../i18n/ui';
+import { localizePath, type Lang } from '../../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const posts = (await publishedPosts(lang)).slice(0, 3);
+const p = (path: string) => localizePath(lang, path);
+---
+
+<section>
+  <span class="eyebrow">{t.home.eyebrow}</span>
+  <h1>{t.home.thesis}</h1>
+  <p class="lede subtle">{t.home.lede}</p>
+  <p class="mono" style="font-size:0.85rem; margin-top:1.2rem;">
+    <a href={site.links.github}>github</a>
+    {site.links.x ? <Fragment> · <a href={site.links.x}>x</a></Fragment> : null}
+    · <a href={p('/writing/')}>{t.nav.writing}</a>
+  </p>
+</section>
+
+{featuredDemo ? (
+  <section>
+    <span class="eyebrow" style="margin-top:2.6rem">{t.home.live} · {featuredDemo.title}</span>
+    <p class="subtle" style="margin-top:0.2rem">{featuredDemo.blurb[lang]}</p>
+    <ModelDemo name={featuredDemo.name} client:load />
+    <p class="mono" style="font-size:0.8rem; margin-top:0.6rem;">
+      <a href={p('/demos/')}>{t.home.allDemos} →</a>
+    </p>
+  </section>
+) : null}
+
+{posts.length ? (
+  <section>
+    <span class="eyebrow" style="margin-top:2.6rem">{t.home.latest}</span>
+    <ul class="entry-list">
+      {posts.map((post) => (
+        <li class="entry">
+          <a href={p(`/writing/${bareSlug(post)}/`)}>
+            <div class="entry-title">{post.data.title}</div>
+            <div class="entry-meta">{post.data.date.toISOString().slice(0, 10)}</div>
+            <div class="entry-summary">{post.data.summary}</div>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="mono" style="font-size:0.8rem; margin-top:0.8rem;">
+      <a href={p('/writing/')}>{t.home.allWriting} →</a>
+    </p>
+  </section>
+) : null}

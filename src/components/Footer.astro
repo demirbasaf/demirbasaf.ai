@@ -1,6 +1,15 @@
 ---
 import { site } from '../config/site';
+import { useTranslations } from '../i18n/ui';
+import { getLang, localizePath, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang?: Lang;
+}
+const { lang = getLang(Astro.url.pathname) } = Astro.props;
+const t = useTranslations(lang);
 const year = new Date().getFullYear();
+const rssHref = localizePath(lang, '/rss.xml');
 ---
 
 <footer class="site-footer">
@@ -8,7 +17,7 @@ const year = new Date().getFullYear();
     <span>© {year} {site.title}</span>
     <a href={site.links.github}>github</a>
     {site.links.x ? <a href={site.links.x}>x</a> : null}
-    <a href={`${site.url}/rss.xml`}>rss</a>
-    <span class="subtle" style="margin-left:auto">deployed intelligence, statically served</span>
+    <a href={rssHref}>rss</a>
+    <span class="subtle" style="margin-left:auto">{t.footer.tagline}</span>
   </div>
 </footer>

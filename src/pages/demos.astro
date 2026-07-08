@@ -1,35 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import ModelDemo from '../components/ModelDemo.tsx';
-import { demos } from '../config/models';
+import DemosBody from '../components/pages/DemosBody.astro';
+import { useTranslations } from '../i18n/ui';
+const t = useTranslations('en');
 ---
 
-<Base title="demos" description="Interactive ML model demos running in the browser.">
-  <span class="eyebrow">demos</span>
-  <h1>Models running in your browser</h1>
-  <p class="subtle">
-    Each demo loads a small model artifact and runs inference client-side. No server,
-    no per-request cost. Trained elsewhere, deployed here.
-  </p>
-
-  <div style="margin-top:2rem; display:grid; gap:2.2rem;">
-    {demos.map((d) => (
-      <section>
-        <span class="eyebrow" style="margin-bottom:0.3rem">
-          {d.status === 'live' ? 'live' : 'soon'} · {d.title}
-        </span>
-        <p class="subtle" style="margin-top:0">{d.blurb}</p>
-        {d.status === 'live' ? (
-          <ModelDemo name={d.name} client:visible />
-        ) : (
-          <div class="console"><div class="console-body subtle mono">coming soon</div></div>
-        )}
-        {d.notebook ? (
-          <p class="mono" style="font-size:0.8rem; margin-top:0.5rem;">
-            <a href={d.notebook}>training notebook ↗</a>
-          </p>
-        ) : null}
-      </section>
-    ))}
-  </div>
+<Base lang="en" title={t.demos.title}>
+  <DemosBody lang="en" />
 </Base>

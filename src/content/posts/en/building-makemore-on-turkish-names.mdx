@@ -1,5 +1,6 @@
 ---
 title: Building makemore on Turkish names
+lang: en
 date: 2026-07-08
 summary: A character-level language model trained on Turkish names, vowel harmony and all, exported to run live in your browser.
 tags: [ml, makemore, from-scratch]
@@ -7,7 +8,7 @@ notebook: https://github.com/demirbasaf
 draft: false
 ---
 
-import ModelDemo from '../../components/ModelDemo.tsx';
+import ModelDemo from '../../../components/ModelDemo.tsx';
 
 The plan is to work through the fundamentals the hard way: a character-level
 language model trained from scratch on Turkish names, then deployed so it runs
@@ -30,5 +31,5 @@ into a static artifact (weights plus a `meta.json` describing the vocab and
 hyperparameters) and drops it into `public/models/`. The forward pass and sampling
 then run in a few dozen lines of plain TypeScript, right here on the page.
 
-That's the whole thesis of this site in miniature: **train elsewhere, deploy here,
-run in the reader's browser.**
+That is the whole thesis of this site in miniature: **train elsewhere, deploy
+here, run in the reader's browser.**

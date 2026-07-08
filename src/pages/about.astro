@@ -1,29 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site } from '../config/site';
+import AboutBody from '../components/pages/AboutBody.astro';
+import { useTranslations } from '../i18n/ui';
+const t = useTranslations('en');
 ---
 
-<Base title="about" description={site.description}>
-  <article class="prose">
-    <span class="eyebrow">about</span>
-    <h1>Ali Furkan Demirbaş</h1>
-    <p>
-      I'm a senior software engineer at <a href={site.person.worksFor.url}>MoonPay</a>, based in
-      Lisbon. For six years I've built deterministic systems at scale: payments and high-load
-      distributed backends, where being correct under load is the whole job.
-    </p>
-    <p>
-      I'm now working at the intersection of <strong>systems and ML</strong>, the engineering of
-      deployed intelligence: making models reliable, fast, and cheap in production. This site is
-      where I build in public. The models here run live, in your browser, next to the writeups
-      and notebooks that produced them.
-    </p>
-    <p class="mono" style="font-size:0.9rem">
-      <a href={site.links.github}>github</a>
-      {site.links.x ? <> · <a href={site.links.x}>x</a></> : null}
-    </p>
-    <p class="subtle" style="font-size:0.85rem">
-      Also written Furkan Demirbaş, or without the diacritics, Ali Furkan Demirbas.
-    </p>
-  </article>
+<Base lang="en" title={t.about.eyebrow}>
+  <AboutBody lang="en" />
 </Base>

@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro';
+import AboutBody from '../../components/pages/AboutBody.astro';
+import { useTranslations } from '../../i18n/ui';
+const t = useTranslations('tr');
+---
+
+<Base lang="tr" title={t.about.eyebrow}>
+  <AboutBody lang="tr" />
+</Base>
