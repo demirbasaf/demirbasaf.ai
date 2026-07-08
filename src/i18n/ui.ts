@@ -6,6 +6,7 @@ import type { Lang } from '../lib/i18n';
 export const ui = {
   en: {
     langName: 'English',
+    bio: 'Six years making machines agree. Now making them think.',
     meta: {
       description:
         'Systems engineer working where systems meet ML. Building things and making them public: live models, writeups, and the notebooks behind them.',
@@ -33,6 +34,7 @@ export const ui = {
 
   tr: {
     langName: 'Türkçe',
+    bio: 'Altı yıl makineleri anlaştırdım. Şimdi onları düşündürüyorum.',
     meta: {
       description:
         "Sistemlerle makine öğreniminin kesiştiği yerde çalışan bir mühendis. Yaptıklarını herkese açıyor: canlı modeller, yazılar ve arkalarındaki notebook'lar.",

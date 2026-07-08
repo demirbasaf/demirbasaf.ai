@@ -12,6 +12,7 @@ export const site = {
   locale: 'en',
   links: {
     github: 'https://github.com/demirbasaf',
+    linkedin: 'https://www.linkedin.com/in/demirbasaf/',
     // You don't have X/Twitter, so it isn't rendered. Set it to switch it on.
     x: '',
   },
@@ -43,7 +44,7 @@ export const site = {
       'PostgreSQL',
       'gRPC',
     ],
-    sameAs: ['https://github.com/demirbasaf'],
+    sameAs: ['https://github.com/demirbasaf', 'https://www.linkedin.com/in/demirbasaf/'],
   },
 } as const;
 

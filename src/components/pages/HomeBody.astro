@@ -1,7 +1,6 @@
 ---
 import { publishedEntries, bareSlug } from '../../lib/entries';
 import { useTranslations } from '../../i18n/ui';
-import { site } from '../../config/site';
 import { localizePath, type Lang } from '../../lib/i18n';
 
 interface Props {
@@ -15,9 +14,6 @@ const p = (path: string) => localizePath(lang, path);
 
 <section>
   <h1>{t.home.thesis}</h1>
-  <p class="mono" style="font-size:0.85rem; margin-top:1rem;">
-    <a href={site.links.github}>github</a>
-  </p>
 </section>
 
 <ul class="entry-list" style="margin-top:2.6rem">

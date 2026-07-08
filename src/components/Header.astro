@@ -8,6 +8,7 @@ interface Props {
 }
 const path = Astro.url.pathname;
 const { lang = getLang(path) } = Astro.props;
+const t = ui[lang];
 const p = (x: string) => localizePath(lang, x);
 
 const otherHref = counterpart(lang, path);
@@ -15,14 +16,20 @@ const otherName = ui[OTHER[lang]].langName;
 ---
 
 <header class="site-header">
-  <div class="wrap bar">
-    <a class="brand" href={p('/')}>{site.handle}</a>
-    <nav class="nav-links" aria-label="Primary">
-      <a class="lang-switch" href={otherHref} hreflang={OTHER[lang]}>{otherName}</a>
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme">
-        ◐
-      </button>
-    </nav>
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href={p('/')}>{site.title}</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href={site.links.github}>github</a>
+        <a href={site.links.linkedin}>linkedin</a>
+        {site.links.x ? <a href={site.links.x}>x</a> : null}
+        <a class="lang-switch" href={otherHref} hreflang={OTHER[lang]}>{otherName}</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme">
+          ◐
+        </button>
+      </nav>
+    </div>
+    <p class="site-bio">{t.bio}</p>
   </div>
 </header>
 
