@@ -132,16 +132,16 @@ main { padding-block: calc(var(--step) * 2); }
 
 /* ---- work timeline ---- */
 .timeline { margin-top: 0.9rem; }
-.timeline-row { display: grid; grid-template-columns: 6rem 1fr; gap: 0.3rem 1.1rem; padding-block: 0.85rem; border-top: 1px solid var(--rule); }
+.timeline-row { display: flex; gap: 0.9rem; align-items: flex-start; padding-block: 0.9rem; border-top: 1px solid var(--rule); }
 .timeline-row:last-child { border-bottom: 1px solid var(--rule); }
-.timeline-years { font-family: var(--font-mono); font-size: 0.76rem; color: var(--muted); padding-top: 0.22rem; white-space: nowrap; }
-.timeline-desc { font-size: 1rem; line-height: 1.55; }
+.timeline-logo { flex: none; width: 2.4rem; height: 2.4rem; border-radius: 6px; object-fit: contain; background: #fff; border: 1px solid var(--rule); padding: 3px; }
+.timeline-logo-empty { background: var(--panel); }
+.timeline-main { min-width: 0; }
+.timeline-years { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+.timeline-desc { font-size: 1rem; line-height: 1.55; margin-top: 0.1rem; }
 .timeline-desc a { text-decoration: none; }
 .timeline-desc a strong { color: var(--ink); }
 .timeline-desc a:hover strong { color: var(--accent); }
-@media (max-width: 34rem) {
-  .timeline-row { grid-template-columns: 1fr; gap: 0.15rem; padding-block: 0.7rem; }
-}
 
 /* ---- demo console (the signature element) ---- */
 .console {

@@ -15,14 +15,21 @@ const t = useTranslations(lang);
   <div class="timeline">
     {timeline.map((item) => (
       <div class="timeline-row">
-        <div class="timeline-years">{item.years}</div>
-        <div class="timeline-desc">
-          {item.url ? (
-            <a href={item.url}><strong>{item.org}</strong></a>
-          ) : (
-            <strong>{item.org}</strong>
-          )}{' '}
-          {item.desc[lang]}
+        {item.logo ? (
+          <img class="timeline-logo" src={item.logo} alt={`${item.org} logo`} width="128" height="128" loading="lazy" />
+        ) : (
+          <span class="timeline-logo timeline-logo-empty" aria-hidden="true"></span>
+        )}
+        <div class="timeline-main">
+          <div class="timeline-years">{item.years}</div>
+          <div class="timeline-desc">
+            {item.url ? (
+              <a href={item.url}><strong>{item.org}</strong></a>
+            ) : (
+              <strong>{item.org}</strong>
+            )}{' '}
+            {item.desc[lang]}
+          </div>
         </div>
       </div>
     ))}
