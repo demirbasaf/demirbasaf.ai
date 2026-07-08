@@ -142,6 +142,8 @@ main { padding-block: calc(var(--step) * 2); }
 .timeline-desc a { text-decoration: none; }
 .timeline-desc a strong { color: var(--ink); }
 .timeline-desc a:hover strong { color: var(--accent); }
+.timeline-edu .timeline-row { align-items: flex-start; }
+.timeline-edu .timeline-logo { margin-top: 0.15rem; }
 .pub-list { list-style: none; padding: 0; margin: 0.45rem 0 0; }
 .pub-list li { position: relative; padding-left: 1rem; font-size: 0.9rem; line-height: 1.5; margin-top: 0.25rem; color: var(--muted); }
 .pub-list li::before { content: '›'; position: absolute; left: 0; color: var(--accent); }

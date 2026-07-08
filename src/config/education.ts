@@ -8,9 +8,9 @@ export interface Publication {
 }
 
 export interface EducationItem {
-  years: string;
   org: string;
   url?: string;
+  logo?: string; // path under /public
   descPre: Record<Lang, string>;
   advisor?: { name: string; url: string };
   descPost: Record<Lang, string>;
@@ -19,9 +19,9 @@ export interface EducationItem {
 
 export const education: EducationItem[] = [
   {
-    years: '2016 - 2020',
     org: 'Yaşar University',
     url: 'https://www.yasar.edu.tr/',
+    logo: '/logos/yasar.png',
     descPre: {
       en: 'BSc in Electrical Engineering, İzmir. Thesis on network prediction with neural networks, advised by ',
       tr: 'Elektrik Mühendisliği lisansı, İzmir. Sinir ağlarıyla ağ tahmini üzerine tez; danışman ',
