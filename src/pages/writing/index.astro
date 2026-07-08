@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<Base title="writing" description="Notes on systems, ML, and deploying models.">
+  <span class="eyebrow">writing</span>
+  <h1>Writing</h1>
+  <p class="subtle">Building in public — training notes, systems writeups, and the demos they produced.</p>
+
+  {posts.length ? (
+    <ul class="entry-list">
+      {posts.map((p) => (
+        <li class="entry">
+          <a href={`/writing/${p.slug}/`}>
+            <div class="entry-title">{p.data.title}</div>
+            <div class="entry-meta">
+              {p.data.date.toISOString().slice(0, 10)}
+              {p.data.tags.length ? <span> · {p.data.tags.join(' · ')}</span> : null}
+            </div>
+            <div class="entry-summary">{p.data.summary}</div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p class="subtle mono" style="margin-top:1.5rem">no posts yet.</p>
+  )}
+</Base>

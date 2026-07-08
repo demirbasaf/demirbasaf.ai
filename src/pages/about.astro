@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../config/site';
+---
+
+<Base title="about" description={site.description}>
+  <article class="prose">
+    <span class="eyebrow">about</span>
+    <h1>Ali Furkan Demirbaş</h1>
+    <p>
+      I'm a senior software engineer in Lisbon. For six years I've built deterministic
+      systems at scale — payments and high-load distributed backends, where being correct
+      under load is the whole job.
+    </p>
+    <p>
+      I'm now working at the intersection of <strong>systems and ML</strong>: the engineering
+      of deployed intelligence — making models reliable, fast, and cheap in production. This
+      site is where I build in public. The models here run live, in your browser, next to the
+      writeups and the notebooks that produced them.
+    </p>
+    <p class="mono" style="font-size:0.9rem">
+      <a href={site.links.github}>github</a>
+      {site.links.x ? <> · <a href={site.links.x}>x</a></> : null}
+    </p>
+  </article>
+</Base>

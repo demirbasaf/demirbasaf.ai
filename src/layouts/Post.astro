@@ -1,0 +1,34 @@
+---
+import Base from './Base.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+const { post } = Astro.props;
+const { title, date, summary, tags, notebook } = post.data;
+const dateStr = date.toISOString().slice(0, 10);
+---
+
+<Base title={title} description={summary}>
+  <article class="prose">
+    <header>
+      <span class="eyebrow">writing</span>
+      <h1>{title}</h1>
+      <p class="entry-meta">
+        <time datetime={dateStr}>{dateStr}</time>
+        {tags.length ? <span> · {tags.join(' · ')}</span> : null}
+        {notebook ? <span> · <a href={notebook}>notebook ↗</a></span> : null}
+      </p>
+    </header>
+    <slot />
+    {notebook ? (
+      <>
+        <hr />
+        <p class="subtle mono">
+          Training notebook: <a href={notebook}>{notebook}</a>
+        </p>
+      </>
+    ) : null}
+  </article>
+</Base>

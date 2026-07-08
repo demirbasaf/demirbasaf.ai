@@ -1,0 +1,38 @@
+{
+  "name": "turkish-makemore",
+  "title": "Turkish makemore",
+  "description": "Character-level bigram trained on Turkish names (placeholder artifact).",
+  "backend": "js",
+  "arch": "bigram",
+  "vocab": [
+    ".",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "y",
+    "z"
+  ],
+  "block_size": 1,
+  "sampling": {
+    "temperature": 0.9,
+    "max_new_tokens": 16,
+    "top_k": null
+  }
+}

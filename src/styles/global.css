@@ -1,0 +1,167 @@
+/* ===========================================================================
+   demirbasaf.ai — design tokens + minimal hand CSS.
+
+   Concept: two voices.
+     · The HUMAN writes in serif  — prose, headings, the thesis.
+     · The MACHINE speaks in mono — nav, labels, dates, model output, code.
+   Everything else stays quiet so the writing and the live demos carry the page.
+   =========================================================================== */
+
+/* ---- tokens: light (default) ---- */
+:root {
+  --paper:   #fbfbf9;   /* near-white, faintly warm — not cream */
+  --ink:     #16181d;   /* body text */
+  --muted:   #6b7078;   /* secondary text, mono chrome */
+  --rule:    #e6e6e1;   /* hairlines, borders */
+  --panel:   #f4f4f0;   /* demo console background */
+  --accent:  #1b44cc;   /* links + interactive — an engineer's blue */
+  --accent-ink: #ffffff;
+
+  --font-serif: 'Iowan Old Style', 'Charter', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-mono:  ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+  --font-sans:  system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --measure: 44rem;     /* readable column width */
+  --step:    1.6rem;    /* base vertical rhythm unit */
+
+  color-scheme: light;
+}
+
+/* ---- tokens: dark ---- */
+:root[data-theme='dark'] {
+  --paper:  #0e0f12;
+  --ink:    #e8e8e4;
+  --muted:  #8a8f98;
+  --rule:   #23252b;
+  --panel:  #16181d;
+  --accent: #7e9bff;
+  --accent-ink: #0e0f12;
+  color-scheme: dark;
+}
+
+/* ---- reset (minimal) ---- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { -webkit-text-size-adjust: 100%; }
+img, svg { display: block; max-width: 100%; }
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+/* ---- base ---- */
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap { width: 100%; max-width: var(--measure); margin-inline: auto; padding-inline: 1.25rem; }
+
+/* headings — the human's voice, tightened */
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.9rem, 1.4rem + 2.2vw, 2.7rem); }
+h2 { font-size: 1.5rem; margin-top: calc(var(--step) * 1.6); }
+h3 { font-size: 1.2rem; margin-top: var(--step); }
+p { margin-top: var(--step); }
+strong { font-weight: 600; }
+
+/* the machine's voice — every mono chrome element */
+.mono, nav, .eyebrow, time, .meta, .tag, code, kbd, .console { font-family: var(--font-mono); }
+.eyebrow {
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); display: block; margin-bottom: 0.6rem;
+}
+code {
+  font-size: 0.9em; background: var(--panel); padding: 0.1em 0.35em;
+  border-radius: 3px; border: 1px solid var(--rule);
+}
+pre code { background: none; border: none; padding: 0; }
+pre { overflow-x: auto; padding: var(--step); background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; margin-top: var(--step); }
+hr { border: none; border-top: 1px solid var(--rule); margin: calc(var(--step) * 1.8) 0; }
+
+/* ---- header / footer ---- */
+.site-header { border-bottom: 1px solid var(--rule); }
+.site-header .bar { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-block: 1.1rem; }
+.brand { font-family: var(--font-mono); font-size: 0.95rem; font-weight: 500; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); }
+.brand:hover { color: var(--accent); }
+.nav-links { display: flex; gap: 1.1rem; align-items: baseline; font-size: 0.85rem; }
+.nav-links a { color: var(--muted); text-decoration: none; }
+.nav-links a:hover, .nav-links a[aria-current='page'] { color: var(--ink); }
+
+.site-footer { border-top: 1px solid var(--rule); margin-top: calc(var(--step) * 3); }
+.site-footer .bar { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; padding-block: 1.4rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+.site-footer a { color: var(--muted); text-decoration: none; }
+.site-footer a:hover { color: var(--accent); }
+
+/* theme toggle — a quiet mono glyph button */
+.theme-toggle { font-family: var(--font-mono); font-size: 0.85rem; background: none; border: none; color: var(--muted); cursor: pointer; padding: 0; }
+.theme-toggle:hover { color: var(--ink); }
+
+/* ---- page rhythm ---- */
+main { padding-block: calc(var(--step) * 2); }
+.lede { font-size: 1.35rem; line-height: 1.45; }
+.subtle { color: var(--muted); }
+
+/* ---- lists (writing index, demos) ---- */
+.entry-list { list-style: none; padding: 0; margin-top: var(--step); }
+.entry { padding-block: 1rem; border-top: 1px solid var(--rule); }
+.entry:last-child { border-bottom: 1px solid var(--rule); }
+.entry a { text-decoration: none; color: var(--ink); }
+.entry a:hover .entry-title { text-decoration: underline; text-underline-offset: 2px; }
+.entry-title { font-size: 1.2rem; font-weight: 600; }
+.entry-meta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+.entry-summary { color: var(--muted); margin-top: 0.35rem; }
+.tag { font-size: 0.72rem; color: var(--muted); }
+
+/* ---- demo console (the signature element) ---- */
+.console {
+  border: 1px solid var(--rule); border-radius: 8px; background: var(--panel);
+  margin-top: var(--step); overflow: hidden;
+}
+.console-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+  padding: 0.6rem 0.85rem; border-bottom: 1px solid var(--rule);
+  font-family: var(--font-mono); font-size: 0.74rem; color: var(--muted);
+}
+.console-head .dot { color: var(--accent); }
+.console-body { padding: 0.85rem; }
+.console-out {
+  font-family: var(--font-mono); font-size: 1rem; line-height: 1.7;
+  white-space: pre-wrap; word-break: break-word; min-height: 4.5rem;
+  color: var(--ink);
+}
+.console-out .caret { display: inline-block; width: 0.6ch; background: var(--accent); color: transparent; animation: blink 1.05s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.console-out .placeholder { color: var(--muted); }
+.console-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-top: 0.85rem; }
+.console-controls label { font-family: var(--font-mono); font-size: 0.76rem; color: var(--muted); display: inline-flex; align-items: center; gap: 0.4rem; }
+.console-controls input[type='text'] {
+  font-family: var(--font-mono); font-size: 0.85rem; padding: 0.35rem 0.5rem;
+  background: var(--paper); color: var(--ink); border: 1px solid var(--rule); border-radius: 4px; width: 9ch;
+}
+.console-controls input[type='range'] { accent-color: var(--accent); }
+.btn {
+  font-family: var(--font-mono); font-size: 0.82rem; cursor: pointer;
+  padding: 0.4rem 0.9rem; border-radius: 5px; border: 1px solid var(--accent);
+  background: var(--accent); color: var(--accent-ink);
+}
+.btn:hover { filter: brightness(1.06); }
+.btn.secondary { background: transparent; color: var(--accent); }
+.btn:disabled { opacity: 0.5; cursor: default; filter: none; }
+.console-err { font-family: var(--font-mono); font-size: 0.8rem; color: #c0392b; }
+
+/* ---- prose (post body) ---- */
+.prose h2 a, .prose h3 a { color: inherit; text-decoration: none; }
+.prose ul, .prose ol { margin-top: var(--step); padding-left: 1.4rem; }
+.prose li { margin-top: 0.35rem; }
+.prose blockquote { border-left: 2px solid var(--accent); padding-left: 1rem; margin-top: var(--step); color: var(--muted); font-style: italic; }
+
+@media (prefers-reduced-motion: reduce) {
+  .console-out .caret { animation: none; }
+  * { scroll-behavior: auto; }
+}

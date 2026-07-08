@@ -1,0 +1,14 @@
+---
+import { site } from '../config/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap bar">
+    <span>© {year} {site.title}</span>
+    <a href={site.links.github}>github</a>
+    {site.links.x ? <a href={site.links.x}>x</a> : null}
+    <a href={`${site.url}/rss.xml`}>rss</a>
+    <span class="subtle" style="margin-left:auto">deployed intelligence, statically served</span>
+  </div>
+</footer>

@@ -1,0 +1,33 @@
+---
+import { site } from '../config/site';
+const path = Astro.url.pathname;
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const nav = [
+  { href: '/writing', label: 'writing' },
+  { href: '/demos', label: 'demos' },
+  { href: '/about', label: 'about' },
+];
+---
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/">{site.handle}</a>
+    <nav class="nav-links" aria-label="Primary">
+      {nav.map((n) => (
+        <a href={n.href} aria-current={isActive(n.href) ? 'page' : undefined}>{n.label}</a>
+      ))}
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme">
+        ◐
+      </button>
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    const el = document.documentElement;
+    const next = el.dataset.theme === 'dark' ? 'light' : 'dark';
+    el.dataset.theme = next;
+    localStorage.setItem('theme', next);
+  });
+</script>
