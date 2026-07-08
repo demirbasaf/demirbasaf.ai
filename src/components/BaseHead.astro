@@ -104,9 +104,9 @@ const articleLd = article
 <meta name="twitter:description" content={description} />
 
 <!-- Structured data for search engines and AI agents. -->
-<script type="application/ld+json" set:html={JSON.stringify(personLd)} />
-<script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
-{articleLd ? <script type="application/ld+json" set:html={JSON.stringify(articleLd)} /> : null}
+<script is:inline type="application/ld+json" set:html={JSON.stringify(personLd)} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
+{articleLd ? <script is:inline type="application/ld+json" set:html={JSON.stringify(articleLd)} /> : null}
 
 <!-- Set the theme before first paint to avoid a flash of the wrong colours. -->
 <script is:inline>

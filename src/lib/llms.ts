@@ -23,13 +23,13 @@ const copy = {
       `${org} bünyesinde ${jt}, ${city}, ${country} merkezli. ${desc}`,
     aka: 'Ayrıca şöyle yazılır',
     languages: 'İngilizce ve Türkçe olarak mevcut. Türkçe sürüm /tr/ altında.',
-    entries: 'Girdiler',
+    entries: 'Kayıtlar',
     about: 'Hakkında',
     aboutText: 'kısa biyografi.',
     topics: 'Konular',
     links: 'Bağlantılar',
     jobTitle: 'Kıdemli Yazılım Mühendisi',
-    desc: 'Sistemler ile makine öğreniminin kesiştiği yerde çalışan bir mühendis. Modeller tarayıcında canlı çalışır.',
+    desc: 'Sistemlerle makine öğreniminin kesiştiği yerde çalışan bir mühendis. Modeller tarayıcınızda canlı çalışıyor.',
   },
 } as const;
 

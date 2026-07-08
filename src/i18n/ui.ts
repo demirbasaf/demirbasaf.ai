@@ -35,26 +35,26 @@ export const ui = {
     langName: 'Türkçe',
     meta: {
       description:
-        'Sistemler ile makine öğreniminin kesiştiği yerde çalışan bir mühendis. Bir şeyler kurup herkese açıyorum: canlı modeller, yazılar ve ardındaki defterler.',
+        "Sistemlerle makine öğreniminin kesiştiği yerde çalışan bir mühendis. Yaptıklarını herkese açıyor: canlı modeller, yazılar ve arkalarındaki notebook'lar.",
     },
     home: {
       thesis:
-        'Ölçekte deterministik sistemler kuruyorum; artık deterministik olmayanları konuşlandıran ve dizginleyen sistemleri de.',
+        'Büyük ölçekte deterministik sistemler kuruyorum. Şimdi de deterministik olmayanları konuşlandırıp dizginleyen sistemleri.',
     },
     entry: {
       wip: 'wip',
-      repo: 'depo',
-      notebook: 'defter',
-      overview: 'genel',
+      repo: 'repo',
+      notebook: 'notebook',
+      overview: 'genel bakış',
       demo: 'demo',
       back: 'ana sayfa',
     },
     about: {
       label: 'hakkında',
-      p1a: 'Lisbon merkezli, ',
-      p1b: "'de kıdemli bir yazılım mühendisiyim. Altı yıldır ölçekte deterministik sistemler kurdum: ödemeler ve yüksek yüklü dağıtık arka uçlar; yük altında doğru çalışmak işin ta kendisi.",
-      p2: 'Şimdi sistemler ve makine öğreniminin kesişiminde çalışıyorum: konuşlandırılmış zekânın mühendisliği, yani modelleri üretimde güvenilir, hızlı ve ucuz kılmak. Bu site, herkesin gözü önünde inşa ettiğim yer. Buradaki modeller tarayıcında canlı çalışır, onları üreten yazıların ve defterlerin yanında.',
-      variants: 'Furkan Demirbaş olarak da yazılır; aksan işaretleri olmadan Ali Furkan Demirbas.',
+      p1a: '',
+      p1b: "'de kıdemli yazılım mühendisiyim, Lizbon'da yaşıyorum. Altı yıldır büyük ölçekte deterministik sistemler kuruyorum: ödemeler, yüksek yüklü dağıtık backend'ler. İşin tamamı şu: yük altında da doğru çalışmak.",
+      p2: "Artık sistemlerle makine öğreniminin kesişiminde çalışıyorum: konuşlandırılmış zekânın mühendisliği, yani modelleri üretimde güvenilir, hızlı ve ucuz tutmak. Bu site, işleri gözler önünde yaptığım yer. Buradaki modeller tarayıcınızda canlı çalışıyor, hemen yanlarında da onları üreten yazılar ve notebook'lar.",
+      variants: 'Furkan Demirbaş diye de yazılır, Türkçe karakterler olmadan Ali Furkan Demirbas.',
     },
   },
 } as const;
