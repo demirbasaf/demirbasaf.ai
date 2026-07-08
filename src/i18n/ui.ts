@@ -15,6 +15,7 @@ export const ui = {
       thesis:
         'I build deterministic systems at scale, and now the systems that deploy and contain the non-deterministic ones.',
     },
+    work: { label: 'work' },
     entry: {
       wip: 'wip',
       repo: 'repo',
@@ -26,7 +27,7 @@ export const ui = {
     about: {
       label: 'bio',
       p1a: "I'm a senior software engineer at ",
-      p1b: ', based in Lisbon. For six years I have built deterministic systems at scale: payments and high-load distributed backends, where being correct under load is the whole job.',
+      p1b: ', based in Lisbon. For years I have built deterministic systems at scale: payments and high-load distributed backends, where being correct under load is the whole job.',
       p2: 'I am now working at the intersection of systems and ML, the engineering of deployed intelligence: making models reliable, fast, and cheap in production. This site is where I build in public. The models here run live, in your browser, next to the writeups and notebooks that produced them.',
     },
   },
@@ -42,6 +43,7 @@ export const ui = {
       thesis:
         'Büyük ölçekte deterministik sistemler kuruyorum. Şimdi de deterministik olmayanları konuşlandırıp dizginleyen sistemleri.',
     },
+    work: { label: 'deneyim' },
     entry: {
       wip: 'wip',
       repo: 'repo',

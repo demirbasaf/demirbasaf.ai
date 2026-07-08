@@ -1,0 +1,30 @@
+---
+import { timeline } from '../../config/timeline';
+import { useTranslations } from '../../i18n/ui';
+import type { Lang } from '../../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section style="margin-top:2.6rem">
+  <span class="eyebrow">{t.work.label}</span>
+  <div class="timeline">
+    {timeline.map((item) => (
+      <div class="timeline-row">
+        <div class="timeline-years">{item.years}</div>
+        <div class="timeline-desc">
+          {item.url ? (
+            <a href={item.url}><strong>{item.org}</strong></a>
+          ) : (
+            <strong>{item.org}</strong>
+          )}{' '}
+          {item.desc[lang]}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

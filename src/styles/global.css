@@ -130,6 +130,19 @@ main { padding-block: calc(var(--step) * 2); }
   color: var(--accent); border: 1px solid var(--accent);
 }
 
+/* ---- work timeline ---- */
+.timeline { margin-top: 0.9rem; }
+.timeline-row { display: grid; grid-template-columns: 6rem 1fr; gap: 0.3rem 1.1rem; padding-block: 0.85rem; border-top: 1px solid var(--rule); }
+.timeline-row:last-child { border-bottom: 1px solid var(--rule); }
+.timeline-years { font-family: var(--font-mono); font-size: 0.76rem; color: var(--muted); padding-top: 0.22rem; white-space: nowrap; }
+.timeline-desc { font-size: 1rem; line-height: 1.55; }
+.timeline-desc a { text-decoration: none; }
+.timeline-desc a strong { color: var(--ink); }
+.timeline-desc a:hover strong { color: var(--accent); }
+@media (max-width: 34rem) {
+  .timeline-row { grid-template-columns: 1fr; gap: 0.15rem; padding-block: 0.7rem; }
+}
+
 /* ---- demo console (the signature element) ---- */
 .console {
   border: 1px solid var(--rule); border-radius: 8px; background: var(--panel);
