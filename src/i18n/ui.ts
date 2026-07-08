@@ -11,10 +11,6 @@ export const ui = {
       description:
         'Systems engineer working where systems meet ML. Building things and making them public: live models, writeups, and the notebooks behind them.',
     },
-    home: {
-      thesis:
-        'I build deterministic systems at scale, and now the systems that deploy and contain the non-deterministic ones.',
-    },
     work: { label: 'work' },
     entry: {
       wip: 'wip',
@@ -38,10 +34,6 @@ export const ui = {
     meta: {
       description:
         "Sistemlerle ML'in kesiştiği yerde çalışan bir sistem mühendisi. Yaptığı her şey ortada: canlı modeller, yazılar ve arkalarındaki notebook'lar.",
-    },
-    home: {
-      thesis:
-        'Büyük ölçekte deterministik sistemler kuruyorum. Şimdi de deterministik olmayanları konuşlandırıp zapt eden sistemleri.',
     },
     work: { label: 'deneyim' },
     entry: {
