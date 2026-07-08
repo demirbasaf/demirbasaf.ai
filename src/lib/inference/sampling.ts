@@ -5,7 +5,7 @@
 // ---------------------------------------------------------------------------
 
 /**
- * mulberry32 — a tiny, fast, deterministic PRNG.
+ * mulberry32 - a tiny, fast, deterministic PRNG.
  * Seed it and you get the same stream of numbers every time, which is what
  * makes "reproducible with a fixed seed" work.
  */
@@ -28,10 +28,10 @@ export interface SampleOpts {
 
 /**
  * Draw one index from `logits`. Four steps, in order:
- *   1. temperature — divide logits by T. T<1 sharpens (greedier), T>1 flattens.
- *   2. top-k       — optionally keep only the k highest logits, drop the rest.
- *   3. softmax     — exponentiate (numerically stabilised) and normalise to probs.
- *   4. multinomial — walk the cumulative distribution past one uniform draw.
+ *   1. temperature - divide logits by T. T<1 sharpens (greedier), T>1 flattens.
+ *   2. top-k       - optionally keep only the k highest logits, drop the rest.
+ *   3. softmax     - exponentiate (numerically stabilised) and normalise to probs.
+ *   4. multinomial - walk the cumulative distribution past one uniform draw.
  */
 export function sampleLogits(logits: ArrayLike<number>, opts: SampleOpts): number {
   const n = logits.length;

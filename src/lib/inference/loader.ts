@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // Loads model artifacts from /public/models/<name>/ over plain fetch().
-// These are static files — no server, no API. That's the whole point.
+// These are static files - no server, no API. That's the whole point.
 // ---------------------------------------------------------------------------
 import type { ModelMeta, Tensor } from './types';
 

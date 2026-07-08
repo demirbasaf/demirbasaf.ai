@@ -1,11 +1,11 @@
 // ---------------------------------------------------------------------------
 // Generates the PLACEHOLDER model artifact so the site has a working, name-ish
 // demo before your real model exists. It trains a character-level *bigram* by
-// counting letter pairs in a small embedded list of Turkish names — no PyTorch,
+// counting letter pairs in a small embedded list of Turkish names - no PyTorch,
 // no deps, runs in plain Node:  `npm run placeholder`.
 //
 // When your real model is ready, run scripts/export_model.py instead and drop
-// its output into public/models/turkish-makemore/ — no code changes needed.
+// its output into public/models/turkish-makemore/ - no code changes needed.
 // ---------------------------------------------------------------------------
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';

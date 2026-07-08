@@ -5,7 +5,7 @@
 // deploy (Cloudflare Pages caps files at 25 MiB), we load it from a CDN *at
 // runtime*, only when a demo actually declares `"backend": "onnx"`. The tiny
 // char-LM demos never touch it, so they pay nothing. `import type` below is
-// erased at build time — no runtime dependency ends up in the bundle.
+// erased at build time - no runtime dependency ends up in the bundle.
 //
 // Contract assumed of the exported graph (see scripts/export_model.py):
 //   input : int64 tensor named "input",  shape [1, block_size]
@@ -24,7 +24,7 @@ const ORT_CDN = `https://cdn.jsdelivr.net/npm/onnxruntime-web@${ORT_VERSION}/dis
 
 export class OnnxEngine implements InferenceEngine {
   readonly meta: ModelMeta;
-  readonly paramCount = 0; // not recoverable from the graph; shown as "—"
+  readonly paramCount = 0; // not recoverable from the graph; shown as "-"
   private ort: typeof Ort;
   private session: Ort.InferenceSession;
 
@@ -36,7 +36,7 @@ export class OnnxEngine implements InferenceEngine {
 
   static async create(meta: ModelMeta, name: string): Promise<OnnxEngine> {
     // Load the ESM build straight from the CDN. @vite-ignore keeps the bundler
-    // from trying to resolve/inline it — it stays a runtime fetch.
+    // from trying to resolve/inline it - it stays a runtime fetch.
     const ort = (await import(/* @vite-ignore */ `${ORT_CDN}ort.min.mjs`)) as typeof Ort;
     // Tell the runtime to fetch its WASM binaries from the same CDN folder.
     ort.env.wasm.wasmPaths = ORT_CDN;

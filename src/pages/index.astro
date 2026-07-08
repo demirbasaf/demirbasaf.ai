@@ -11,12 +11,12 @@ const posts = (await getCollection('posts', ({ data }) => !data.draft))
 ---
 
 <Base>
-  <!-- Hero: the thesis, then immediate proof — a model running live. -->
+  <!-- Hero: the thesis, then immediate proof, a model running live. -->
   <section>
     <span class="eyebrow">engineer of deployed intelligence</span>
     <h1>{site.thesis}</h1>
     <p class="lede subtle">
-      Six years of payments and distributed systems, now pointed at the model side —
+      Six years of payments and distributed systems, now pointed at the model side,
       making inference reliable, fast, and cheap where it runs.
     </p>
     <p class="mono" style="font-size:0.85rem; margin-top:1.2rem;">
@@ -30,7 +30,7 @@ const posts = (await getCollection('posts', ({ data }) => !data.draft))
     <section>
       <span class="eyebrow" style="margin-top:2.6rem">live · {featuredDemo.title}</span>
       <p class="subtle" style="margin-top:0.2rem">{featuredDemo.blurb}</p>
-      <!-- client:load — the front door itself runs the model, no server. -->
+      <!-- client:load. The front door itself runs the model, no server. -->
       <ModelDemo name={featuredDemo.name} client:load />
       <p class="mono" style="font-size:0.8rem; margin-top:0.6rem;">
         <a href="/demos">all demos →</a>

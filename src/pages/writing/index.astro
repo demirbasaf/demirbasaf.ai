@@ -10,7 +10,7 @@ const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
 <Base title="writing" description="Notes on systems, ML, and deploying models.">
   <span class="eyebrow">writing</span>
   <h1>Writing</h1>
-  <p class="subtle">Building in public — training notes, systems writeups, and the demos they produced.</p>
+  <p class="subtle">Building in public: training notes, systems writeups, and the demos they produced.</p>
 
   {posts.length ? (
     <ul class="entry-list">

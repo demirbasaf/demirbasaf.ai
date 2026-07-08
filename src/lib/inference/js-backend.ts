@@ -1,9 +1,9 @@
 // ---------------------------------------------------------------------------
 // The "js" backend: the forward pass, in plain TypeScript, for tiny models.
-// No dependencies, no WASM — just a few array loops you can read top to bottom.
+// No dependencies, no WASM - just a few array loops you can read top to bottom.
 // Supports two architectures, selected by meta.arch:
 //   - 'bigram': next token depends only on the previous one (a V×V table).
-//   - 'mlp'   : Bengio-style — embed a context window, one tanh hidden layer,
+//   - 'mlp'   : Bengio-style - embed a context window, one tanh hidden layer,
 //               then project to vocab logits. (Karpathy's makemore, part 2.)
 // ---------------------------------------------------------------------------
 import type { GenerateOptions, InferenceEngine, ModelMeta, Tensor } from './types';

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-export_model.py — the bridge from a trained PyTorch char-LM to a live browser demo.
+export_model.py - the bridge from a trained PyTorch char-LM to a live browser demo.
 
 It writes a model artifact folder that <ModelDemo> can serve with no code changes:
 

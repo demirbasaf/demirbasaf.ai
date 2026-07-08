@@ -17,7 +17,7 @@ export const demos: DemoEntry[] = [
     name: 'turkish-makemore',
     title: 'Turkish makemore',
     blurb:
-      'A character-level model that dreams up Turkish names one letter at a time — inference runs entirely in your browser.',
+      'A character-level model that dreams up Turkish names one letter at a time. Inference runs entirely in your browser.',
     status: 'live',
     featured: true,
     notebook: 'https://github.com/demirbasaf',

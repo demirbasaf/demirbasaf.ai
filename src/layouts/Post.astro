@@ -10,7 +10,7 @@ const { title, date, summary, tags, notebook } = post.data;
 const dateStr = date.toISOString().slice(0, 10);
 ---
 
-<Base title={title} description={summary}>
+<Base title={title} description={summary} article={{ publishedTime: date, tags }}>
   <article class="prose">
     <header>
       <span class="eyebrow">writing</span>

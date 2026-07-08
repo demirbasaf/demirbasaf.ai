@@ -1,6 +1,6 @@
 /** @jsxImportSource preact */
-// A thin UI shell around the inference engine. All the ML — loading weights,
-// the forward pass, sampling — lives in src/lib/inference/*. This component only
+// A thin UI shell around the inference engine. All the ML - loading weights,
+// the forward pass, sampling - lives in src/lib/inference/*. This component only
 // wires an input, a temperature slider and a Generate button to engine.generate()
 // and streams the result into the console output.
 import { useEffect, useRef, useState } from 'preact/hooks';

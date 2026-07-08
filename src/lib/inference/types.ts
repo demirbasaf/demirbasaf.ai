@@ -3,7 +3,7 @@
 // A demo is just a folder under /public/models/<name>/ containing:
 //   - meta.json     (this ModelMeta, minus the weights)
 //   - weights.json  (js backend)  OR  model.onnx (onnx backend)
-// <ModelDemo> reads meta.json and renders itself — no per-model code.
+// <ModelDemo> reads meta.json and renders itself - no per-model code.
 // ---------------------------------------------------------------------------
 
 /** Which inference path runs in the browser. */
@@ -56,7 +56,7 @@ export interface GenerateOptions {
 
 /**
  * One interface, any backend. Callers `for await` over generate() and get the
- * output token-by-token as it is sampled — that is the "streaming" you see.
+ * output token-by-token as it is sampled - that is the "streaming" you see.
  */
 export interface InferenceEngine {
   readonly meta: ModelMeta;

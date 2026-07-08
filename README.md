@@ -1,7 +1,7 @@
 # demirbasaf.ai
 
 A fast, static, content-first site for writing in public and hosting **ML models
-that run live in the browser** — no inference server, no per-request cost.
+that run live in the browser** - no inference server, no per-request cost.
 
 Built with [Astro](https://astro.build) (static output), TypeScript, and a few
 dozen lines of hand-written CSS. The models and the writing are the point; the
@@ -26,13 +26,13 @@ scripts/
   make_placeholder.mjs     builds the placeholder bigram from Turkish names (Node)
   export_model.py          PyTorch -> artifact bridge (JSON weights AND ONNX)
 src/
-  lib/inference/           ★ the legible serving path — plain, commented TS
+  lib/inference/           ★ the legible serving path - plain, commented TS
     types.ts               the artifact + engine contract
     loader.ts              fetch meta.json / weights.json
     sampling.ts            temperature -> top-k -> softmax -> multinomial draw
     js-backend.ts          bigram + MLP forward pass (no deps)
     onnx-backend.ts        onnxruntime-web via CDN, lazy (for bigger models)
-    index.ts               createEngine(name) — picks the backend
+    index.ts               createEngine(name) - picks the backend
   components/ModelDemo.tsx  thin Preact UI shell around an engine
   config/
     site.ts                identity + links (edit here, not in templates)
@@ -54,8 +54,8 @@ title: My post title
 date: 2026-07-20
 summary: One sentence shown in lists and meta tags.
 tags: [ml, systems]
-notebook: https://colab.research.google.com/...   # optional — repo / Colab / nbviewer
-draft: false                                       # optional — hides it while true
+notebook: https://colab.research.google.com/...   # optional - repo / Colab / nbviewer
+draft: false                                       # optional - hides it while true
 ---
 
 import ModelDemo from '../../components/ModelDemo.tsx';
@@ -77,7 +77,7 @@ It appears on `/writing` and the home page automatically, sorted by date.
    { name: '<name>', title: '…', blurb: '…', status: 'live', notebook: '…' }
    ```
 
-`<ModelDemo name="<name>" />` renders entirely from `meta.json` — no per-model code.
+`<ModelDemo name="<name>" />` renders entirely from `meta.json` - no per-model code.
 
 ### The artifact contract (`meta.json`)
 
@@ -120,7 +120,7 @@ python scripts/export_model.py --name my-gpt --checkpoint runs/gpt.pt \
   --vocab runs/vocab.txt --block-size 16 --format onnx
 ```
 
-It writes straight into `public/models/<name>/`. Reload — the demo lights up with
+It writes straight into `public/models/<name>/`. Reload - the demo lights up with
 no code changes. See the module docstring in `scripts/export_model.py` for the
 parameter-shape contract and the ONNX input/output names.
 
@@ -128,7 +128,7 @@ parameter-shape contract and the ONNX input/output names.
 
 ## Deploy
 
-Static output in `dist/` — host it anywhere.
+Static output in `dist/` - host it anywhere.
 
 **Cloudflare Pages (recommended):** connect the repo; build command `npm run build`,
 output directory `dist`. Add `demirbasaf.ai` under the project's Custom Domains.
@@ -137,7 +137,7 @@ output directory `dist`. Add `demirbasaf.ai` under the project's Custom Domains.
 
 **GitHub Pages:** works too (`site` is set, no `base` needed for a custom domain).
 
-> Note: the ONNX runtime is **not** bundled — the `onnx` backend fetches
+> Note: the ONNX runtime is **not** bundled - the `onnx` backend fetches
 > onnxruntime-web from a CDN on demand, keeping every deploy tiny and under
 > Cloudflare's 25 MiB per-file limit. If you need fully offline/self-hosted ONNX,
 > copy the `onnxruntime-web/dist` files into `public/` and point

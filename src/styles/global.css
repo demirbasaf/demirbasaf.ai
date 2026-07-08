@@ -1,20 +1,20 @@
 /* ===========================================================================
-   demirbasaf.ai — design tokens + minimal hand CSS.
+   demirbasaf.ai - design tokens + minimal hand CSS.
 
    Concept: two voices.
-     · The HUMAN writes in serif  — prose, headings, the thesis.
-     · The MACHINE speaks in mono — nav, labels, dates, model output, code.
+     · The HUMAN writes in serif  - prose, headings, the thesis.
+     · The MACHINE speaks in mono - nav, labels, dates, model output, code.
    Everything else stays quiet so the writing and the live demos carry the page.
    =========================================================================== */
 
 /* ---- tokens: light (default) ---- */
 :root {
-  --paper:   #fbfbf9;   /* near-white, faintly warm — not cream */
+  --paper:   #fbfbf9;   /* near-white, faintly warm - not cream */
   --ink:     #16181d;   /* body text */
   --muted:   #6b7078;   /* secondary text, mono chrome */
   --rule:    #e6e6e1;   /* hairlines, borders */
   --panel:   #f4f4f0;   /* demo console background */
-  --accent:  #1b44cc;   /* links + interactive — an engineer's blue */
+  --accent:  #1b44cc;   /* links + interactive - an engineer's blue */
   --accent-ink: #ffffff;
 
   --font-serif: 'Iowan Old Style', 'Charter', 'Palatino Linotype', Palatino, Georgia, serif;
@@ -62,7 +62,7 @@ body {
 
 .wrap { width: 100%; max-width: var(--measure); margin-inline: auto; padding-inline: 1.25rem; }
 
-/* headings — the human's voice, tightened */
+/* headings - the human's voice, tightened */
 h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }
 h1 { font-size: clamp(1.9rem, 1.4rem + 2.2vw, 2.7rem); }
 h2 { font-size: 1.5rem; margin-top: calc(var(--step) * 1.6); }
@@ -70,7 +70,7 @@ h3 { font-size: 1.2rem; margin-top: var(--step); }
 p { margin-top: var(--step); }
 strong { font-weight: 600; }
 
-/* the machine's voice — every mono chrome element */
+/* the machine's voice - every mono chrome element */
 .mono, nav, .eyebrow, time, .meta, .tag, code, kbd, .console { font-family: var(--font-mono); }
 .eyebrow {
   font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
@@ -98,7 +98,7 @@ hr { border: none; border-top: 1px solid var(--rule); margin: calc(var(--step) *
 .site-footer a { color: var(--muted); text-decoration: none; }
 .site-footer a:hover { color: var(--accent); }
 
-/* theme toggle — a quiet mono glyph button */
+/* theme toggle - a quiet mono glyph button */
 .theme-toggle { font-family: var(--font-mono); font-size: 0.85rem; background: none; border: none; color: var(--muted); cursor: pointer; padding: 0; }
 .theme-toggle:hover { color: var(--ink); }
 
