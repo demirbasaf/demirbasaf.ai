@@ -24,8 +24,8 @@ export const ui = {
     about: {
       label: 'bio',
       p1a: "I'm a senior software engineer at ",
-      p1b: ', based in Lisbon. For years I have built deterministic systems at scale: payments and high-load distributed backends, where being correct under load is the whole job.',
-      p2: 'I am now working at the intersection of systems and ML, the engineering of deployed intelligence: making models reliable, fast, and cheap in production. This site is where I build in public. The models here run live, in your browser, next to the writeups and notebooks that produced them.',
+      p1b: ', based in Lisbon. For years I have built deterministic systems at scale: payments and high-load distributed backends.',
+      p2: 'I am now working at the intersection of systems and ML: making models reliable, fast, and cheap in production. This site is where I build in public: you can run the models live, right in your browser.',
     },
   },
 
@@ -49,8 +49,8 @@ export const ui = {
     about: {
       label: 'hakkında',
       p1a: '',
-      p1b: "'de kıdemli yazılım mühendisiyim, Lizbon'dayım. Yıllardır büyük ölçekte deterministik sistemler kuruyorum: ödemeler ve yüksek trafikli dağıtık backend'ler. İşin tamamı zaten bu: yük altında doğru kalmak.",
-      p2: "Artık sistemlerle ML'in kesişiminde, konuşlandırılmış zekânın mühendisliğinde çalışıyorum: modelleri üretimde güvenilir, hızlı ve ucuz kılmak. Bu site, işi göz önünde yaptığım yer. Buradaki modeller tarayıcınızda canlı çalışıyor, hemen yanlarında da onları üreten yazılar ve notebook'lar var.",
+      p1b: "'de kıdemli yazılım mühendisiyim, Lizbon'da yaşıyorum. Yıllardır büyük ölçekli deterministik sistemler geliştiriyorum: ödeme sistemleri, yüksek trafikli dağıtık backend'ler.",
+      p2: "Şu an sistemlerle ML'in kesiştiği yerde çalışıyorum: modelleri production'da güvenilir, hızlı ve ucuza çalışır hale getirmek. Bu sitede yaptıklarımı olduğu gibi paylaşıyorum: modelleri doğrudan tarayıcınızda çalıştırabilirsiniz.",
     },
   },
 } as const;

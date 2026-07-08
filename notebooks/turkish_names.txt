@@ -1,4 +1,3 @@
-ab
 abaca
 abacan
 abad
@@ -194,7 +193,6 @@ acunman
 acunseven
 acunışık
 acıdaş
-ad
 adahan
 adak
 adal
@@ -296,7 +294,6 @@ ahıska
 aişe
 ajda
 ajlan
-ak
 akabay
 akabe
 akabey
@@ -759,7 +756,6 @@ alıncak
 alışan
 alışık
 alışın
-am
 amade
 amanullah
 amaç
@@ -927,7 +923,6 @@ arıyüz
 arıç
 arığ
 arış
-as
 asaf
 asal
 asalbegim
@@ -973,7 +968,6 @@ asılgül
 asım
 asıma
 asıye
-at
 ata
 ataan
 atabay
@@ -1064,7 +1058,6 @@ avnullah
 avunç
 avvad
 avşar
-ay
 ayaba
 ayal
 ayalp
@@ -1685,7 +1678,6 @@ baştugay
 baştuğ
 baştürk
 başöz
-be
 bedahşan
 bedayi
 bedel
@@ -2567,7 +2559,6 @@ dağaşan
 dağdelen
 dağhan
 dağtekin
-de
 dede
 define
 defne
@@ -3163,7 +3154,6 @@ ensari
 ensarullah
 envar
 enver
-er
 eracar
 erakalın
 eraksan
@@ -3577,7 +3567,6 @@ ezrak
 eğilmez
 eğin
 eğrek
-eş
 eşay
 eşca
 eşfak
@@ -5286,7 +5275,6 @@ jeyan
 jiyan
 julide
 jülide
-ka
 kaan
 kabadayı
 kaban
@@ -5632,7 +5620,6 @@ keşfi
 keşfiye
 keşif
 keşşaf
-ki
 kibar
 kibare
 kibariye
@@ -5961,7 +5948,6 @@ kızıltuğ
 kızılyalım
 kızılözen
 kızımay
-la
 lacerem
 lahib
 lahik
@@ -6577,7 +6563,6 @@ muzi
 muğdat
 muştu
 muştubey
-mü
 mübahat
 mübarek
 mübareke
@@ -6858,7 +6843,6 @@ naşide
 naşir
 naşire
 naşit
-ne
 neba
 nebahaddin
 nebahat
@@ -7011,7 +6995,6 @@ neşide
 neşit
 neşterin
 neşve
-ni
 nida
 nidai
 nigah
@@ -7245,10 +7228,7 @@ oğuztüzün
 oğuç
 oğuş
 oırtaç
-re
-si
 son
-uv
 çaba
 çabar
 çadır
@@ -7522,7 +7502,6 @@ uv
 ıtri
 ıtır
 ığıl
-ıı
 ışkın
 ışık
 ışıkal
