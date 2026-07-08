@@ -17,10 +17,6 @@ export interface EducationItem {
   publications?: Publication[];
 }
 
-// Author profile, used as a fallback link.
-export const researchGate =
-  'https://www.researchgate.net/scientific-contributions/Ali-Furkan-Demirbas-2207573792';
-
 export const education: EducationItem[] = [
   {
     years: '2016 - 2020',
@@ -41,16 +37,16 @@ export const education: EducationItem[] = [
     // Co-authored with Prof. Rodoplu. Newest first.
     publications: [
       {
-        // 2022 conference paper. No stable direct link found; points to profile.
+        // 2022 conference paper.
         title:
           'Network Failure and Anomaly Prediction to Achieve Quality of Service on Software-Defined Networks',
-        url: researchGate,
+        url: 'https://www.researchgate.net/publication/365100890_Network_Failure_and_Anomaly_Prediction_to_Achieve_Quality_of_Service_QoS_on_Software-Defined_Networks',
       },
       {
-        // 2021, IEEE PIMRC.
+        // 2021 conference paper.
         title:
           'LEAN: A Multi-Cell Smart City Simulator for the Massive Internet of Things Medium Access Control Layer',
-        url: 'https://ieeexplore.ieee.org/document/9599066',
+        url: 'https://www.researchgate.net/publication/356364253_LEAN_A_Multi-Cell_Smart_City_Simulator_for_the_Massive_Internet_of_Things_Medium_Access_Control_Layer',
       },
     ],
   },
