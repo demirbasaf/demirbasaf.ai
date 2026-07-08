@@ -132,7 +132,7 @@ main { padding-block: calc(var(--step) * 2); }
 
 /* ---- work timeline ---- */
 .timeline { margin-top: 0.9rem; }
-.timeline-row { display: flex; gap: 0.9rem; align-items: flex-start; padding-block: 0.9rem; border-top: 1px solid var(--rule); }
+.timeline-row { display: flex; gap: 0.9rem; align-items: center; padding-block: 0.9rem; border-top: 1px solid var(--rule); }
 .timeline-row:last-child { border-bottom: 1px solid var(--rule); }
 .timeline-logo { flex: none; width: 2.4rem; height: 2.4rem; border-radius: 6px; object-fit: contain; background: #fff; border: 1px solid var(--rule); padding: 3px; }
 .timeline-logo-empty { background: var(--panel); }
