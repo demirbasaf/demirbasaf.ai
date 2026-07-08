@@ -49,7 +49,7 @@ export const ui = {
     about: {
       label: 'hakkında',
       p1a: '',
-      p1b: "'de kıdemli yazılım mühendisiyim, Lizbon'da yaşıyorum. Yıllardır büyük ölçekli deterministik sistemler geliştiriyorum: ödeme sistemleri, yüksek trafikli dağıtık backend'ler.",
+      p1b: "'de yazılım mühendisi olarak çalışıyorum, Lizbon'da yaşıyorum. Yıllardır büyük ölçekli deterministik sistemler geliştiriyorum: ödeme sistemleri, yüksek trafikli dağıtık backend'ler.",
       p2: "Şu an sistemlerle ML'in kesiştiği yerde çalışıyorum: modelleri production'da güvenilir, hızlı ve ucuza çalışır hale getirmek. Bu sitede yaptıklarımı olduğu gibi paylaşıyorum: modelleri doğrudan tarayıcınızda çalıştırabilirsiniz.",
     },
   },
