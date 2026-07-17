@@ -1,0 +1,9 @@
+[
+  {
+    "name": "turkish-makemore",
+    "repo": "demirbasaf/turkish-makemore",
+    "ref": "main",
+    "path": "model",
+    "local": "../turkish-makemore"
+  }
+]

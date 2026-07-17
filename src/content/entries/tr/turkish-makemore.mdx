@@ -1,0 +1,29 @@
+---
+title: Turkish makemore — tarayıcında bir isim üreteci
+lang: tr
+date: 2026-07-17
+summary: Sıfırdan eğittiğim, Türkçe kadın isimleri uyduran karakter seviyesinde bir MLP — kendi repo'sundan yüklenip tarayıcında canlı çalışıyor.
+tags: [ml, char-lm, makemore]
+status: done
+repo: https://github.com/demirbasaf/turkish-makemore
+demo: turkish-makemore
+notebook: https://github.com/demirbasaf/turkish-makemore/blob/main/train/exploration.ipynb
+draft: false
+---
+
+Yukarıdaki model gerçek. Karakter seviyesinde minik bir MLP — [Karpathy'nin
+*makemore* ikinci bölümü](https://github.com/karpathy/makemore), Bengio-2003 tarzı
+sinirsel bir n-gram — ve onu ~560 Türkçe isim üzerinde sıfırdan eğittim. Önceki
+üç karaktere bakıyor, onları gömüyor, tek bir `tanh` gizli katmandan geçiriyor ve
+isim bitene kadar sıradaki karakteri örnekliyor.
+
+Tamamı **4.234 parametre**; 90 KB'lık bir JSON dosyası olarak taşınacak ve ileri
+geçişi birkaç satır sade JavaScript ile çalıştırılacak kadar küçük — sunucu yok,
+API yok, çıkarım maliyeti yok. "generate"e bas, örnekleme döngüsü senin cihazında
+dönüyor.
+
+İsimlerin *biçimini* karakter karakter öğrendi: ünlü uyumu, `-an` ve `-el` gibi
+ekler, `ç ğ ı ö ş ü` harfleri. Bu kadar az isimle eğitildiği için küçük ve biraz
+gürültülü bir model — ki bütün mesele bu: şeffaf.
+[Repo'da](https://github.com/demirbasaf/turkish-makemore) eğitim kodu, eğitilmiş
+ağırlıklar ve tarayıcı demosu var; bu site yalnızca o çıktıyı yüklüyor.

@@ -5,6 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
+    "sync": "node scripts/sync-models.mjs",
+    "predev": "node scripts/sync-models.mjs",
+    "prebuild": "node scripts/sync-models.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
