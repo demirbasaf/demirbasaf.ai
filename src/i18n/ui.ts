@@ -13,6 +13,7 @@ export const ui = {
     },
     work: { label: 'work' },
     education: { label: 'education' },
+    entries: { label: 'projects' },
     entry: {
       wip: 'wip',
       repo: 'repo',
@@ -38,6 +39,7 @@ export const ui = {
     },
     work: { label: 'deneyim' },
     education: { label: 'eğitim' },
+    entries: { label: 'projeler' },
     entry: {
       wip: 'wip',
       repo: 'repo',

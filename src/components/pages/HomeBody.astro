@@ -25,7 +25,9 @@ const p = (path: string) => localizePath(lang, path);
 
 <EducationSection lang={lang} />
 
-<ul class="entry-list" style="margin-top:2.8rem">
+<section style="margin-top:2.6rem">
+  <span class="eyebrow">{t.entries.label}</span>
+  <ul class="entry-list" style="margin-top:0">
   {entries.map((e) => (
     <li class="entry">
       <a href={p(`/${bareSlug(e)}/`)}>
@@ -41,4 +43,5 @@ const p = (path: string) => localizePath(lang, path);
       </a>
     </li>
   ))}
-</ul>
+  </ul>
+</section>
