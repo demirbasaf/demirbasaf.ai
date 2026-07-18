@@ -18,7 +18,6 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export default function ModelDemo({ name, title }: Props) {
   const [meta, setMeta] = useState<ModelMeta | null>(null);
-  const [params, setParams] = useState<number>(0);
   const [error, setError] = useState<string | null>(null);
   const [out, setOut] = useState('');
   const [running, setRunning] = useState(false);
@@ -35,7 +34,6 @@ export default function ModelDemo({ name, title }: Props) {
         if (!alive) return;
         engineRef.current = engine;
         setMeta(engine.meta);
-        setParams(engine.paramCount);
         setTemp(engine.meta.sampling.temperature);
       })
       .catch((e) => alive && setError(e?.message ?? String(e)));
@@ -74,17 +72,8 @@ export default function ModelDemo({ name, title }: Props) {
     setRunning(false);
   }
 
-  const paramLabel = params > 0 ? `${params.toLocaleString()} params` : 'onnx graph';
-
   return (
     <div class="console" role="group" aria-label={title ?? `${name} demo`}>
-      <div class="console-head">
-        <span>
-          <span class="dot">●</span>{' '}
-          {meta ? `${meta.backend} · ${meta.arch ?? 'onnx'} · ${paramLabel}` : 'loading model…'}
-        </span>
-        <span>in-browser</span>
-      </div>
       <div class="console-body">
         {title ? <strong>{title}</strong> : null}
 

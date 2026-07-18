@@ -28,7 +28,6 @@ const p = (x: string) => localizePath(lang, x);
       </h1>
       <p class="entry-meta">
         <time datetime={dateStr}>{dateStr}</time>
-        {tags.length ? <span> · {tags.join(' · ')}</span> : null}
         {repo ? <span> · <a href={repo}>{t.entry.repo} ↗</a></span> : null}
         {notebook ? <span> · <a href={notebook}>{t.entry.notebook} ↗</a></span> : null}
       </p>

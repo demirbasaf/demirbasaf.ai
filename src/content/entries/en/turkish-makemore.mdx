@@ -1,8 +1,8 @@
 ---
-title: Turkish makemore — a name generator in your browser
+title: Turkish makemore
 lang: en
 date: 2026-07-17
-summary: A character-level MLP, trained from scratch, that invents Turkish first names — running live in your browser, loaded straight from its own repo.
+summary: A character-level MLP that invents Turkish first names, running live in your browser.
 tags: [ml, char-lm, makemore]
 status: done
 repo: https://github.com/demirbasaf/turkish-makemore
@@ -11,19 +11,13 @@ notebook: https://github.com/demirbasaf/turkish-makemore/blob/main/train/explora
 draft: false
 ---
 
-The model above is real. It's a tiny character-level MLP — [Karpathy's *makemore*
-part 2](https://github.com/karpathy/makemore), a Bengio-2003 style neural n-gram —
-that I trained from scratch on ~560 Turkish first names. It conditions on the
-previous three characters, embeds them, runs one `tanh` hidden layer, and samples
-the next character until it decides the name is done.
+The model above is real: a tiny character-level MLP (Karpathy's makemore part 2)
+trained from scratch on ~560 Turkish first names. It looks at the previous three
+characters, embeds them, runs one tanh hidden layer, and samples the next
+character until the name ends.
 
-The whole thing is **4,234 parameters**, which is small enough to ship as a 90 KB
-JSON file and run the forward pass in a few lines of plain JavaScript — no server,
-no API, no inference cost. Press generate and the sampling loop runs on your
-machine.
-
-It learned Turkish name *shape* one character at a time: vowel harmony, endings
-like `-an` and `-el`, and the `ç ğ ı ö ş ü` letters. With so few training names
-it's a small, slightly noisy model — which is the point. It's transparent: the
-[repo](https://github.com/demirbasaf/turkish-makemore) has the training code, the
-trained weights, and the browser demo, and this site just loads that artifact.
+It's 4,234 parameters, small enough to ship as a 90 KB JSON file and run in a few
+lines of plain JavaScript. Press generate and the sampling loop runs on your
+machine, no server. The training code, weights and demo live in [their own
+repo](https://github.com/demirbasaf/turkish-makemore); this page just loads that
+artifact.

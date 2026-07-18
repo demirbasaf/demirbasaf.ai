@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// sync-models.mjs — pull each project's model/ artifact into public/models/.
+// sync-models.mjs, pull each project's model/ artifact into public/models/.
 //
 // This is the seam that keeps "repo = source of truth, site = presentation".
 // Every project repo owns its trained model under model/. At build time we copy
@@ -8,9 +8,9 @@
 // zero code changes.
 //
 // Two sources, tried in order per project:
-//   1. LOCAL  — a sibling checkout (../<repo>/model). Instant, offline, and the
+//   1. LOCAL, a sibling checkout (../<repo>/model). Instant, offline, and the
 //               reason the demo works before anything is pushed to GitHub.
-//   2. REMOTE — jsDelivr CDN, pinned to a tag/branch:
+//   2. REMOTE, jsDelivr CDN, pinned to a tag/branch:
 //               https://cdn.jsdelivr.net/gh/<owner>/<repo>@<ref>/<path>/<file>
 //
 // Registry lives in models.config.json. Run via `npm run sync` (also wired as
@@ -63,7 +63,7 @@ async function syncOne(entry) {
   const outDir = join(OUT_ROOT, name);
   mkdirSync(outDir, { recursive: true });
 
-  // meta.json first — it tells us whether weights.json or model.onnx follows.
+  // meta.json first, it tells us whether weights.json or model.onnx follows.
   const meta = await readJsonMaybeRemote(
     join(localDir, 'meta.json'), `${remoteBase}/meta.json`, useLocal,
   );
