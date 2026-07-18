@@ -37,7 +37,6 @@ const p = (path: string) => localizePath(lang, path);
         </div>
         <div class="entry-meta">
           {e.data.date.toISOString().slice(0, 10)}
-          {e.data.tags.length ? <span> · {e.data.tags.join(' · ')}</span> : null}
         </div>
         <div class="entry-summary">{e.data.summary}</div>
       </a>
