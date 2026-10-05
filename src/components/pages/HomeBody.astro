@@ -1,18 +1,12 @@
 ---
-import { publishedEntries, bareSlug } from '../../lib/entries';
-import { useTranslations } from '../../i18n/ui';
+import { publishedEntries } from '../../lib/entries';
+import { ui } from '../../i18n/ui';
 import { site } from '../../config/site';
-import { localizePath, type Lang } from '../../lib/i18n';
 import TimelineSection from './TimelineSection.astro';
 import EducationSection from './EducationSection.astro';
 
-interface Props {
-  lang: Lang;
-}
-const { lang } = Astro.props;
-const t = useTranslations(lang);
-const entries = await publishedEntries(lang);
-const p = (path: string) => localizePath(lang, path);
+const t = ui;
+const entries = await publishedEntries();
 ---
 
 <section class="prose">
@@ -21,16 +15,16 @@ const p = (path: string) => localizePath(lang, path);
   <p>{t.about.p2}</p>
 </section>
 
-<TimelineSection lang={lang} />
+<TimelineSection />
 
-<EducationSection lang={lang} />
+<EducationSection />
 
 <section style="margin-top:2.6rem">
   <span class="eyebrow">{t.entries.label}</span>
   <ul class="entry-list" style="margin-top:0">
   {entries.map((e) => (
     <li class="entry">
-      <a href={p(`/${bareSlug(e)}/`)}>
+      <a href={`/${e.slug}/`}>
         <div class="entry-title">
           {e.data.title}
           {e.data.status === 'wip' ? <span class="badge">{t.entry.wip}</span> : null}

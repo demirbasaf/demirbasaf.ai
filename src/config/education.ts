@@ -1,7 +1,5 @@
-// Education, shown below the work timeline. Descriptions are per-locale.
+// Education, shown below the work timeline.
 // The advisor name renders as a link, so the description is split around it.
-import type { Lang } from '../lib/i18n';
-
 export interface Publication {
   title: string;
   url: string;
@@ -11,9 +9,9 @@ export interface EducationItem {
   org: string;
   url?: string;
   logo?: string; // path under /public
-  descPre: Record<Lang, string>;
+  descPre: string;
   advisor?: { name: string; url: string };
-  descPost: Record<Lang, string>;
+  descPost: string;
   publications?: Publication[];
 }
 
@@ -22,18 +20,12 @@ export const education: EducationItem[] = [
     org: 'Yaşar University',
     url: 'https://www.yasar.edu.tr/',
     logo: '/logos/yasar.png',
-    descPre: {
-      en: 'BSc in Electrical Engineering. Thesis on network prediction with neural networks, advised by ',
-      tr: 'Elektrik Mühendisliği lisansı. Sinir ağlarıyla ağ tahmini üzerine tez; danışman ',
-    },
+    descPre: 'BSc in Electrical Engineering. Thesis on network prediction with neural networks, advised by ',
     advisor: {
       name: 'Prof. Volkan Rodoplu',
       url: 'https://www.researchgate.net/scientific-contributions/Volkan-Rodoplu-2166823613',
     },
-    descPost: {
-      en: ' (Stanford PhD).',
-      tr: ' (Stanford doktoralı).',
-    },
+    descPost: ' (Stanford PhD).',
     // Co-authored with Prof. Rodoplu. Newest first.
     publications: [
       {

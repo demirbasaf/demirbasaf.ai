@@ -1,16 +1,16 @@
 ---
 import Entry from '../layouts/Entry.astro';
-import { publishedEntries, bareSlug } from '../lib/entries';
+import { publishedEntries } from '../lib/entries';
 
 export async function getStaticPaths() {
-  const entries = await publishedEntries('en');
-  return entries.map((entry) => ({ params: { slug: bareSlug(entry) }, props: { entry, lang: 'en' as const } }));
+  const entries = await publishedEntries();
+  return entries.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
 }
 
-const { entry, lang } = Astro.props;
+const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Entry entry={entry} lang={lang}>
+<Entry entry={entry}>
   <Content />
 </Entry>

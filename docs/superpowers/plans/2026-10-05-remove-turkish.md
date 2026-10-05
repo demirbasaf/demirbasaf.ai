@@ -1,6 +1,6 @@
 # Remove Turkish Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Make demirbasaf.dev English only by deleting the Turkish locale, its routes, content and the bilingual machinery, with every English URL unchanged.
 
@@ -31,14 +31,14 @@
 **Interfaces:**
 - Produces: content collection `entries` whose `entry.slug` is the bare URL slug, no `lang` field.
 
-- [ ] **Step 1: Delete and move**
+- [x] **Step 1: Delete and move**
 
 ```bash
 git rm -r -q src/pages/tr src/content/entries/tr src/lib/i18n.ts
 git mv src/content/entries/en/turkish-makemore.mdx src/content/entries/turkish-makemore.mdx
 ```
 
-- [ ] **Step 2: Drop the i18n block from `astro.config.mjs`**
+- [x] **Step 2: Drop the i18n block from `astro.config.mjs`**
 
 ```js
 export default defineConfig({
@@ -49,16 +49,16 @@ export default defineConfig({
 ```
 Also drop the comment line about "English at the root, Turkish under /tr/".
 
-- [ ] **Step 3: Drop `lang` from the content schema and update the comment**
+- [x] **Step 3: Drop `lang` from the content schema and update the comment**
 
 In `src/content/config.ts` remove the `lang: z.enum(['en', 'tr']),` line and the `lang: en` line from the moved MDX file's frontmatter. Replace the collection comment's last two sentences with: `Files live at src/content/entries/<slug>.mdx.`
 
-- [ ] **Step 4: Verify the build fails only on the remaining imports**
+- [x] **Step 4: Verify the build fails only on the remaining imports**
 
 Run: `npx astro check 2>&1 | grep -c "lib/i18n"`
 Expected: a positive count (the remaining importers), no other error class.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add -A && git commit -m "Remove Turkish routes, content and the locale helper"
@@ -75,7 +75,7 @@ git add -A && git commit -m "Remove Turkish routes, content and the locale helpe
 - Produces: `ui` (plain English object, same keys as before under `ui.en`), `publishedEntries(): Promise<Entry[]>`, `llmsText(origin: string): Promise<string>`.
 - Removes: `useTranslations`, `bcp47`, `ogLocale`, `bareSlug`, `entriesByLang`.
 
-- [ ] **Step 1: Rewrite `src/i18n/ui.ts`**
+- [x] **Step 1: Rewrite `src/i18n/ui.ts`**
 
 ```ts
 // All UI and page copy in one place, so page components stay free of prose.
@@ -106,7 +106,7 @@ export const ui = {
 } as const;
 ```
 
-- [ ] **Step 2: Rewrite `src/lib/entries.ts`**
+- [x] **Step 2: Rewrite `src/lib/entries.ts`**
 
 ```ts
 // Entry helpers. An entry's collection slug is its URL slug.
@@ -121,7 +121,7 @@ export async function publishedEntries(): Promise<Entry[]> {
 }
 ```
 
-- [ ] **Step 3: Rewrite `src/lib/llms.ts`**
+- [x] **Step 3: Rewrite `src/lib/llms.ts`**
 
 ```ts
 // Builds the /llms.txt markdown brief (see llmstxt.org). Generated from the
@@ -165,7 +165,7 @@ export async function llmsText(origin: string): Promise<string> {
 }
 ```
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add -A && git commit -m "Flatten UI strings, entry and llms helpers to English only"
@@ -183,7 +183,7 @@ git add -A && git commit -m "Flatten UI strings, entry and llms helpers to Engli
 - Consumes: `ui` from Task 2.
 - Produces: `<Base title? description? article?>`, `<Entry entry>`.
 
-- [ ] **Step 1: `Base.astro`**
+- [x] **Step 1: `Base.astro`**
 
 Remove the `i18n` and `bcp47` imports and the `lang` prop. Frontmatter becomes:
 ```astro
@@ -202,15 +202,15 @@ const { title, description, article } = Astro.props;
 ```
 Template: `<html lang="en">`, `<BaseHead title={title} description={description} article={article} />`, `<Header />`, `<Footer />`.
 
-- [ ] **Step 2: `BaseHead.astro`**
+- [x] **Step 2: `BaseHead.astro`**
 
 Imports become `import { ui } from '../i18n/ui';` (drop `bcp47`, `ogLocale`, the `lib/i18n` import). Drop `lang` from Props and destructuring. `description` default is `ui.meta.description`. Delete the `canonicalPath`, `enHref`, `trHref` block. `inLanguage: 'en'` in both JSON-LD objects. In the template delete the three hreflang `<link rel="alternate" hreflang=...>` lines and their comment, make the RSS link `href="/rss.xml"`, set `<meta property="og:locale" content="en_US" />` and delete the `og:locale:alternate` line.
 
-- [ ] **Step 3: `Header.astro`**
+- [x] **Step 3: `Header.astro`**
 
 Imports: `site` and `ui` only. Delete the Props interface, `path`, `lang`, `p`, `otherHref`, `otherName`. Use `t = ui`. Template: brand `href="/"`, RSS `href="/rss.xml"`, and delete the `<a class="lang-switch" ...>` line.
 
-- [ ] **Step 4: `Entry.astro`**
+- [x] **Step 4: `Entry.astro`**
 
 ```astro
 ---
@@ -230,7 +230,7 @@ const dateStr = date.toISOString().slice(0, 10);
 ```
 Template: `<Base title={title} description={summary} article={{ publishedTime: date, tags }}>` and the back link `href="/"`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add -A && git commit -m "Drop the lang prop from layouts, head and header"
@@ -243,7 +243,7 @@ git add -A && git commit -m "Drop the lang prop from layouts, head and header"
 - Modify: `src/components/pages/HomeBody.astro`, `TimelineSection.astro`, `EducationSection.astro`
 - Modify: `src/config/timeline.ts`, `src/config/education.ts`
 
-- [ ] **Step 1: Pages**
+- [x] **Step 1: Pages**
 
 `index.astro`: `<Base><HomeBody /></Base>`.
 
@@ -297,16 +297,16 @@ ${urls
 
 `llms.txt.ts`: `llmsText(origin)`, comment `// /llms.txt. See src/lib/llms.ts for the generator.`
 
-- [ ] **Step 2: Sections**
+- [x] **Step 2: Sections**
 
 In `HomeBody.astro`, `TimelineSection.astro`, `EducationSection.astro`: remove the Props interface, the `lang` destructure, the `lib/i18n` import and `useTranslations`; import `{ ui }` and set `const t = ui;`. `HomeBody`: `publishedEntries()`, entry link `href={\`/${e.slug}/\`}`, and render `<TimelineSection />`, `<EducationSection />`. `TimelineSection`: `{item.desc}`. `EducationSection`: `{item.descPre}` and `{item.descPost}`.
 
-- [ ] **Step 3: Config**
+- [x] **Step 3: Config**
 
 `timeline.ts`: drop the `Lang` import, `desc: string`, and each `desc` becomes its `en` string. Comment: `// Work timeline. Concise, one or two sentences per role.`
 `education.ts`: drop the `Lang` import, `descPre: string`, `descPost: string`, each becomes its `en` string. Comment: `// Education, shown below the work timeline.`
 
-- [ ] **Step 4: Verify**
+- [x] **Step 4: Verify**
 
 Run: `npm run check && npm run build && npm run verify`
 Expected: 0 errors, build succeeds, verify prints sampled names.
@@ -314,7 +314,7 @@ Expected: 0 errors, build succeeds, verify prints sampled names.
 Run: `grep -rn "lib/i18n\|useTranslations\|bareSlug\|localizePath\|/tr/\|bcp47\|ogLocale" src scripts; ls dist/tr 2>&1; grep -c "<loc>" dist/sitemap.xml; grep -o '/tr' dist/sitemap.xml dist/llms.txt dist/index.html`
 Expected: no grep hits in `src`, `dist/tr` missing, 2 locs in the sitemap, no `/tr` anywhere in the built files.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add -A && git commit -m "Drop lang from pages, sections and config; site is English only"
