@@ -1,25 +1,18 @@
 ---
 import '../styles/global.css';
 import { site } from '../config/site';
-import { ui, bcp47, ogLocale } from '../i18n/ui';
-import { localizePath, stripLang, type Lang } from '../lib/i18n';
+import { ui } from '../i18n/ui';
 
 interface Props {
   title?: string;
   description?: string;
   article?: { publishedTime: Date; tags?: string[] };
-  lang: Lang;
 }
-const { title, article, lang } = Astro.props;
-const description = Astro.props.description ?? ui[lang].meta.description;
+const { title, article } = Astro.props;
+const description = Astro.props.description ?? ui.meta.description;
 const fullTitle = title ? `${title} · ${site.title}` : site.title;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? site.url).href;
 const ogType = article ? 'article' : 'website';
-
-// hreflang: this same page in each language, plus x-default -> English.
-const canonicalPath = stripLang(Astro.url.pathname);
-const enHref = new URL(localizePath('en', canonicalPath), site.url).href;
-const trHref = new URL(localizePath('tr', canonicalPath), site.url).href;
 
 const keywords = [
   ...site.person.alternateNames,
@@ -51,7 +44,7 @@ const websiteLd = {
   '@type': 'WebSite',
   name: site.title,
   url: site.url,
-  inLanguage: bcp47[lang],
+  inLanguage: 'en',
   author: { '@type': 'Person', name: site.title, url: site.url },
 };
 
@@ -62,7 +55,7 @@ const articleLd = article
       headline: title,
       description,
       url: canonical,
-      inLanguage: bcp47[lang],
+      inLanguage: 'en',
       datePublished: article.publishedTime.toISOString(),
       keywords: (article.tags ?? []).join(', '),
       author: { '@type': 'Person', name: site.title, url: site.url },
@@ -77,12 +70,7 @@ const articleLd = article
 <meta name="generator" content={Astro.generator} />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="canonical" href={canonical} />
-
-<!-- hreflang alternates for the two locales. -->
-<link rel="alternate" hreflang="en" href={enHref} />
-<link rel="alternate" hreflang="tr" href={trHref} />
-<link rel="alternate" hreflang="x-default" href={enHref} />
-<link rel="alternate" type="application/rss+xml" title={site.title} href={localizePath(lang, '/rss.xml')} />
+<link rel="alternate" type="application/rss+xml" title={site.title} href="/rss.xml" />
 
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
@@ -95,8 +83,7 @@ const articleLd = article
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
-<meta property="og:locale" content={ogLocale[lang]} />
-<meta property="og:locale:alternate" content={lang === 'en' ? ogLocale.tr : ogLocale.en} />
+<meta property="og:locale" content="en_US" />
 {article ? <meta property="article:published_time" content={article.publishedTime.toISOString()} /> : null}
 {article?.tags?.map((tag) => <meta property="article:tag" content={tag} />)}
 <meta name="twitter:card" content="summary" />

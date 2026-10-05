@@ -1,25 +1,22 @@
 ---
 import Base from './Base.astro';
 import ModelDemo from '../components/ModelDemo.tsx';
-import { useTranslations } from '../i18n/ui';
-import { localizePath, type Lang } from '../lib/i18n';
+import { ui } from '../i18n/ui';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
   entry: CollectionEntry<'entries'>;
-  lang: Lang;
 }
-const { entry, lang } = Astro.props;
-const t = useTranslations(lang);
+const { entry } = Astro.props;
+const t = ui;
 const { title, date, summary, tags, status, repo, demo, notebook } = entry.data;
 const dateStr = date.toISOString().slice(0, 10);
-const p = (x: string) => localizePath(lang, x);
 ---
 
-<Base title={title} description={summary} article={{ publishedTime: date, tags }} lang={lang}>
+<Base title={title} description={summary} article={{ publishedTime: date, tags }}>
   <article class="prose">
     <p class="entry-meta" style="margin-bottom:0.4rem">
-      <a href={p('/')}>← {t.entry.back}</a>
+      <a href="/">← {t.entry.back}</a>
     </p>
     <header>
       <h1>
