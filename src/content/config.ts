@@ -2,13 +2,11 @@ import { defineCollection, z } from 'astro:content';
 
 // One flexible content type: an "entry" is a thing built or learned in public.
 // It becomes a project when it carries a demo/repo/notebook, or a plain note
-// when it does not. Files live at src/content/entries/<lang>/<slug>.mdx.
-// Strict bilingual: a slug ships only when both en and tr exist.
+// when it does not. Files live at src/content/entries/<slug>.mdx.
 const entries = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    lang: z.enum(['en', 'tr']),
     date: z.coerce.date(),
     summary: z.string(),
     tags: z.array(z.string()).default([]),
