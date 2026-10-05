@@ -18,8 +18,9 @@ WoW keystone timer) need one file, not two.
 - `src/lib/i18n.ts` (`Lang`, `localizePath`) and every import of it.
 - The `tr` half of `src/i18n/ui.ts`, plus `bcp47`, `ogLocale` and
   `useTranslations(lang)`. The English strings stay as a plain `ui` object.
-- Hreflang `<link rel="alternate">` tags, `og:locale:alternate`, and any
-  language switcher in `BaseHead.astro`, `Header.astro` and `Footer.astro`.
+- Hreflang `<link rel="alternate">` tags and `og:locale:alternate` in
+  `BaseHead.astro`; the `lang-switch` link and its `counterpart` logic in
+  `Header.astro`.
 - Turkish URLs from `sitemap.xml.ts` and `llms.txt.ts`.
 - The strict bilingual rule in `src/lib/entries.ts`. `publishedEntries()`
   becomes "all non-draft entries, newest first".
@@ -34,8 +35,8 @@ WoW keystone timer) need one file, not two.
   `Entry.astro`, `HomeBody.astro`, `TimelineSection.astro`,
   `EducationSection.astro`, `Header.astro`, `Footer.astro`) drops it and
   reads the English strings directly.
-- `src/config/timeline.ts` and `src/config/education.ts`: if they carry
-  per-language copy, keep only the English.
+- `src/config/timeline.ts` and `src/config/education.ts` carry `{ en, tr }`
+  copy objects. Flatten each to the English string.
 
 ## What stays the same
 
