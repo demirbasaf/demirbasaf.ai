@@ -31,7 +31,8 @@ spec on removing Turkish, which lands first).
 ```
 data/
   raw/<region>/<period>/<realm>-<dungeon>.json   # verbatim API responses, gitignored
-  runs.parquet                                   # one row per unique run, committed
+  runs.csv                                       # one row per unique run, gitignored (363 MB)
+  runs.parquet                                   # same rows, written by the notebook, committed if under 100 MB
   dungeons.csv  affixes.csv  specs.csv           # lookup tables, hand maintained
 scripts/
   collect.py          # Battle.net -> data/raw/, resumable
@@ -49,6 +50,16 @@ charts/
 
 ## Collector
 
+Implemented as a Bruno collection at `bruno/` (requests for every endpoint,
+plus `batch / Collect all`, which sweeps both regions and ends by running
+`batch / Merge raw -> runs.csv`). The Python `collect.py` and
+`build_dataset.py` from the layout above are therefore optional; keep them
+only if a scripted rerun outside Bruno is wanted.
+
+Season 18 snapshot taken 2026-10-05: 92 EU + 83 US connected realms, 8
+dungeons, periods 1076 to 1083 (1076 is empty, pre-season week), 11,200
+leaderboard files, 4.69M entries, 3.11M unique runs after dedup.
+
 - Auth: OAuth client-credentials flow. `BNET_CLIENT_ID` and
   `BNET_CLIENT_SECRET` come from environment variables and are never
   committed.
@@ -63,9 +74,10 @@ charts/
 - Each response is written to its own file. A file already on disk is
   skipped, so a crash or a rerun resumes for free. Raw data stays out of git.
 
-## Dataset: `runs.parquet`
+## Dataset: `runs.csv` / `runs.parquet`
 
-One row per unique run. The same run appears on several realm leaderboards
+One row per unique run. The Bruno merge writes `runs.csv`; the notebook
+converts it to parquet once, since 363 MB of CSV is over GitHub's file limit. The same run appears on several realm leaderboards
 when the group spans connected realms, so dedup on
 `(region, period, dungeon_id, completed_at, sorted member ids)` and store the
 hash of that key as `run_id`.
@@ -80,11 +92,12 @@ Every column holds exactly one scalar value. No lists, no nested structs.
 | dungeon_id | int | joins to `dungeons.csv` |
 | keystone_level | int | |
 | duration_ms | int | the target |
-| timed | bool | `is_completed_within_time` |
+| timed | bool | derived: `duration_ms <= timer_ms` of the dungeon. The current API no longer sends `is_completed_within_time` |
+| rating | float | `mythic_rating.rating`, kept for analysis, not a feature |
 | completed_at | timestamp | |
 | affix_1, affix_2, affix_3 | int, nullable | slot order as the API lists them |
 | spec_1 .. spec_5 | int | sorted by role (tank, healer, dps) then id |
-| faction | string | |
+| faction | string | `ALLIANCE`, `HORDE` or `MIXED` (cross-faction groups are the majority) |
 | realm_count | int | how many connected realms the group spans |
 
 Lookup tables: `dungeons.csv` (id, name, timer_ms), `affixes.csv` (id, name),
@@ -108,7 +121,7 @@ change a prediction.
 |---|---|---|
 | dungeon | `dungeon_<id>` x 8 | one-hot |
 | region | `region_eu`, `region_us` | one-hot |
-| faction | `faction_alliance`, `faction_horde` | one-hot |
+| faction | `faction_alliance`, `faction_horde`, `faction_mixed` | one-hot |
 | key level | `level_2` .. `level_<max seen>` | one-hot, because difficulty compounds per level and steps at affix thresholds |
 | specs | `spec_<id>` x 39 | count of that spec in the group, sums to 5 |
 | affixes | `affix_<id>` x ~12 | binary |
