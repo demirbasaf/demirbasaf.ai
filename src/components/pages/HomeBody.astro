@@ -10,7 +10,7 @@ const entries = await publishedEntries();
 ---
 
 <section class="prose">
-  <span class="eyebrow">{t.about.label}</span>
+  <h2 class="eyebrow">{t.about.label}</h2>
   <p>{t.about.p1a}<a href={site.person.worksFor.url}>MoonPay</a>{t.about.p1b}</p>
   <p>{t.about.p2}</p>
 </section>
@@ -20,7 +20,7 @@ const entries = await publishedEntries();
 <EducationSection />
 
 <section style="margin-top:2.6rem">
-  <span class="eyebrow">{t.entries.label}</span>
+  <h2 class="eyebrow">{t.entries.label}</h2>
   <ul class="entry-list" style="margin-top:0">
   {entries.map((e) => (
     <li class="entry">

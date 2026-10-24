@@ -3,6 +3,7 @@ import { site } from '../config/site';
 import { ui } from '../i18n/ui';
 
 const t = ui;
+const isHome = Astro.url.pathname === '/';
 
 // Brand-mark SVG paths (24x24 viewBox), rendered as a glyph inside a dark circle.
 const GITHUB =
@@ -18,7 +19,11 @@ const EMAIL =
 <header class="site-header">
   <div class="wrap">
     <div class="bar">
-      <a class="brand" href="/">{site.title}</a>
+      {isHome ? (
+        <h1 class="brand"><a href="/">{site.title}</a></h1>
+      ) : (
+        <a class="brand" href="/">{site.title}</a>
+      )}
       <div class="header-controls">
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme">
           ◐

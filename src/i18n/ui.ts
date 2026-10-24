@@ -11,8 +11,8 @@ export const ui = {
   entries: { label: 'projects' },
   entry: {
     wip: 'wip',
-    repo: 'repo',
-    notebook: 'notebook',
+    repo: 'source on GitHub',
+    notebook: 'training notebook',
     overview: 'overview',
     demo: 'demo',
     back: 'home',
