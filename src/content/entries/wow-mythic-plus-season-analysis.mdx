@@ -4,6 +4,7 @@ date: 2026-10-24
 summary: Every Season 18 Mythic+ leaderboard from the Battle.net API, EU and US, in charts. Where people actually play, which specs win as keys get harder, and why the timer stops being scary by week four.
 tags: [wow, data-analysis, battle-net-api, mythic-plus, gaming]
 status: done
+image: /og/wow-mythic-plus.png
 draft: false
 ---
 import Fig from '../../components/Fig.astro';
@@ -25,7 +26,7 @@ One caveat before the charts. A leaderboard keeps the top 500 runs per realm,
 dungeon and week. Keys that got abandoned are not in here. Keys that finished
 over the timer are. 87% of what's below was timed.
 
-## Where people play
+## Which key levels do people actually run?
 
 <Fig src="wow-mythic-plus/runs-by-level" alt="Bar chart of run count by keystone level, 2 to 23. Levels 10 and 12 stand at about 600 thousand runs each; 11 is half that." caption="Runs by key level. +10 and +12 alone are 39% of the season." />
 
@@ -34,7 +35,7 @@ runs an 11 on purpose.
 
 <Fig src="wow-mythic-plus/timed-rate-by-level" alt="Line chart of the share of runs completed inside the timer by key level. About 96% up to +6, mid 80s from +11 up." caption="Share of leaderboard runs inside the timer. Past +10 the boards have room for depleted keys too." />
 
-## Nobody's median misses the timer
+## How close do runs get to the timer?
 
 <Fig src="wow-mythic-plus/clear-time-by-dungeon" alt="Eight small line charts, one per dungeon, of median clear time in minutes against key level with a dashed line at the dungeon's timer. Every median stays under its timer at all levels." caption="Median clear time per dungeon, dashed line is the timer. Even at +21 the median run is under it." />
 
@@ -43,7 +44,7 @@ dungeon. The people who reach +21 are the people who can time +21. At +12
 the median run uses 80% of the timer in Murder Row and 86% in The Blinding
 Vale, and every other dungeon sits in between.
 
-## Who gets brought
+## Which specs are played most in Mythic+?
 
 <SpecBars>Share of runs that include each spec. Damage is per slot since every group has three.</SpecBars>
 
@@ -61,7 +62,7 @@ what you have.
 Same thing at the whole-group level, only steeper. Below +13 the ten most
 common comps cover under 2% of runs. At +21 they cover 37%.
 
-## The timer gets easier every week
+## Does the timer get easier over a season?
 
 <Fig src="wow-mythic-plus/week-over-week" alt="Bar chart of median +12 clear time as a percent of the timer by week, labelled with each week's two rotating affixes. Falls from 91% in week one to 76% in week seven, every week lower than the last." caption="Median +12 clear time as a share of the timer, by week, with that week's rotating affixes." />
 
@@ -69,7 +70,7 @@ At a fixed +12, the median went from 91% of the timer in week one to 76% in
 week seven, down every single week. Affix rotation doesn't even dent the
 line. Gear and routes do.
 
-## Odd ones
+## Smaller patterns: realms, faction, region
 
 <Fig src="wow-mythic-plus/realm-count" alt="Bar chart of median +12 clear time as a percent of the timer against the number of distinct realms in the group, 1 to 5. One realm is slowest at 86%; three or more realms sit around 83%." caption="Median +12 clear time by how many realms the five players come from." />
 

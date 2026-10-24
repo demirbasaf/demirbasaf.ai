@@ -2,7 +2,11 @@
 // Inline an SVG chart from src/charts/ so it picks up the site's theme.
 // The charts are exported with the site's hex tokens; swapping them for CSS
 // variables here is what makes them follow dark mode. Width/height come off so
-// the viewBox scales to the column.
+// the viewBox scales to the column. When the chart folder's stats.json carries
+// a table for this chart, it renders collapsed under the figure, so the numbers
+// exist as text for search engines, agents and screen readers.
+import { chartTable } from '../lib/charts';
+
 interface Props {
   /** path under src/charts/, without .svg */
   src: string;
@@ -31,9 +35,20 @@ const svg = raw
   .replace(/#e6e6e1/gi, 'var(--rule)')
   .replace(/#1b44cc/gi, 'var(--accent)')
   .replace(/<svg ([^>]*?)\s*width="[^"]*"\s*height="[^"]*"/, `<svg role="img" aria-label="${alt.replace(/"/g, '&quot;')}" $1`);
+
+const table = chartTable(src);
 ---
 
 <figure class="fig">
   <Fragment set:html={svg} />
   {caption ? <figcaption>{caption}</figcaption> : null}
+  {table ? (
+    <details class="fig-data">
+      <summary>data</summary>
+      <table>
+        <thead><tr>{table.columns.map((c) => <th>{c}</th>)}</tr></thead>
+        <tbody>{table.rows.map((r) => <tr>{r.map((v) => <td>{v}</td>)}</tr>)}</tbody>
+      </table>
+    </details>
+  ) : null}
 </figure>
