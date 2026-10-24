@@ -14,6 +14,7 @@ export const ui = {
     work: { label: 'work' },
     education: { label: 'education' },
     entries: { label: 'projects' },
+    email: { copy: 'copy', copied: 'copied' },
     entry: {
       wip: 'wip',
       repo: 'repo',
@@ -40,6 +41,7 @@ export const ui = {
     work: { label: 'deneyim' },
     education: { label: 'eğitim' },
     entries: { label: 'projeler' },
+    email: { copy: 'kopyala', copied: 'kopyalandı' },
     entry: {
       wip: 'wip',
       repo: 'repo',
