@@ -2,31 +2,28 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { getLang, type Lang } from '../lib/i18n';
-import { bcp47 } from '../i18n/ui';
 
 interface Props {
   title?: string;
   description?: string;
   article?: { publishedTime: Date; tags?: string[] };
-  lang?: Lang;
 }
-const { title, description, article, lang = getLang(Astro.url.pathname) } = Astro.props;
+const { title, description, article } = Astro.props;
 ---
 
 <!doctype html>
-<html lang={bcp47[lang]}>
+<html lang="en">
   <head>
-    <BaseHead title={title} description={description} article={article} lang={lang} />
+    <BaseHead title={title} description={description} article={article} />
   </head>
   <body>
-    <Header lang={lang} />
+    <Header />
     <main>
       <div class="wrap">
         <slot />
       </div>
     </main>
-    <Footer lang={lang} />
+    <Footer />
 
     <!-- Open off-site links in a new tab so the site stays put. Covers links in
          writeups too, so nothing has to be tagged by hand. -->

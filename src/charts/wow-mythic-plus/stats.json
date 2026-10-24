@@ -1,0 +1,574 @@
+{
+ "runs": 3110306,
+ "periods": [
+  1077,
+  1078,
+  1079,
+  1080,
+  1081,
+  1082,
+  1083
+ ],
+ "timed_rate": 0.8663941747210725,
+ "runs_at_10": 612732,
+ "runs_at_12": 593016,
+ "runs_at_11": 294005,
+ "share_10_12": 0.38766217857664165,
+ "timed_rate_by_level": {
+  "2": 0.9610579193679962,
+  "3": 0.937915321815075,
+  "4": 0.9614134985764529,
+  "5": 0.9647904785519464,
+  "6": 0.9599976821447886,
+  "7": 0.8839402022207059,
+  "8": 0.8906239773813108,
+  "9": 0.8593450576106731,
+  "10": 0.9278493697081269,
+  "11": 0.8583901634325947,
+  "12": 0.8669226462692406,
+  "13": 0.7929265734374562,
+  "14": 0.8249956539268158,
+  "15": 0.8411567938722714,
+  "16": 0.8330914525257211,
+  "17": 0.837815640298892,
+  "18": 0.8386842681059004,
+  "19": 0.840772264895163,
+  "20": 0.8315443592552026,
+  "21": 0.781084656084656
+ },
+ "median_crosses_timer_at": {
+  "Ruby Life Pools": null,
+  "The Blinding Vale": null,
+  "Voidscar Arena": null,
+  "Altar of Fangs": null,
+  "Temple of Sethraliss": null,
+  "Den of Nalorakk": null,
+  "Kings' Rest": null,
+  "Murder Row": null
+ },
+ "median_ratio_at_12": {
+  "Ruby Life Pools": 0.8502220238095238,
+  "The Blinding Vale": 0.8567680555555556,
+  "Voidscar Arena": 0.8153408333333333,
+  "Altar of Fangs": 0.8523991666666667,
+  "Temple of Sethraliss": 0.8130372395833333,
+  "Den of Nalorakk": 0.8477463541666667,
+  "Kings' Rest": 0.8162757575757575,
+  "Murder Row": 0.7971313725490196
+ },
+ "pick_rate": {
+  "tank": [
+   {
+    "id": 250,
+    "name": "Blood",
+    "class": "Death Knight",
+    "color": "#be2d3f",
+    "share": 0.34141013778065565
+   },
+   {
+    "id": 66,
+    "name": "Protection",
+    "class": "Paladin",
+    "color": "#c3608d",
+    "share": 0.241056024712681
+   },
+   {
+    "id": 104,
+    "name": "Guardian",
+    "class": "Druid",
+    "color": "#d75c00",
+    "share": 0.17687487983497444
+   },
+   {
+    "id": 73,
+    "name": "Protection",
+    "class": "Warrior",
+    "color": "#a67d50",
+    "share": 0.09348887215598722
+   },
+   {
+    "id": 581,
+    "name": "Vengeance",
+    "class": "Demon Hunter",
+    "color": "#9948b7",
+    "share": 0.08579445237864056
+   },
+   {
+    "id": 268,
+    "name": "Brewmaster",
+    "class": "Monk",
+    "color": "#00a151",
+    "share": 0.0618974467463973
+   }
+  ],
+  "healer": [
+   {
+    "id": 65,
+    "name": "Holy",
+    "class": "Paladin",
+    "color": "#c3608d",
+    "share": 0.29714246765430796
+   },
+   {
+    "id": 264,
+    "name": "Restoration",
+    "class": "Shaman",
+    "color": "#0f71d9",
+    "share": 0.2768952636814513
+   },
+   {
+    "id": 257,
+    "name": "Holy",
+    "class": "Priest",
+    "color": "#868686",
+    "share": 0.16996430576284133
+   },
+   {
+    "id": 105,
+    "name": "Restoration",
+    "class": "Druid",
+    "color": "#d75c00",
+    "share": 0.0831950296851821
+   },
+   {
+    "id": 270,
+    "name": "Mistweaver",
+    "class": "Monk",
+    "color": "#00a151",
+    "share": 0.07929798547152596
+   },
+   {
+    "id": 256,
+    "name": "Discipline",
+    "class": "Priest",
+    "color": "#868686",
+    "share": 0.048645052930483365
+   },
+   {
+    "id": 1468,
+    "name": "Preservation",
+    "class": "Evoker",
+    "color": "#33937f",
+    "share": 0.04526789325551891
+   }
+  ],
+  "damage": [
+   {
+    "id": 62,
+    "name": "Arcane",
+    "class": "Mage",
+    "color": "#0096b9",
+    "share": 0.1472669677302919
+   },
+   {
+    "id": 71,
+    "name": "Arms",
+    "class": "Warrior",
+    "color": "#a67d50",
+    "share": 0.09500919416503285
+   },
+   {
+    "id": 253,
+    "name": "Beast Mastery",
+    "class": "Hunter",
+    "color": "#6f9533",
+    "share": 0.09123850407859119
+   },
+   {
+    "id": 70,
+    "name": "Retribution",
+    "class": "Paladin",
+    "color": "#c3608d",
+    "share": 0.08810258540478011
+   },
+   {
+    "id": 262,
+    "name": "Elemental",
+    "class": "Shaman",
+    "color": "#0f71d9",
+    "share": 0.08674184040627085
+   },
+   {
+    "id": 266,
+    "name": "Demonology",
+    "class": "Warlock",
+    "color": "#7878dd",
+    "share": 0.08165455960496062
+   },
+   {
+    "id": 102,
+    "name": "Balance",
+    "class": "Druid",
+    "color": "#d75c00",
+    "share": 0.0414543349325329
+   },
+   {
+    "id": 259,
+    "name": "Assassination",
+    "class": "Rogue",
+    "color": "#968900",
+    "share": 0.0361184183592654
+   },
+   {
+    "id": 252,
+    "name": "Unholy",
+    "class": "Death Knight",
+    "color": "#be2d3f",
+    "share": 0.03605690243982425
+   },
+   {
+    "id": 1480,
+    "name": "Devourer",
+    "class": "Demon Hunter",
+    "color": "#9948b7",
+    "share": 0.03417027134950709
+   },
+   {
+    "id": 258,
+    "name": "Shadow",
+    "class": "Priest",
+    "color": "#868686",
+    "share": 0.029746912361677594
+   },
+   {
+    "id": 577,
+    "name": "Havoc",
+    "class": "Demon Hunter",
+    "color": "#9948b7",
+    "share": 0.029615092534303698
+   },
+   {
+    "id": 269,
+    "name": "Windwalker",
+    "class": "Monk",
+    "color": "#00a151",
+    "share": 0.02810420153729783
+   },
+   {
+    "id": 263,
+    "name": "Enhancement",
+    "class": "Shaman",
+    "color": "#0f71d9",
+    "share": 0.022060423208091637
+   },
+   {
+    "id": 251,
+    "name": "Frost",
+    "class": "Death Knight",
+    "color": "#be2d3f",
+    "share": 0.019488436186021568
+   },
+   {
+    "id": 261,
+    "name": "Subtlety",
+    "class": "Rogue",
+    "color": "#968900",
+    "share": 0.01782279085509057
+   },
+   {
+    "id": 103,
+    "name": "Feral",
+    "class": "Druid",
+    "color": "#d75c00",
+    "share": 0.015302352887465093
+   },
+   {
+    "id": 72,
+    "name": "Fury",
+    "class": "Warrior",
+    "color": "#a67d50",
+    "share": 0.014600492684642604
+   },
+   {
+    "id": 254,
+    "name": "Marksmanship",
+    "class": "Hunter",
+    "color": "#6f9533",
+    "share": 0.014265906098413897
+   },
+   {
+    "id": 1467,
+    "name": "Devastation",
+    "class": "Evoker",
+    "color": "#33937f",
+    "share": 0.013112643364779327
+   },
+   {
+    "id": 64,
+    "name": "Frost",
+    "class": "Mage",
+    "color": "#0096b9",
+    "share": 0.01206376478713027
+   },
+   {
+    "id": 267,
+    "name": "Destruction",
+    "class": "Warlock",
+    "color": "#7878dd",
+    "share": 0.011397163708865517
+   },
+   {
+    "id": 260,
+    "name": "Outlaw",
+    "class": "Rogue",
+    "color": "#968900",
+    "share": 0.010559089684423333
+   },
+   {
+    "id": 265,
+    "name": "Affliction",
+    "class": "Warlock",
+    "color": "#7878dd",
+    "share": 0.009546541937245618
+   },
+   {
+    "id": 255,
+    "name": "Survival",
+    "class": "Hunter",
+    "color": "#6f9533",
+    "share": 0.007605682527699847
+   },
+   {
+    "id": 63,
+    "name": "Fire",
+    "class": "Mage",
+    "color": "#0096b9",
+    "share": 0.003545095991626976
+   },
+   {
+    "id": 1473,
+    "name": "Augmentation",
+    "class": "Evoker",
+    "color": "#33937f",
+    "share": 0.003039893823951727
+   }
+  ]
+ },
+ "narrowing": {
+  "tank": [
+   {
+    "id": 250,
+    "name": "Blood Death Knight",
+    "share_at_5": 25.98838033158566,
+    "share_at_12": 32.64500491342097,
+    "share_at_18": 48.51070657564619
+   },
+   {
+    "id": 66,
+    "name": "Protection Paladin",
+    "share_at_5": 26.20093524160408,
+    "share_at_12": 24.864269906097192,
+    "share_at_18": 13.971060155201586
+   },
+   {
+    "id": 104,
+    "name": "Guardian Druid",
+    "share_at_5": 17.0469037834774,
+    "share_at_12": 17.340246395841376,
+    "share_at_18": 24.073749927066924
+   }
+  ],
+  "healer": [
+   {
+    "id": 65,
+    "name": "Holy Paladin",
+    "share_at_5": 23.375013283270164,
+    "share_at_12": 27.503527519711124,
+    "share_at_18": 49.12114360732259
+   },
+   {
+    "id": 264,
+    "name": "Restoration Shaman",
+    "share_at_5": 22.81534483369346,
+    "share_at_12": 27.839337281458143,
+    "share_at_18": 29.2670118882649
+   },
+   {
+    "id": 257,
+    "name": "Holy Priest",
+    "share_at_5": 16.882150827104955,
+    "share_at_12": 18.128501179211487,
+    "share_at_18": 11.064109109474145
+   }
+  ],
+  "damage": [
+   {
+    "id": 62,
+    "name": "Arcane Mage",
+    "share_at_5": 11.881316709171626,
+    "share_at_12": 14.131958929818387,
+    "share_at_18": 19.29311887350241
+   },
+   {
+    "id": 71,
+    "name": "Arms Warrior",
+    "share_at_5": 7.367526211391329,
+    "share_at_12": 8.881072565492007,
+    "share_at_18": 15.02547845028785
+   },
+   {
+    "id": 253,
+    "name": "Beast Mastery Hunter",
+    "share_at_5": 10.504628317748182,
+    "share_at_12": 9.739774903379823,
+    "share_at_18": 4.56472693325035
+   }
+  ]
+ },
+ "top10_comp_share": {
+  "2": 0.4808724399982826,
+  "3": 0.7024871843554205,
+  "4": 0.519176017417518,
+  "5": 0.5844638872161808,
+  "6": 0.5601483427335239,
+  "7": 0.614105824700701,
+  "8": 0.7461025956516617,
+  "9": 0.7628865979381444,
+  "10": 0.8855421293485569,
+  "11": 1.0275335453478682,
+  "12": 1.2785489767561078,
+  "13": 1.892389047798386,
+  "14": 2.6450016459596317,
+  "15": 3.8077945201253396,
+  "16": 5.287208731447563,
+  "17": 7.750096624581293,
+  "18": 11.478375027350303,
+  "19": 17.417479759186214,
+  "20": 25.191675794085434,
+  "21": 36.64021164021164
+ },
+ "distinct_comps": 113538,
+ "weeks": [
+  {
+   "period": 1077,
+   "affixes": "Lindormi's Guidance + Pulsar + Fortified",
+   "median_ratio_12": 0.9149036458333333,
+   "runs": 492811
+  },
+  {
+   "period": 1078,
+   "affixes": "Lindormi's Guidance + Voidbound + Tyrannical",
+   "median_ratio_12": 0.8805621212121211,
+   "runs": 470938
+  },
+  {
+   "period": 1079,
+   "affixes": "Lindormi's Guidance + Devour + Fortified",
+   "median_ratio_12": 0.8370295659722222,
+   "runs": 469719
+  },
+  {
+   "period": 1080,
+   "affixes": "Lindormi's Guidance + Pulsar + Tyrannical",
+   "median_ratio_12": 0.8164275,
+   "runs": 459276
+  },
+  {
+   "period": 1081,
+   "affixes": "Lindormi's Guidance + Ascendant + Fortified",
+   "median_ratio_12": 0.7883513020833333,
+   "runs": 422718
+  },
+  {
+   "period": 1082,
+   "affixes": "Lindormi's Guidance + Voidbound + Tyrannical",
+   "median_ratio_12": 0.7730686274509805,
+   "runs": 422846
+  },
+  {
+   "period": 1083,
+   "affixes": "Lindormi's Guidance + Devour + Fortified",
+   "median_ratio_12": 0.7638294444444444,
+   "runs": 371998
+  }
+ ],
+ "realm_count_at_12": {
+  "1": {
+   "median_ratio": 0.8635838541666668,
+   "runs": 6717
+  },
+  "2": {
+   "median_ratio": 0.8446352941176472,
+   "runs": 37323
+  },
+  "3": {
+   "median_ratio": 0.8285533730158732,
+   "runs": 113802
+  },
+  "4": {
+   "median_ratio": 0.8271473958333333,
+   "runs": 228859
+  },
+  "5": {
+   "median_ratio": 0.8321942708333333,
+   "runs": 206315
+  }
+ },
+ "region": {
+  "eu": {
+   "runs": 1651247,
+   "median_ratio_12": 0.8221416666666667
+  },
+  "us": {
+   "runs": 1459059,
+   "median_ratio_12": 0.8406692261904762
+  }
+ },
+ "faction": {
+  "MIXED": {
+   "runs": 2654381,
+   "median_ratio_12": 0.8291072222222222
+  },
+  "ALLIANCE": {
+   "runs": 312467,
+   "median_ratio_12": 0.8307950980392157
+  },
+  "HORDE": {
+   "runs": 143458,
+   "median_ratio_12": 0.8591630208333333
+  }
+ },
+ "max_level": 23,
+ "fastest": {
+  "Ruby Life Pools": {
+   "level": 2,
+   "time": "9:08",
+   "ratio": 0.32622559523809525
+  },
+  "The Blinding Vale": {
+   "level": 4,
+   "time": "9:48",
+   "ratio": 0.32643444444444447
+  },
+  "Voidscar Arena": {
+   "level": 2,
+   "time": "10:20",
+   "ratio": 0.34469444444444447
+  },
+  "Altar of Fangs": {
+   "level": 6,
+   "time": "12:01",
+   "ratio": 0.40070833333333333
+  },
+  "Temple of Sethraliss": {
+   "level": 6,
+   "time": "12:12",
+   "ratio": 0.3812625
+  },
+  "Den of Nalorakk": {
+   "level": 2,
+   "time": "13:17",
+   "ratio": 0.4149963541666667
+  },
+  "Kings' Rest": {
+   "level": 5,
+   "time": "12:20",
+   "ratio": 0.3738929292929293
+  },
+  "Murder Row": {
+   "level": 2,
+   "time": "12:12",
+   "ratio": 0.3588955882352941
+  }
+ }
+}

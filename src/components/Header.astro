@@ -1,18 +1,9 @@
 ---
 import { site } from '../config/site';
 import { ui } from '../i18n/ui';
-import { getLang, localizePath, counterpart, OTHER, type Lang } from '../lib/i18n';
 
-interface Props {
-  lang?: Lang;
-}
-const path = Astro.url.pathname;
-const { lang = getLang(path) } = Astro.props;
-const t = ui[lang];
-const p = (x: string) => localizePath(lang, x);
-
-const otherHref = counterpart(lang, path);
-const otherName = ui[OTHER[lang]].langName;
+const t = ui;
+const isHome = Astro.url.pathname === '/';
 
 // Brand-mark SVG paths (24x24 viewBox), rendered as a glyph inside a dark circle.
 const GITHUB =
@@ -26,9 +17,12 @@ const RSS =
 <header class="site-header">
   <div class="wrap">
     <div class="bar">
-      <a class="brand" href={p('/')}>{site.title}</a>
+      {isHome ? (
+        <h1 class="brand"><a href="/">{site.title}</a></h1>
+      ) : (
+        <a class="brand" href="/">{site.title}</a>
+      )}
       <div class="header-controls">
-        <a class="lang-switch" href={otherHref} hreflang={OTHER[lang]}>{otherName}</a>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme">
           ◐
         </button>
@@ -46,7 +40,7 @@ const RSS =
       <a href={site.links.linkedin} aria-label="LinkedIn" rel="me">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d={LINKEDIN} /></svg>
       </a>
-      <a href={p('/rss.xml')} aria-label="RSS feed">
+      <a href="/rss.xml" aria-label="RSS feed">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d={RSS} /></svg>
       </a>
     </div>

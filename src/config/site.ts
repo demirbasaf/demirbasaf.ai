@@ -2,10 +2,12 @@
 // facts. Edit here, not in templates.
 export const site = {
   title: 'Ali Furkan Demirbaş',
+  // Appended to the home page title so search results say what I do, not just who.
+  tagline: 'Software engineer, ML systems',
   handle: 'demirbasaf',
   url: 'https://demirbasaf.dev',
   description:
-    'Systems engineer working where systems meet ML. Models that run live in your browser, next to the writeups and notebooks behind them.',
+    'Software engineer working where systems meet machine learning. Models that run live in your browser, with the data analysis, writeups and notebooks behind them.',
   // The hero thesis. No em dashes, per preference.
   thesis:
     'I build deterministic systems at scale, and now the systems that deploy and contain the non-deterministic ones.',
@@ -36,7 +38,9 @@ export const site = {
     knowsAbout: [
       'Distributed systems',
       'Payments infrastructure',
+      'Machine learning',
       'Machine learning systems',
+      'Data analysis',
       'Model deployment',
       'Inference optimization',
       'Go',

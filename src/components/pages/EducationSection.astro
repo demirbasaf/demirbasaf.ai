@@ -1,17 +1,12 @@
 ---
 import { education } from '../../config/education';
-import { useTranslations } from '../../i18n/ui';
-import type { Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
 
-interface Props {
-  lang: Lang;
-}
-const { lang } = Astro.props;
-const t = useTranslations(lang);
+const t = ui;
 ---
 
 <section style="margin-top:2.6rem">
-  <span class="eyebrow">{t.education.label}</span>
+  <h2 class="eyebrow">{t.education.label}</h2>
   <div class="timeline timeline-edu">
     {education.map((item) => (
       <div class="timeline-row">
@@ -27,9 +22,9 @@ const t = useTranslations(lang);
             ) : (
               <strong>{item.org}</strong>
             )}{' '}
-            {item.descPre[lang]}
+            {item.descPre}
             {item.advisor ? <a href={item.advisor.url}>{item.advisor.name}</a> : null}
-            {item.descPost[lang]}
+            {item.descPost}
           </div>
           {item.publications && item.publications.length ? (
             <ul class="pub-list">

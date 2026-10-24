@@ -26,5 +26,5 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Structured summaries for language models: /llms.txt (English), /tr/llms.txt (Turkish)
+# Structured summary for language models: /llms.txt
 Sitemap: https://demirbasaf.dev/sitemap.xml

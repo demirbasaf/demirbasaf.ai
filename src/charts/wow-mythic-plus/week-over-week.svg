@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="446.126932pt" height="206.090968pt" viewBox="0 0 446.126932 206.090968" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-24T12:45:21.468145</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 206.090968 
+L 446.126932 206.090968 
+L 446.126932 0 
+L 0 0 
+L 0 206.090968 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.355625 170.139405 
+L 439.115625 170.139405 
+L 439.115625 3.819405 
+L 37.355625 3.819405 
+L 37.355625 170.139405 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 55.617443 170.139405 
+L 55.617443 3.819405 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(45.984943 180.518937)">wk 1</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(41.168693 190.143624)">Pulsar</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(33.944318 199.745812)">Fortified</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 116.49017 170.139405 
+L 116.49017 3.819405 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(106.85767 180.518937)">wk 2</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(94.817045 190.121124)">Voidbound</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(92.40892 199.745812)">Tyrannical</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 177.362898 170.139405 
+L 177.362898 3.819405 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(167.730398 180.518937)">wk 3</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(162.914148 190.120499)">Devour</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(155.689773 199.722687)">Fortified</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 238.235625 170.139405 
+L 238.235625 3.819405 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(228.603125 180.518937)">wk 4</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(223.786875 190.143624)">Pulsar</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(214.154375 199.768312)">Tyrannical</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 299.108352 170.139405 
+L 299.108352 3.819405 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(289.475852 180.518937)">wk 5</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(277.435227 190.121124)">Ascendant</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(277.435227 199.723312)">Fortified</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 359.98108 170.139405 
+L 359.98108 3.819405 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_6">
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(350.34858 180.518937)">wk 6</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(338.307955 190.121124)">Voidbound</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(335.89983 199.745812)">Tyrannical</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 420.853807 170.139405 
+L 420.853807 3.819405 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_7">
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(411.221307 180.518937)">wk 7</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(406.405057 190.120499)">Devour</text>
+      <text style="font-size: 8px; font-family: 'Menlo'; fill: #6b7078" transform="translate(399.180682 199.722687)">Fortified</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_15">
+      <path d="M 37.355625 170.139405 
+L 439.115625 170.139405 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_8">
+      <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="33.855625" y="173.558351" transform="rotate(-0 33.855625 173.558351)">70%</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_17">
+      <path d="M 37.355625 137.515313 
+L 439.115625 137.515313 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_9">
+      <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="33.855625" y="140.934259" transform="rotate(-0 33.855625 140.934259)">75%</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_19">
+      <path d="M 37.355625 104.891221 
+L 439.115625 104.891221 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_10">
+      <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="33.855625" y="108.310167" transform="rotate(-0 33.855625 108.310167)">80%</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_21">
+      <path d="M 37.355625 72.267129 
+L 439.115625 72.267129 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22"/>
+     <g id="text_11">
+      <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="33.855625" y="75.686075" transform="rotate(-0 33.855625 75.686075)">85%</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_23">
+      <path d="M 37.355625 39.643037 
+L 439.115625 39.643037 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24"/>
+     <g id="text_12">
+      <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="33.855625" y="43.061983" transform="rotate(-0 33.855625 43.061983)">90%</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_25">
+      <path d="M 37.355625 7.018945 
+L 439.115625 7.018945 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26"/>
+     <g id="text_13">
+      <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="33.855625" y="10.437891" transform="rotate(-0 33.855625 10.437891)">95%</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 10px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="11.198438" y="86.979405" transform="rotate(-90 11.198438 86.979405)">+12 median, % of timer</text>
+    </g>
+   </g>
+   <g id="line2d_27">
+    <path d="M 55.617443 29.918679 
+L 116.49017 52.3259 
+L 177.362898 80.730102 
+L 238.235625 94.172576 
+L 299.108352 112.491785 
+L 359.98108 122.463453 
+L 420.853807 128.491852 
+" clip-path="url(#p80c531210e)" style="fill: none; stroke: #1b44cc; stroke-width: 2; stroke-linecap: square"/>
+    <defs>
+     <path id="m843a4f97c6" d="M 0 3.5 
+C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874 
+C 3.131218 1.81853 3.5 0.928211 3.5 0 
+C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874 
+C 1.81853 -3.131218 0.928211 -3.5 0 -3.5 
+C -0.928211 -3.5 -1.81853 -3.131218 -2.474874 -2.474874 
+C -3.131218 -1.81853 -3.5 -0.928211 -3.5 0 
+C -3.5 0.928211 -3.131218 1.81853 -2.474874 2.474874 
+C -1.81853 3.131218 -0.928211 3.5 0 3.5 
+z
+" style="stroke: #fbfbf9; stroke-width: 2"/>
+    </defs>
+    <g clip-path="url(#p80c531210e)">
+     <use xlink:href="#m843a4f97c6" x="55.617443" y="29.918679" style="fill: #1b44cc; stroke: #fbfbf9; stroke-width: 2"/>
+     <use xlink:href="#m843a4f97c6" x="116.49017" y="52.3259" style="fill: #1b44cc; stroke: #fbfbf9; stroke-width: 2"/>
+     <use xlink:href="#m843a4f97c6" x="177.362898" y="80.730102" style="fill: #1b44cc; stroke: #fbfbf9; stroke-width: 2"/>
+     <use xlink:href="#m843a4f97c6" x="238.235625" y="94.172576" style="fill: #1b44cc; stroke: #fbfbf9; stroke-width: 2"/>
+     <use xlink:href="#m843a4f97c6" x="299.108352" y="112.491785" style="fill: #1b44cc; stroke: #fbfbf9; stroke-width: 2"/>
+     <use xlink:href="#m843a4f97c6" x="359.98108" y="122.463453" style="fill: #1b44cc; stroke: #fbfbf9; stroke-width: 2"/>
+     <use xlink:href="#m843a4f97c6" x="420.853807" y="128.491852" style="fill: #1b44cc; stroke: #fbfbf9; stroke-width: 2"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.355625 170.139405 
+L 37.355625 3.819405 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 37.355625 170.139405 
+L 439.115625 170.139405 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #16181d" x="55.617443" y="20.996804" transform="rotate(-0 55.617443 20.996804)">91%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #16181d" x="116.49017" y="43.404025" transform="rotate(-0 116.49017 43.404025)">88%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #16181d" x="177.362898" y="71.808227" transform="rotate(-0 177.362898 71.808227)">84%</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #16181d" x="238.235625" y="85.250701" transform="rotate(-0 238.235625 85.250701)">82%</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #16181d" x="299.108352" y="103.56991" transform="rotate(-0 299.108352 103.56991)">79%</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #16181d" x="359.98108" y="113.541578" transform="rotate(-0 359.98108 113.541578)">77%</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #16181d" x="420.853807" y="119.569977" transform="rotate(-0 420.853807 119.569977)">76%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p80c531210e">
+   <rect x="37.355625" y="3.819405" width="401.76" height="166.32"/>
+  </clipPath>
+ </defs>
+</svg>

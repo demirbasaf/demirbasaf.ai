@@ -1,66 +1,34 @@
-// Builds the /llms.txt markdown brief for a given locale (see llmstxt.org).
-// Generated from the same content as the site, so it never drifts.
+// Builds the /llms.txt markdown brief (see llmstxt.org). Generated from the
+// same content as the site, so it never drifts.
 import { site } from '../config/site';
-import { publishedEntries, bareSlug } from './entries';
-import { localizePath, type Lang } from './i18n';
+import { publishedEntries } from './entries';
 
-const copy = {
-  en: {
-    intro: (jt: string, org: string, city: string, country: string, desc: string) =>
-      `${jt} at ${org}, based in ${city}, ${country}. ${desc}`,
-    aka: 'Also known as',
-    languages: 'Available in English and Turkish. Turkish version under /tr/.',
-    entries: 'Entries',
-    about: 'About',
-    aboutText: 'short bio.',
-    topics: 'Topics',
-    links: 'Links',
-    jobTitle: 'Senior Software Engineer',
-    desc: site.description,
-  },
-  tr: {
-    intro: (jt: string, org: string, city: string, country: string, desc: string) =>
-      `${org} bünyesinde ${jt}, ${city}, ${country} merkezli. ${desc}`,
-    aka: 'Ayrıca şöyle yazılır',
-    languages: 'İngilizce ve Türkçe olarak mevcut. Türkçe sürüm /tr/ altında.',
-    entries: 'Kayıtlar',
-    about: 'Hakkında',
-    aboutText: 'kısa biyografi.',
-    topics: 'Konular',
-    links: 'Bağlantılar',
-    jobTitle: 'Kıdemli Yazılım Mühendisi',
-    desc: 'Sistemlerle makine öğreniminin kesiştiği yerde çalışan bir mühendis. Modeller tarayıcınızda canlı çalışıyor.',
-  },
-} as const;
-
-export async function llmsText(lang: Lang, origin: string): Promise<string> {
-  const c = copy[lang];
-  const entries = await publishedEntries(lang);
-  const url = (path: string) => `${origin}${localizePath(lang, path)}`;
+export async function llmsText(origin: string): Promise<string> {
+  const entries = await publishedEntries();
+  const url = (path: string) => `${origin}${path}`;
   const aka = site.person.alternateNames.filter((n) => n !== site.title).join(', ');
 
   const lines = [
     `# ${site.title}`,
     '',
-    `> ${c.intro(c.jobTitle, site.person.worksFor.name, site.person.location.city, site.person.location.country, c.desc)}`,
+    `> ${site.person.jobTitle} at ${site.person.worksFor.name}, based in ${site.person.location.city}, ${site.person.location.country}. ${site.description}`,
     '',
-    `${c.aka}: ${aka}.`,
-    c.languages,
+    `Also known as: ${aka}.`,
     '',
-    `## ${c.entries}`,
+    '## Entries',
     ...(entries.length
       ? entries.map(
           (e) =>
-            `- [${e.data.title}](${url(`/${bareSlug(e)}/`)}): ${e.data.summary} (${e.data.date
+            `- [${e.data.title}](${url(`/${e.slug}/`)}): ${e.data.summary} (${e.data.date
               .toISOString()
               .slice(0, 10)})`,
         )
       : ['-']),
     '',
-    `## ${c.topics}`,
+    '## Topics',
     `- ${site.person.knowsAbout.join(', ')}.`,
     '',
-    `## ${c.links}`,
+    '## Links',
     `- GitHub: ${site.links.github}`,
     site.links.x ? `- X: ${site.links.x}` : '',
     `- RSS: ${url('/rss.xml')}`,
