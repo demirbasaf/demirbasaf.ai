@@ -9,6 +9,7 @@ export const ui = {
   work: { label: 'work' },
   education: { label: 'education' },
   entries: { label: 'posts' },
+  email: { copy: 'copy', copied: 'copied' },
   entry: {
     wip: 'wip',
     repo: 'source on GitHub',

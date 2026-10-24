@@ -95,6 +95,11 @@ h1.brand { margin: 0; font-size: 1.4rem; line-height: inherit; }
 .header-controls a { color: var(--muted); text-decoration: none; text-transform: lowercase; }
 .header-controls a:hover { color: var(--ink); }
 .site-bio { font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; color: var(--muted); margin-top: 0.4rem; }
+/* email as selectable text plus a one-tap copy; mailto was the old icon's job */
+.site-email { display: flex; align-items: baseline; gap: 0.7rem; margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink); }
+.site-email span { user-select: all; }
+.site-email button { font: inherit; background: none; border: none; padding: 0; color: var(--muted); cursor: pointer; text-decoration: underline dotted; }
+.site-email button:hover { color: var(--accent); }
 
 /* circular social icons (github / linkedin / rss) */
 .icon-links { display: flex; gap: 0.55rem; margin-top: 1rem; padding-bottom: 1.5rem; }
