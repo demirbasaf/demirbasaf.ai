@@ -6,12 +6,12 @@ import { ui } from '../i18n/ui';
 interface Props {
   title?: string;
   description?: string;
-  article?: { publishedTime: Date; tags?: string[] };
+  article?: { publishedTime: Date; tags?: string[]; image?: string };
 }
 const { title, article } = Astro.props;
 const description = Astro.props.description ?? ui.meta.description;
 const fullTitle = title ? `${title} · ${site.title}` : `${site.title} · ${site.tagline}`;
-const ogImage = new URL('/og.png', site.url).href;
+const ogImage = new URL(article?.image ?? '/og.png', site.url).href;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? site.url).href;
 const ogType = article ? 'article' : 'website';
 

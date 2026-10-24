@@ -19,6 +19,8 @@ const entries = defineCollection({
     demo: z.string().optional(),
     // training notebook (English): Colab / nbviewer / repo link
     notebook: z.string().url().optional(),
+    // social preview image under /public, e.g. /og/wow-mythic-plus.png; falls back to /og.png
+    image: z.string().optional(),
   }),
 });
 

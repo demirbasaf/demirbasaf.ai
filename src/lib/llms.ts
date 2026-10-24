@@ -21,7 +21,7 @@ export async function llmsText(origin: string): Promise<string> {
           (e) =>
             `- [${e.data.title}](${url(`/${e.slug}/`)}): ${e.data.summary} (${e.data.date
               .toISOString()
-              .slice(0, 10)})`,
+              .slice(0, 10)}). Markdown: ${url(`/${e.slug}.md`)}`,
         )
       : ['-']),
     '',
@@ -32,6 +32,7 @@ export async function llmsText(origin: string): Promise<string> {
     `- GitHub: ${site.links.github}`,
     site.links.x ? `- X: ${site.links.x}` : '',
     `- RSS: ${url('/rss.xml')}`,
+    `- Full text of every entry: ${url('/llms-full.txt')}`,
     '',
   ].filter((l) => l !== '');
 
