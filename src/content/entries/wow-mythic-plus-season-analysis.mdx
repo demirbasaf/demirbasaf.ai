@@ -1,0 +1,85 @@
+---
+title: 3 million Mythic+ runs, charted
+date: 2026-10-24
+summary: Every Season 18 Mythic+ leaderboard from the Battle.net API, EU and US, in charts. Where people actually play, which specs win as keys get harder, and why the timer stops being scary by week four.
+tags: [wow, data-analysis, battle-net-api, mythic-plus, gaming]
+status: done
+draft: false
+---
+import Fig from '../../components/Fig.astro';
+import SpecBars from '../../components/SpecBars.astro';
+
+I pulled every Mythic+ leaderboard the [Battle.net API](https://develop.battle.net/documentation/world-of-warcraft/game-data-apis)
+exposes for the current season: each connected realm, each dungeon, each
+week. Groups show up on several realms' boards when their players come from
+different realms, so I dedup those. What's left:
+
+<div class="tiles">
+  <div class="tile"><b>3.11M</b><span>unique runs</span></div>
+  <div class="tile"><b>175</b><span>connected realms, EU + US</span></div>
+  <div class="tile"><b>8 × 7</b><span>dungeons × weeks</span></div>
+  <div class="tile"><b>113K</b><span>distinct 5-spec comps</span></div>
+</div>
+
+One caveat before the charts. A leaderboard keeps the top 500 runs per realm,
+dungeon and week. Keys that got abandoned are not in here. Keys that finished
+over the timer are. 87% of what's below was timed.
+
+## Where people play
+
+<Fig src="wow-mythic-plus/runs-by-level" alt="Bar chart of run count by keystone level, 2 to 23. Levels 10 and 12 stand at about 600 thousand runs each; 11 is half that." caption="Runs by key level. +10 and +12 alone are 39% of the season." />
+
++10 and +12 are where the rewards sit, so that's where the runs are. Nobody
+runs an 11 on purpose.
+
+<Fig src="wow-mythic-plus/timed-rate-by-level" alt="Line chart of the share of runs completed inside the timer by key level. About 96% up to +6, mid 80s from +11 up." caption="Share of leaderboard runs inside the timer. Past +10 the boards have room for depleted keys too." />
+
+## Nobody's median misses the timer
+
+<Fig src="wow-mythic-plus/clear-time-by-dungeon" alt="Eight small line charts, one per dungeon, of median clear time in minutes against key level with a dashed line at the dungeon's timer. Every median stays under its timer at all levels." caption="Median clear time per dungeon, dashed line is the timer. Even at +21 the median run is under it." />
+
+I expected the median to cross the timer around +18. It never does, in any
+dungeon. The people who reach +21 are the people who can time +21. At +12
+the median run uses 80% of the timer in Murder Row and 86% in The Blinding
+Vale, and every other dungeon sits in between.
+
+## Who gets brought
+
+<SpecBars>Share of runs that include each spec. Damage is per slot since every group has three.</SpecBars>
+
+Tank is a three-way argument, healer a two-way one, damage is wide open.
+That's the average over all levels. Now split it by level:
+
+<Fig src="wow-mythic-plus/top-spec-share-by-level" alt="Three line charts on a dark panel, one per role, of the top three specs' share by key level in their class colours. Blood Death Knight climbs from about a quarter of groups at +5 to half at +18; Holy Paladin does the same; Arcane Mage rises from 12% of damage slots to 19%." caption="Top three specs per role by key level, in class colours, icon at the line's end." />
+
+Blood Death Knight is in 26% of groups at +5 and 49% at +18. Holy Paladin,
+23% to 49%. The meta people argue about is a +18 meta. At +10 you can bring
+what you have.
+
+<Fig src="wow-mythic-plus/top10-comp-share-by-level" alt="Line chart of the share of runs using one of the ten most common full compositions at each key level. Under 2% through +12, 11% at +18, 37% at +21." caption="Share of runs on one of the ten most common full comps at that level." />
+
+Same thing at the whole-group level, only steeper. Below +13 the ten most
+common comps cover under 2% of runs. At +21 they cover 37%.
+
+## The timer gets easier every week
+
+<Fig src="wow-mythic-plus/week-over-week" alt="Bar chart of median +12 clear time as a percent of the timer by week, labelled with each week's two rotating affixes. Falls from 91% in week one to 76% in week seven, every week lower than the last." caption="Median +12 clear time as a share of the timer, by week, with that week's rotating affixes." />
+
+At a fixed +12, the median went from 91% of the timer in week one to 76% in
+week seven, down every single week. Affix rotation doesn't even dent the
+line. Gear and routes do.
+
+## Odd ones
+
+<Fig src="wow-mythic-plus/realm-count" alt="Bar chart of median +12 clear time as a percent of the timer against the number of distinct realms in the group, 1 to 5. One realm is slowest at 86%; three or more realms sit around 83%." caption="Median +12 clear time by how many realms the five players come from." />
+
+- Groups from a single realm, which are mostly guild and friends, are the
+  slowest. Pugs built through the rating filter beat them by three points.
+- 85% of runs are cross-faction. Horde-only groups are 4.6% of runs and the
+  slowest split.
+- EU is a touch faster than US at +12: 82% of timer against 84%.
+- Highest key: +23, four runs. Fastest run against its timer: a +2 Ruby
+  Life Pools in 9:08.
+
+The model that predicts clear time from all this is next. Collector, merge,
+lookups and the chart script will be linked here when that ships.

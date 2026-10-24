@@ -1,0 +1,34 @@
+---
+// Pick rate per spec, one column per role, drawn as HTML bars with the spec
+// icon. Colours are the WoW class colours, lowered to a step that reads on the
+// light page (see class_colors.csv in the project repo).
+import stats from '../charts/wow-mythic-plus/stats.json';
+
+interface Row { id: number; name: string; class: string; color: string; share: number }
+const roles: { key: 'tank' | 'healer' | 'damage'; title: string; n: number }[] = [
+  { key: 'tank', title: 'tank', n: 6 },
+  { key: 'healer', title: 'healer', n: 6 },
+  { key: 'damage', title: 'damage, per slot', n: 12 },
+];
+const pick = stats.pick_rate as Record<string, Row[]>;
+const max = Math.max(...roles.flatMap((r) => pick[r.key].slice(0, r.n).map((x) => x.share)));
+---
+
+<figure class="fig">
+  <div class="specbars">
+    {roles.map((r) => (
+      <div class="specbars-col">
+        <div class="specbars-title">{r.title}</div>
+        {pick[r.key].slice(0, r.n).map((x) => (
+          <div class="specbars-row" title={`${x.name} ${x.class}: in ${(x.share * 100).toFixed(1)}% of runs`}>
+            <img src={`/icons/wow/specs/${x.id}.jpg`} alt="" width="22" height="22" loading="lazy" />
+            <span class="specbars-name">{x.name} <small>{x.class.replace('Demon Hunter', 'DH').replace('Death Knight', 'DK')}</small></span>
+            <span class="specbars-track"><span class="specbars-bar" style={`width:${(x.share / max) * 100}%;background:${x.color}`}></span></span>
+            <span class="specbars-val">{(x.share * 100).toFixed(0)}%</span>
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+  <figcaption><slot /></figcaption>
+</figure>

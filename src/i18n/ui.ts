@@ -8,7 +8,7 @@ export const ui = {
   },
   work: { label: 'work' },
   education: { label: 'education' },
-  entries: { label: 'projects' },
+  entries: { label: 'posts' },
   entry: {
     wip: 'wip',
     repo: 'source on GitHub',

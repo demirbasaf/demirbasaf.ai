@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="504.432pt" height="395.568pt" viewBox="0 0 504.432 395.568" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-24T12:40:37.113116</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 395.568 
+L 504.432 395.568 
+L 504.432 0 
+L 0 0 
+L 0 395.568 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.395516 167.586992 
+L 135.305262 167.586992 
+L 135.305262 16.463906 
+L 37.395516 16.463906 
+L 37.395516 167.586992 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 41.845959 167.586992 
+L 41.845959 16.463906 
+" clip-path="url(#p62a2075315)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="41.845959" y="177.165117" transform="rotate(-0 41.845959 177.165117)">2</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 79.323373 167.586992 
+L 79.323373 16.463906 
+" clip-path="url(#p62a2075315)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="79.323373" y="177.165117" transform="rotate(-0 79.323373 177.165117)">10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 102.746758 167.586992 
+L 102.746758 16.463906 
+" clip-path="url(#p62a2075315)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="102.746758" y="177.165117" transform="rotate(-0 102.746758 177.165117)">15</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 126.170142 167.586992 
+L 126.170142 16.463906 
+" clip-path="url(#p62a2075315)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="126.170142" y="177.165117" transform="rotate(-0 126.170142 177.165117)">20</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9">
+      <path d="M 37.395516 134.734147 
+L 135.305262 134.734147 
+" clip-path="url(#p62a2075315)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="33.895516" y="137.77321" transform="rotate(-0 33.895516 137.77321)">20</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_11">
+      <path d="M 37.395516 69.028458 
+L 135.305262 69.028458 
+" clip-path="url(#p62a2075315)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_6">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="33.895516" y="72.06752" transform="rotate(-0 33.895516 72.06752)">30</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_13">
+    <path d="M 41.845959 149.328914 
+L 46.530635 139.093282 
+L 51.215312 142.606675 
+L 55.899989 147.125693 
+L 60.584666 139.941323 
+L 65.269343 121.223305 
+L 69.95402 120.959059 
+L 74.638697 111.603883 
+L 79.323373 123.110866 
+L 84.00805 107.731628 
+L 88.692727 109.725138 
+L 93.377404 97.001451 
+L 98.062081 96.765841 
+L 102.746758 94.431482 
+L 107.431434 91.332254 
+L 112.116111 89.285905 
+L 116.800788 87.509826 
+L 121.485465 86.884417 
+L 126.170142 86.179669 
+L 130.854819 84.32091 
+" clip-path="url(#p62a2075315)" style="fill: none; stroke: #1b44cc; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 37.395516 82.169596 
+L 135.305262 82.169596 
+" clip-path="url(#p62a2075315)" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #16181d"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.395516 167.586992 
+L 37.395516 16.463906 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 37.395516 167.586992 
+L 135.305262 167.586992 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: start; fill: #16181d" x="37.395516" y="10.463906" transform="rotate(-0 37.395516 10.463906)">Ruby Life Pools</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 159.237762 167.586992 
+L 257.147508 167.586992 
+L 257.147508 16.463906 
+L 159.237762 16.463906 
+L 159.237762 167.586992 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_15">
+      <path d="M 163.688205 167.586992 
+L 163.688205 16.463906 
+" clip-path="url(#paa54a9cae7)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_8">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="163.688205" y="177.165117" transform="rotate(-0 163.688205 177.165117)">2</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_17">
+      <path d="M 201.165619 167.586992 
+L 201.165619 16.463906 
+" clip-path="url(#paa54a9cae7)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_9">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="201.165619" y="177.165117" transform="rotate(-0 201.165619 177.165117)">10</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_19">
+      <path d="M 224.589004 167.586992 
+L 224.589004 16.463906 
+" clip-path="url(#paa54a9cae7)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_10">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="224.589004" y="177.165117" transform="rotate(-0 224.589004 177.165117)">15</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_21">
+      <path d="M 248.012388 167.586992 
+L 248.012388 16.463906 
+" clip-path="url(#paa54a9cae7)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22"/>
+     <g id="text_11">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="248.012388" y="177.165117" transform="rotate(-0 248.012388 177.165117)">20</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_3">
+     <g id="line2d_23">
+      <path d="M 159.237762 134.734147 
+L 257.147508 134.734147 
+" clip-path="url(#paa54a9cae7)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24"/>
+     <g id="text_12">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="155.737762" y="137.77321" transform="rotate(-0 155.737762 137.77321)">20</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_25">
+      <path d="M 159.237762 69.028458 
+L 257.147508 69.028458 
+" clip-path="url(#paa54a9cae7)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26"/>
+     <g id="text_13">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="155.737762" y="72.06752" transform="rotate(-0 155.737762 72.06752)">30</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_27">
+    <path d="M 163.688205 133.240219 
+L 168.372882 123.673416 
+L 173.057558 126.057821 
+L 177.742235 131.909898 
+L 182.426912 128.405266 
+L 187.111589 109.259668 
+L 191.796266 110.361772 
+L 196.480943 100.425265 
+L 201.165619 113.576258 
+L 205.850296 97.438284 
+L 210.534973 97.261919 
+L 215.21965 85.463641 
+L 219.904327 85.640937 
+L 224.589004 83.448064 
+L 229.273681 80.140057 
+L 233.958357 78.619025 
+L 238.643034 76.968662 
+L 243.327711 75.902642 
+L 248.012388 74.283818 
+L 252.697065 72.396422 
+" clip-path="url(#paa54a9cae7)" style="fill: none; stroke: #1b44cc; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_28">
+    <path d="M 159.237762 69.028458 
+L 257.147508 69.028458 
+" clip-path="url(#paa54a9cae7)" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #16181d"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 159.237762 167.586992 
+L 159.237762 16.463906 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 159.237762 167.586992 
+L 257.147508 167.586992 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: start; fill: #16181d" x="159.237762" y="10.463906" transform="rotate(-0 159.237762 10.463906)">The Blinding Vale</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_8">
+    <path d="M 281.080008 167.586992 
+L 378.989754 167.586992 
+L 378.989754 16.463906 
+L 281.080008 16.463906 
+L 281.080008 167.586992 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_5">
+    <g id="xtick_9">
+     <g id="line2d_29">
+      <path d="M 285.530451 167.586992 
+L 285.530451 16.463906 
+" clip-path="url(#pc499bf2f79)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_30"/>
+     <g id="text_15">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="285.530451" y="177.165117" transform="rotate(-0 285.530451 177.165117)">2</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_31">
+      <path d="M 323.007866 167.586992 
+L 323.007866 16.463906 
+" clip-path="url(#pc499bf2f79)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_32"/>
+     <g id="text_16">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="323.007866" y="177.165117" transform="rotate(-0 323.007866 177.165117)">10</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_33">
+      <path d="M 346.43125 167.586992 
+L 346.43125 16.463906 
+" clip-path="url(#pc499bf2f79)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_34"/>
+     <g id="text_17">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="346.43125" y="177.165117" transform="rotate(-0 346.43125 177.165117)">15</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_35">
+      <path d="M 369.854634 167.586992 
+L 369.854634 16.463906 
+" clip-path="url(#pc499bf2f79)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_36"/>
+     <g id="text_18">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="369.854634" y="177.165117" transform="rotate(-0 369.854634 177.165117)">20</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_5">
+     <g id="line2d_37">
+      <path d="M 281.080008 134.734147 
+L 378.989754 134.734147 
+" clip-path="url(#pc499bf2f79)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_38"/>
+     <g id="text_19">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="277.580008" y="137.77321" transform="rotate(-0 277.580008 137.77321)">20</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_39">
+      <path d="M 281.080008 69.028458 
+L 378.989754 69.028458 
+" clip-path="url(#pc499bf2f79)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_40"/>
+     <g id="text_20">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="277.580008" y="72.06752" transform="rotate(-0 277.580008 72.06752)">30</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_41">
+    <path d="M 285.530451 140.03353 
+L 290.215128 130.614565 
+L 294.899805 133.681926 
+L 299.584481 137.798168 
+L 304.269158 134.472858 
+L 308.953835 114.985153 
+L 313.638512 115.136221 
+L 318.323189 105.358776 
+L 323.007866 123.08316 
+L 327.692542 105.737953 
+L 332.377219 105.427932 
+L 337.061896 90.552218 
+L 341.746573 89.587659 
+L 346.43125 86.220187 
+L 351.115927 81.412283 
+L 355.800604 77.931634 
+L 360.48528 75.858126 
+L 365.169957 74.838429 
+L 369.854634 74.209625 
+L 374.539311 73.925996 
+" clip-path="url(#pc499bf2f79)" style="fill: none; stroke: #1b44cc; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_42">
+    <path d="M 281.080008 69.028458 
+L 378.989754 69.028458 
+" clip-path="url(#pc499bf2f79)" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #16181d"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 281.080008 167.586992 
+L 281.080008 16.463906 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 281.080008 167.586992 
+L 378.989754 167.586992 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: start; fill: #16181d" x="281.080008" y="10.463906" transform="rotate(-0 281.080008 10.463906)">Voidscar Arena</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_11">
+    <path d="M 402.922254 167.586992 
+L 500.832 167.586992 
+L 500.832 16.463906 
+L 402.922254 16.463906 
+L 402.922254 167.586992 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_7">
+    <g id="xtick_13">
+     <g id="line2d_43">
+      <path d="M 407.372697 167.586992 
+L 407.372697 16.463906 
+" clip-path="url(#p1c1507df25)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_44"/>
+     <g id="text_22">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="407.372697" y="177.165117" transform="rotate(-0 407.372697 177.165117)">2</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_45">
+      <path d="M 444.850112 167.586992 
+L 444.850112 16.463906 
+" clip-path="url(#p1c1507df25)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_46"/>
+     <g id="text_23">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="444.850112" y="177.165117" transform="rotate(-0 444.850112 177.165117)">10</text>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_47">
+      <path d="M 468.273496 167.586992 
+L 468.273496 16.463906 
+" clip-path="url(#p1c1507df25)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_48"/>
+     <g id="text_24">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="468.273496" y="177.165117" transform="rotate(-0 468.273496 177.165117)">15</text>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_49">
+      <path d="M 491.69688 167.586992 
+L 491.69688 16.463906 
+" clip-path="url(#p1c1507df25)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_50"/>
+     <g id="text_25">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="491.69688" y="177.165117" transform="rotate(-0 491.69688 177.165117)">20</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_8">
+    <g id="ytick_7">
+     <g id="line2d_51">
+      <path d="M 402.922254 134.734147 
+L 500.832 134.734147 
+" clip-path="url(#p1c1507df25)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_52"/>
+     <g id="text_26">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="399.422254" y="137.77321" transform="rotate(-0 399.422254 137.77321)">20</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_53">
+      <path d="M 402.922254 69.028458 
+L 500.832 69.028458 
+" clip-path="url(#p1c1507df25)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_54"/>
+     <g id="text_27">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="399.422254" y="72.06752" transform="rotate(-0 399.422254 72.06752)">30</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_55">
+    <path d="M 407.372697 132.590554 
+L 412.057374 121.866071 
+L 416.742051 122.237966 
+L 421.426727 127.959015 
+L 426.111404 127.803183 
+L 430.796081 109.062113 
+L 435.480758 108.301515 
+L 440.165435 102.972565 
+L 444.850112 117.330243 
+L 449.534789 99.118816 
+L 454.219465 98.123101 
+L 458.904142 82.532565 
+L 463.588819 81.440482 
+L 468.273496 79.240053 
+L 472.958173 76.495143 
+L 477.64285 75.184479 
+L 482.327526 74.252936 
+L 487.012203 73.108726 
+L 491.69688 72.301204 
+L 496.381557 72.732945 
+" clip-path="url(#p1c1507df25)" style="fill: none; stroke: #1b44cc; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_56">
+    <path d="M 402.922254 69.028458 
+L 500.832 69.028458 
+" clip-path="url(#p1c1507df25)" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #16181d"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 402.922254 167.586992 
+L 402.922254 16.463906 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 402.922254 167.586992 
+L 500.832 167.586992 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: start; fill: #16181d" x="402.922254" y="10.463906" transform="rotate(-0 402.922254 10.463906)">Altar of Fangs</text>
+   </g>
+  </g>
+  <g id="axes_5">
+   <g id="patch_14">
+    <path d="M 37.395516 353.873984 
+L 135.305262 353.873984 
+L 135.305262 202.750898 
+L 37.395516 202.750898 
+L 37.395516 353.873984 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_9">
+    <g id="xtick_17">
+     <g id="line2d_57">
+      <path d="M 41.845959 353.873984 
+L 41.845959 202.750898 
+" clip-path="url(#pf565e8c69d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_58"/>
+     <g id="text_29">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="41.845959" y="363.452109" transform="rotate(-0 41.845959 363.452109)">2</text>
+     </g>
+    </g>
+    <g id="xtick_18">
+     <g id="line2d_59">
+      <path d="M 79.323373 353.873984 
+L 79.323373 202.750898 
+" clip-path="url(#pf565e8c69d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_60"/>
+     <g id="text_30">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="79.323373" y="363.452109" transform="rotate(-0 79.323373 363.452109)">10</text>
+     </g>
+    </g>
+    <g id="xtick_19">
+     <g id="line2d_61">
+      <path d="M 102.746758 353.873984 
+L 102.746758 202.750898 
+" clip-path="url(#pf565e8c69d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_62"/>
+     <g id="text_31">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="102.746758" y="363.452109" transform="rotate(-0 102.746758 363.452109)">15</text>
+     </g>
+    </g>
+    <g id="xtick_20">
+     <g id="line2d_63">
+      <path d="M 126.170142 353.873984 
+L 126.170142 202.750898 
+" clip-path="url(#pf565e8c69d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_64"/>
+     <g id="text_32">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="126.170142" y="363.452109" transform="rotate(-0 126.170142 363.452109)">20</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_10">
+    <g id="ytick_9">
+     <g id="line2d_65">
+      <path d="M 37.395516 321.02114 
+L 135.305262 321.02114 
+" clip-path="url(#pf565e8c69d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_66"/>
+     <g id="text_33">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="33.895516" y="324.060202" transform="rotate(-0 33.895516 324.060202)">20</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_67">
+      <path d="M 37.395516 255.31545 
+L 135.305262 255.31545 
+" clip-path="url(#pf565e8c69d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_68"/>
+     <g id="text_34">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="33.895516" y="258.354513" transform="rotate(-0 33.895516 258.354513)">30</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_69">
+    <path d="M 41.845959 302.740119 
+L 46.530635 293.053732 
+L 51.215312 297.531575 
+L 55.899989 303.683379 
+L 60.584666 302.980876 
+L 65.269343 286.388656 
+L 69.95402 287.651848 
+L 74.638697 280.394107 
+L 79.323373 299.152753 
+L 84.00805 282.432845 
+L 88.692727 281.484767 
+L 93.377404 266.085817 
+L 98.062081 265.322427 
+L 102.746758 262.405094 
+L 107.431434 258.003032 
+L 112.116111 255.145163 
+L 116.800788 252.192021 
+L 121.485465 250.094366 
+L 126.170142 248.157363 
+L 130.854819 246.64438 
+" clip-path="url(#pf565e8c69d)" style="fill: none; stroke: #1b44cc; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_70">
+    <path d="M 37.395516 242.174312 
+L 135.305262 242.174312 
+" clip-path="url(#pf565e8c69d)" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #16181d"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 37.395516 353.873984 
+L 37.395516 202.750898 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 37.395516 353.873984 
+L 135.305262 353.873984 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: start; fill: #16181d" x="37.395516" y="196.750898" transform="rotate(-0 37.395516 196.750898)">Temple of Sethraliss</text>
+   </g>
+  </g>
+  <g id="axes_6">
+   <g id="patch_17">
+    <path d="M 159.237762 353.873984 
+L 257.147508 353.873984 
+L 257.147508 202.750898 
+L 159.237762 202.750898 
+L 159.237762 353.873984 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_11">
+    <g id="xtick_21">
+     <g id="line2d_71">
+      <path d="M 163.688205 353.873984 
+L 163.688205 202.750898 
+" clip-path="url(#p19f4bc48d9)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_72"/>
+     <g id="text_36">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="163.688205" y="363.452109" transform="rotate(-0 163.688205 363.452109)">2</text>
+     </g>
+    </g>
+    <g id="xtick_22">
+     <g id="line2d_73">
+      <path d="M 201.165619 353.873984 
+L 201.165619 202.750898 
+" clip-path="url(#p19f4bc48d9)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_74"/>
+     <g id="text_37">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="201.165619" y="363.452109" transform="rotate(-0 201.165619 363.452109)">10</text>
+     </g>
+    </g>
+    <g id="xtick_23">
+     <g id="line2d_75">
+      <path d="M 224.589004 353.873984 
+L 224.589004 202.750898 
+" clip-path="url(#p19f4bc48d9)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_76"/>
+     <g id="text_38">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="224.589004" y="363.452109" transform="rotate(-0 224.589004 363.452109)">15</text>
+     </g>
+    </g>
+    <g id="xtick_24">
+     <g id="line2d_77">
+      <path d="M 248.012388 353.873984 
+L 248.012388 202.750898 
+" clip-path="url(#p19f4bc48d9)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_78"/>
+     <g id="text_39">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="248.012388" y="363.452109" transform="rotate(-0 248.012388 363.452109)">20</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_12">
+    <g id="ytick_11">
+     <g id="line2d_79">
+      <path d="M 159.237762 321.02114 
+L 257.147508 321.02114 
+" clip-path="url(#p19f4bc48d9)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_80"/>
+     <g id="text_40">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="155.737762" y="324.060202" transform="rotate(-0 155.737762 324.060202)">20</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_81">
+      <path d="M 159.237762 255.31545 
+L 257.147508 255.31545 
+" clip-path="url(#p19f4bc48d9)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_82"/>
+     <g id="text_41">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="155.737762" y="258.354513" transform="rotate(-0 155.737762 258.354513)">30</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_83">
+    <path d="M 163.688205 306.961217 
+L 168.372882 297.102133 
+L 173.057558 299.841568 
+L 177.742235 303.458337 
+L 182.426912 299.933556 
+L 187.111589 278.717353 
+L 191.796266 280.338093 
+L 196.480943 271.440612 
+L 201.165619 287.43595 
+L 205.850296 270.006476 
+L 210.534973 274.186891 
+L 215.21965 261.24944 
+L 219.904327 261.874192 
+L 224.589004 259.994955 
+L 229.273681 257.187077 
+L 233.958357 255.584296 
+L 238.643034 253.956437 
+L 243.327711 252.784741 
+L 248.012388 251.19428 
+L 252.697065 248.678628 
+" clip-path="url(#p19f4bc48d9)" style="fill: none; stroke: #1b44cc; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_84">
+    <path d="M 159.237762 242.174312 
+L 257.147508 242.174312 
+" clip-path="url(#p19f4bc48d9)" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #16181d"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 159.237762 353.873984 
+L 159.237762 202.750898 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 159.237762 353.873984 
+L 257.147508 353.873984 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: start; fill: #16181d" x="159.237762" y="196.750898" transform="rotate(-0 159.237762 196.750898)">Den of Nalorakk</text>
+   </g>
+  </g>
+  <g id="axes_7">
+   <g id="patch_20">
+    <path d="M 281.080008 353.873984 
+L 378.989754 353.873984 
+L 378.989754 202.750898 
+L 281.080008 202.750898 
+L 281.080008 353.873984 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_13">
+    <g id="xtick_25">
+     <g id="line2d_85">
+      <path d="M 285.530451 353.873984 
+L 285.530451 202.750898 
+" clip-path="url(#pe28cf679a6)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_86"/>
+     <g id="text_43">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="285.530451" y="363.452109" transform="rotate(-0 285.530451 363.452109)">2</text>
+     </g>
+    </g>
+    <g id="xtick_26">
+     <g id="line2d_87">
+      <path d="M 323.007866 353.873984 
+L 323.007866 202.750898 
+" clip-path="url(#pe28cf679a6)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_88"/>
+     <g id="text_44">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="323.007866" y="363.452109" transform="rotate(-0 323.007866 363.452109)">10</text>
+     </g>
+    </g>
+    <g id="xtick_27">
+     <g id="line2d_89">
+      <path d="M 346.43125 353.873984 
+L 346.43125 202.750898 
+" clip-path="url(#pe28cf679a6)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_90"/>
+     <g id="text_45">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="346.43125" y="363.452109" transform="rotate(-0 346.43125 363.452109)">15</text>
+     </g>
+    </g>
+    <g id="xtick_28">
+     <g id="line2d_91">
+      <path d="M 369.854634 353.873984 
+L 369.854634 202.750898 
+" clip-path="url(#pe28cf679a6)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_92"/>
+     <g id="text_46">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="369.854634" y="363.452109" transform="rotate(-0 369.854634 363.452109)">20</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_14">
+    <g id="ytick_13">
+     <g id="line2d_93">
+      <path d="M 281.080008 321.02114 
+L 378.989754 321.02114 
+" clip-path="url(#pe28cf679a6)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_94"/>
+     <g id="text_47">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="277.580008" y="324.060202" transform="rotate(-0 277.580008 324.060202)">20</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_95">
+      <path d="M 281.080008 255.31545 
+L 378.989754 255.31545 
+" clip-path="url(#pe28cf679a6)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_96"/>
+     <g id="text_48">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="277.580008" y="258.354513" transform="rotate(-0 277.580008 258.354513)">30</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_97">
+    <path d="M 285.530451 311.039898 
+L 290.215128 300.94159 
+L 294.899805 304.811984 
+L 299.584481 307.350085 
+L 304.269158 304.037533 
+L 308.953835 285.973342 
+L 313.638512 286.171554 
+L 318.323189 277.696122 
+L 323.007866 292.615584 
+L 327.692542 275.201606 
+L 332.377219 275.440446 
+L 337.061896 260.265498 
+L 341.746573 259.533208 
+L 346.43125 255.888513 
+L 351.115927 251.42299 
+L 355.800604 248.291731 
+L 360.48528 245.605135 
+L 365.169957 243.926026 
+L 369.854634 241.779421 
+L 374.539311 239.929149 
+" clip-path="url(#pe28cf679a6)" style="fill: none; stroke: #1b44cc; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_98">
+    <path d="M 281.080008 235.603743 
+L 378.989754 235.603743 
+" clip-path="url(#pe28cf679a6)" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #16181d"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 281.080008 353.873984 
+L 281.080008 202.750898 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 281.080008 353.873984 
+L 378.989754 353.873984 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: start; fill: #16181d" x="281.080008" y="196.750898" transform="rotate(-0 281.080008 196.750898)">Kings' Rest</text>
+   </g>
+  </g>
+  <g id="axes_8">
+   <g id="patch_23">
+    <path d="M 402.922254 353.873984 
+L 500.832 353.873984 
+L 500.832 202.750898 
+L 402.922254 202.750898 
+L 402.922254 353.873984 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_15">
+    <g id="xtick_29">
+     <g id="line2d_99">
+      <path d="M 407.372697 353.873984 
+L 407.372697 202.750898 
+" clip-path="url(#pb1438d142d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_100"/>
+     <g id="text_50">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="407.372697" y="363.452109" transform="rotate(-0 407.372697 363.452109)">2</text>
+     </g>
+    </g>
+    <g id="xtick_30">
+     <g id="line2d_101">
+      <path d="M 444.850112 353.873984 
+L 444.850112 202.750898 
+" clip-path="url(#pb1438d142d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_102"/>
+     <g id="text_51">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="444.850112" y="363.452109" transform="rotate(-0 444.850112 363.452109)">10</text>
+     </g>
+    </g>
+    <g id="xtick_31">
+     <g id="line2d_103">
+      <path d="M 468.273496 353.873984 
+L 468.273496 202.750898 
+" clip-path="url(#pb1438d142d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_104"/>
+     <g id="text_52">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="468.273496" y="363.452109" transform="rotate(-0 468.273496 363.452109)">15</text>
+     </g>
+    </g>
+    <g id="xtick_32">
+     <g id="line2d_105">
+      <path d="M 491.69688 353.873984 
+L 491.69688 202.750898 
+" clip-path="url(#pb1438d142d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_106"/>
+     <g id="text_53">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="491.69688" y="363.452109" transform="rotate(-0 491.69688 363.452109)">20</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_16">
+    <g id="ytick_15">
+     <g id="line2d_107">
+      <path d="M 402.922254 321.02114 
+L 500.832 321.02114 
+" clip-path="url(#pb1438d142d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_108"/>
+     <g id="text_54">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="399.422254" y="324.060202" transform="rotate(-0 399.422254 324.060202)">20</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_109">
+      <path d="M 402.922254 255.31545 
+L 500.832 255.31545 
+" clip-path="url(#pb1438d142d)" style="fill: none; stroke: #e6e6e1; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_110"/>
+     <g id="text_55">
+      <text style="font-size: 8px; font-family: 'Menlo'; text-anchor: end; fill: #6b7078" x="399.422254" y="258.354513" transform="rotate(-0 399.422254 258.354513)">30</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_111">
+    <path d="M 407.372697 304.653305 
+L 412.057374 294.596556 
+L 416.742051 295.256734 
+L 421.426727 300.534872 
+L 426.111404 302.785402 
+L 430.796081 283.333013 
+L 435.480758 286.111652 
+L 440.165435 279.592607 
+L 444.850112 294.340195 
+L 449.534789 274.835734 
+L 454.219465 274.353893 
+L 458.904142 254.602379 
+L 463.588819 253.465287 
+L 468.273496 251.599629 
+L 472.958173 248.189668 
+L 477.64285 246.244561 
+L 482.327526 243.446922 
+L 487.012203 240.659413 
+L 491.69688 238.421477 
+L 496.381557 235.322304 
+" clip-path="url(#pb1438d142d)" style="fill: none; stroke: #1b44cc; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_112">
+    <path d="M 402.922254 229.033174 
+L 500.832 229.033174 
+" clip-path="url(#pb1438d142d)" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #16181d"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 402.922254 353.873984 
+L 402.922254 202.750898 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 402.922254 353.873984 
+L 500.832 353.873984 
+" style="fill: none; stroke: #e6e6e1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: start; fill: #16181d" x="402.922254" y="196.750898" transform="rotate(-0 402.922254 196.750898)">Murder Row</text>
+   </g>
+  </g>
+  <g id="text_57">
+   <text style="font-size: 9px; font-family: 'Menlo'; text-anchor: middle; fill: #6b7078" x="252.432" y="389.805891" transform="rotate(-0 252.432 389.805891)">keystone level</text>
+  </g>
+  <g id="text_58">
+   <text style="font-size: 9px; font-family: 'Menlo'; fill: #6b7078" transform="translate(10.868906 256.710234) rotate(-90)">median clear time (min)</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p62a2075315">
+   <rect x="37.395516" y="16.463906" width="97.909746" height="151.123086"/>
+  </clipPath>
+  <clipPath id="paa54a9cae7">
+   <rect x="159.237762" y="16.463906" width="97.909746" height="151.123086"/>
+  </clipPath>
+  <clipPath id="pc499bf2f79">
+   <rect x="281.080008" y="16.463906" width="97.909746" height="151.123086"/>
+  </clipPath>
+  <clipPath id="p1c1507df25">
+   <rect x="402.922254" y="16.463906" width="97.909746" height="151.123086"/>
+  </clipPath>
+  <clipPath id="pf565e8c69d">
+   <rect x="37.395516" y="202.750898" width="97.909746" height="151.123086"/>
+  </clipPath>
+  <clipPath id="p19f4bc48d9">
+   <rect x="159.237762" y="202.750898" width="97.909746" height="151.123086"/>
+  </clipPath>
+  <clipPath id="pe28cf679a6">
+   <rect x="281.080008" y="202.750898" width="97.909746" height="151.123086"/>
+  </clipPath>
+  <clipPath id="pb1438d142d">
+   <rect x="402.922254" y="202.750898" width="97.909746" height="151.123086"/>
+  </clipPath>
+ </defs>
+</svg>

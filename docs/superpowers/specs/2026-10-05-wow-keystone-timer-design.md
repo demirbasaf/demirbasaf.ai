@@ -195,6 +195,18 @@ Three touch points.
    and `notebook` in frontmatter. Charts are plain markdown images pointing
    at `/charts/wow-keystone-timer/<file>.svg`.
 
+## Shipped first: the exploratory entry (2026-10-24)
+
+The analysis half shipped on its own as `wow-mythic-plus-season-analysis`,
+before the model. Charts are SVGs from `train/eda.py`, committed into this
+site under `src/charts/wow-mythic-plus/` and inlined by `Fig.astro` (hex
+tokens swapped for CSS variables so they follow the theme), rather than
+synced from the project repo, because the project repo is not on GitHub
+yet. Spec pick rates render as HTML bars (`SpecBars.astro`) with Blizzard's
+spec icons (self-hosted under `public/icons/wow/specs/`) in WoW class
+colours lowered to a step that clears 3:1 on the light page. The model entry
+stays a separate, later post.
+
 ## Article outline
 
 Demo sits at the top, as the existing entry does.

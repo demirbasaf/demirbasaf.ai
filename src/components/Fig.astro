@@ -1,0 +1,39 @@
+---
+// Inline an SVG chart from src/charts/ so it picks up the site's theme.
+// The charts are exported with the site's hex tokens; swapping them for CSS
+// variables here is what makes them follow dark mode. Width/height come off so
+// the viewBox scales to the column.
+interface Props {
+  /** path under src/charts/, without .svg */
+  src: string;
+  /** what the chart shows, for screen readers */
+  alt: string;
+  caption?: string;
+}
+const { src, alt, caption } = Astro.props;
+
+const charts = import.meta.glob('/src/charts/**/*.svg', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+const raw = charts[`/src/charts/${src}.svg`];
+if (!raw) throw new Error(`Fig: no chart at src/charts/${src}.svg`);
+
+// matplotlib names clipPaths and markers by a hash of their geometry, so two
+// charts with the same axes size share ids. Inlined on one page, the first
+// definition would clip every later chart. Prefix every id per figure.
+const ns = src.replace(/[^a-z0-9]/gi, '-');
+const svg = raw
+  .replace(/ id="([^"]+)"/g, ` id="${ns}-$1"`)
+  .replace(/url\(#([^)]+)\)/g, `url(#${ns}-$1)`)
+  .replace(/href="#([^"]+)"/g, `href="#${ns}-$1"`)
+  .replace(/<\?xml[^>]*>\s*/, '')
+  .replace(/<!DOCTYPE[^>]*>\s*/, '')
+  .replace(/#16181d/gi, 'var(--ink)')
+  .replace(/#6b7078/gi, 'var(--muted)')
+  .replace(/#e6e6e1/gi, 'var(--rule)')
+  .replace(/#1b44cc/gi, 'var(--accent)')
+  .replace(/<svg ([^>]*?)\s*width="[^"]*"\s*height="[^"]*"/, `<svg role="img" aria-label="${alt.replace(/"/g, '&quot;')}" $1`);
+---
+
+<figure class="fig">
+  <Fragment set:html={svg} />
+  {caption ? <figcaption>{caption}</figcaption> : null}
+</figure>
