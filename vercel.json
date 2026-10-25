@@ -1,0 +1,33 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    {
+      "src": "^/$",
+      "has": [{ "type": "header", "key": "accept", "value": ".*text/markdown.*" }],
+      "headers": { "Vary": "Accept" },
+      "dest": "/index.md"
+    },
+    {
+      "src": "^/([^/.]+)/?$",
+      "has": [{ "type": "header", "key": "accept", "value": ".*text/markdown.*" }],
+      "headers": { "Vary": "Accept" },
+      "dest": "/$1.md"
+    },
+    {
+      "src": "^/$",
+      "headers": {
+        "Vary": "Accept",
+        "Link": "</index.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"alternate\"; type=\"text/plain\", </rss.xml>; rel=\"alternate\"; type=\"application/rss+xml\", </sitemap.xml>; rel=\"sitemap\"; type=\"application/xml\""
+      },
+      "continue": true
+    },
+    {
+      "src": "^/([^/.]+)/?$",
+      "headers": {
+        "Vary": "Accept",
+        "Link": "</$1.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"alternate\"; type=\"text/plain\""
+      },
+      "continue": true
+    }
+  ]
+}
