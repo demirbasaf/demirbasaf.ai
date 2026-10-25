@@ -3,6 +3,9 @@
 
 User-agent: *
 Allow: /
+# Content Signals (contentsignals.org): what the content may be used for.
+# yes to all three: search indexing, AI answers at query time, AI training.
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 # AI / agent crawlers, named explicitly so there is no ambiguity.
 User-agent: GPTBot
@@ -26,5 +29,6 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Structured summary for language models: /llms.txt
+# For agents: /llms.txt (brief), /llms-full.txt (every entry), /<slug>.md (one entry).
+# Every page also answers `Accept: text/markdown` with its markdown twin.
 Sitemap: https://demirbasaf.dev/sitemap.xml

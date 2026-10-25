@@ -30,11 +30,11 @@ export async function llmsText(origin: string): Promise<string> {
     '',
     '## Links',
     `- GitHub: ${site.links.github}`,
-    site.links.x ? `- X: ${site.links.x}` : '',
+    site.links.x ? `- X: ${site.links.x}` : null,
     `- RSS: ${url('/rss.xml')}`,
     `- Full text of every entry: ${url('/llms-full.txt')}`,
     '',
-  ].filter((l) => l !== '');
+  ].filter((l) => l !== null);
 
   return lines.join('\n');
 }
