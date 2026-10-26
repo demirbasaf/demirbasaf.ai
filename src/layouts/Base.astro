@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   title?: string;
@@ -24,6 +25,8 @@ const { title, description, article } = Astro.props;
       </div>
     </main>
     <Footer />
+    <!-- Vercel Web Analytics: cookieless page views and referrers. -->
+    <Analytics />
 
     <!-- Open off-site links in a new tab so the site stays put. Covers links in
          writeups too, so nothing has to be tagged by hand. -->

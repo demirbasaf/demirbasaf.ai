@@ -38,6 +38,10 @@ export const site = {
     knowsAbout: [
       'Distributed systems',
       'Payments infrastructure',
+      'Card payments',
+      'Virtual accounts',
+      'Ledger systems',
+      'Stablecoin payments',
       'Machine learning',
       'Machine learning systems',
       'Data science',

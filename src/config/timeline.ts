@@ -13,7 +13,7 @@ export const timeline: TimelineItem[] = [
     org: 'MoonPay',
     url: 'https://www.moonpay.com/',
     logo: '/logos/moonpay.png',
-    desc: 'Payments infrastructure across bank transfers, cards, Apple Pay and more, in Node.js. Systems that process over $1B in transactions a year.',
+    desc: "Payments infrastructure in Node.js, behind $1B+ in transactions a year: virtual accounts, card routing across PSPs, and payment methods like Apple Pay, Google Pay, PIX and Cash App.",
   },
   {
     years: '2022 - 2024',
